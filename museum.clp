@@ -24,20 +24,20 @@
 (defmodule MAIN (export ?ALL))
 
 ;;; Modulo de recopilacio de los dades de l'usuari
-(defmodule recopilacio-usuari
+(defmodule recopilacio-visita
 	(import MAIN ?ALL)
 	(export ?ALL)
 )
 
 (defmodule recopilacio-prefs
 	(import MAIN ?ALL)
-	(import recopilacio-usuari deftemplate ?ALL)
+	(import recopilacio-visita deftemplate ?ALL)
 	(export ?ALL)
 )
 ;;; Modulo de filtrado y procesado del contenido adequado al usuario
 (defmodule processat
 	(import MAIN ?ALL)
-	(import recopilacio-usuari deftemplate ?ALL)
+	(import recopilacio-visita deftemplate ?ALL)
 	(import recopilacio-prefs deftemplate ?ALL)
 	(export ?ALL)
 )
@@ -101,33 +101,36 @@
 
 ;;; ------------------------ Declaracion de templates --------------------------
 ;;; Template para los datos socio-demograficos del usuario
-(deftemplate MAIN::Usuario
-	(slot nombre (type STRING))
-	(slot sexo (type SYMBOL) (default desconocido))
-	(slot edad (type INTEGER) (default -1))
-	(slot familia (type SYMBOL) (default desconocido))
+
+(deftemplate MAIN::Visita
+	(slot tipus (type STRING) (default "indefinit"))
+	(slot dies (type INTEGER) (default -1))
+	(slot hores (type DOUBLE) (default -1))
+	(slot coneixement (type INTEGER) (default -1))
+	(slot edat (type INTEGER) (default -1))
+	(slot nacionalitat (type STRING) (default "indefinit"))
 )
 
 ;;; Template para las preferencias del usuario
-(deftemplate MAIN::preferencias
-	(multislot generos-favoritos (type INSTANCE))
-	(multislot tematicas-favoritas (type INSTANCE))
-	(multislot nacionalidades (type INSTANCE))
-	(multislot idiomas (type INSTANCE))
+(deftemplate MAIN::preferencies_visita
+	(multislot autors_preferits (type INSTANCE))
+	(multislot tematiques_preferides (type INSTANCE))
+	(multislot estils_preferits (type INSTANCE))
+	(multislot epoques_preferides (type INSTANCE))
 )
 
-;;; Template para una lista de recomendaciones sin orden
-(deftemplate MAIN::lista-rec-desordenada
+;;; Template para una llista de recomanacions sense ordre
+(deftemplate MAIN::llista-rec-desordenada
 	(multislot recomendaciones (type INSTANCE))
 )
 
-;;; Template para una lista de recomendaciones con orden
-(deftemplate MAIN::lista-rec-ordenada
+;;; Template para una llista de recomanacions amb ordre
+(deftemplate MAIN::llista-rec-ordenada
 	(multislot recomendaciones (type INSTANCE))
 )
 
 ;;; Template para la lista de los dias de la recomendacion
-(deftemplate MAIN::lista-dias
+(deftemplate MAIN::llista-dies
 	(multislot dias (type INSTANCE))
 )
 
@@ -135,19 +138,19 @@
 
 ;;; ------------------------ Declaracion de funciones --------------------------
 
-;;; Funcion para hacer una pregunta con respuesta cualquiera
+;;; Funcio per fer una pregunta amb respostes qualssevol
 (deffunction pregunta-general (?pregunta)
     (format t "%s " ?pregunta)
-	(bind ?respuesta (read))
-	(while (not (lexemep ?respuesta)) do
+	(bind ?resposta (read))
+	(while (not (lexemep ?resposta)) do
 		(format t "%s " ?pregunta)
-		(bind ?respuesta (read))
+		(bind ?resposta (read))
     )
 	?respuesta
 )
 
-;;; Funcion para hacer una pregunta general con una serie de respuestas admitidas
-(deffunction MAIN::pregunta-opciones (?question $?allowed-values)
+;;; Funcio per fer una pregunta general amb una serie de respostes admitides
+(deffunction MAIN::pregunta-opcions (?question $?allowed-values)
    (format t "%s "?question)
    (progn$ (?curr-value $?allowed-values)
 		(format t "[%s]" ?curr-value)
@@ -168,7 +171,7 @@
    ?answer
 )
 
-;;; Funcion para hacer una pregunta de tipo si/no
+;;; Funcio per fer una pregunta amb resposta si/no
 (deffunction MAIN::pregunta-si-no (?question)
    (bind ?response (pregunta-opciones ?question si no))
    (if (or (eq ?response si) (eq ?response s))
@@ -187,15 +190,15 @@
 	?respuesta
 )
 
-;;; Funcion para hacer pregunta con indice de respuestas posibles
-(deffunction MAIN::pregunta-indice (?pregunta $?valores-posibles)
+;;; Funcio per fer una pregunta amb moltes opcions
+(deffunction MAIN::pregunta-index (?pregunta $?valores-posibles)
     (bind ?linea (format nil "%s" ?pregunta))
     (printout t ?linea crlf)
     (progn$ (?var ?valores-posibles)
             (bind ?linea (format nil "  %d. %s" ?var-index ?var))
             (printout t ?linea crlf)
     )
-    (bind ?respuesta (pregunta-numerica "Escoge una opción:" 1 (length$ ?valores-posibles)))
+    (bind ?respuesta (pregunta-numerica "Escull una opció:" 1 (length$ ?valores-posibles)))
 	?respuesta
 )
 
@@ -207,7 +210,7 @@
             (bind ?linea (format nil "  %d. %s" ?var-index ?var))
             (printout t ?linea crlf)
     )
-    (format t "%s" "Indica los números separados por un espacio: ")
+    (format t "%s" "Indica els números separats per un espaci: ")
     (bind ?resp (readline))
     (bind ?numeros (str-explode ?resp))
     (bind $?lista (create$ ))
@@ -246,10 +249,10 @@
 	(printout t "▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌" crlf)
 	(printout t " ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  " crlf)
   (printout t crlf)
-	(printout t "Welcome to our visit recommendation system! " crlf)
-	(printout t "Please answer the following questions in order to recommend you a museum tour." crlf)
+	(printout t "Benvingut al nostre sistema de recomanació de visites! " crlf)
+	(printout t "Si us plau contesteu les preguntes que venen a continuació per tal d'oferir-li un tour per el nostre museu." crlf)
 	(printout t crlf)
-	(focus recopilacion-usuario)
+	(focus recopilacio-visita)
 )
 
 ;;; Modulo recopilacion
