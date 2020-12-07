@@ -4,15 +4,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5> .
+@base <http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu> .
 
-<http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5> rdf:type owl:Ontology .
+<http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Connecta_Amb
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Connecta_Amb
 :Connecta_Amb rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf owl:topObjectProperty ;
               rdfs:domain :Sala ;
@@ -20,7 +20,7 @@
               rdfs:comment "Una Sala pot estar connectada amb una altra sala" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Es_De
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Es_De
 :Es_De rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf owl:topObjectProperty ;
        rdfs:domain :Quadre ;
@@ -28,7 +28,7 @@
        rdfs:comment "Un quadre esta pintat per un Autor" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Esta_En
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Esta_En
 :Esta_En rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
          rdfs:domain :Quadre ;
@@ -36,7 +36,7 @@
          rdfs:comment "Un quadre esta situat en una sala dins del museu" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Pinta
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Pinta
 :Pinta rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf owl:topObjectProperty ;
        rdfs:domain :Author ;
@@ -44,7 +44,7 @@
        rdfs:comment "Un autor pinta uns quadres" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Te
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Te
 :Te rdf:type owl:ObjectProperty ;
     rdfs:subPropertyOf owl:topObjectProperty ;
     rdfs:domain :Visita ;
@@ -55,14 +55,7 @@
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-2#Edat
-<http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-2#Edat> rdf:type owl:DatatypeProperty ;
-                                                                               rdfs:subPropertyOf owl:topDataProperty ;
-                                                                               rdfs:domain :Visita ;
-                                                                               rdfs:range xsd:string .
-
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Altura
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Altura
 :Altura rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
         rdf:type owl:FunctionalProperty ;
@@ -70,7 +63,7 @@
         rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Amplada
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Amplada
 :Amplada rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty ;
          rdf:type owl:FunctionalProperty ;
@@ -78,7 +71,7 @@
          rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#AnyMort
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#AnyMort
 :AnyMort rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf owl:topDataProperty ;
          rdf:type owl:FunctionalProperty ;
@@ -86,7 +79,7 @@
          rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#AnyNeixement
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#AnyNeixement
 :AnyNeixement rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdf:type owl:FunctionalProperty ;
@@ -94,7 +87,7 @@
               rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#ArtistID
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#ArtistID
 :ArtistID rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty ;
           rdf:type owl:FunctionalProperty ;
@@ -102,27 +95,27 @@
           rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor
 :Autor rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
        rdf:type owl:FunctionalProperty .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autors
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autors
 :Autors rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
         rdfs:domain :Preferencia ;
         rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Data
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Data
 :Data rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
       rdf:type owl:FunctionalProperty ;
       rdfs:domain :Quadre .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Dies
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Dies
 :Dies rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
       rdf:type owl:FunctionalProperty ;
@@ -130,19 +123,19 @@
       rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Epoca
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Epoca
 :Epoca rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil
 :Estil rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
        rdfs:domain :Preferencia ;
        rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Genere
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Genere
 :Genere rdf:type owl:DatatypeProperty ;
         rdfs:subPropertyOf owl:topDataProperty ;
         rdf:type owl:FunctionalProperty ;
@@ -150,19 +143,19 @@
         rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Hores
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Hores
 :Hores rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
        rdfs:domain :Visita ;
        rdfs:range xsd:float .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Identificador
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Identificador
 :Identificador rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Medi
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Medi
 :Medi rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
       rdf:type owl:FunctionalProperty ;
@@ -170,7 +163,7 @@
       rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Nacionalitat
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Nacionalitat
 :Nacionalitat rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf owl:topDataProperty ;
               rdf:type owl:FunctionalProperty ;
@@ -179,7 +172,7 @@
               rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Nom
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Nom
 :Nom rdf:type owl:DatatypeProperty ;
      rdfs:subPropertyOf owl:topDataProperty ;
      rdf:type owl:FunctionalProperty ;
@@ -188,7 +181,7 @@
      rdfs:range xsd:string .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Rellevancia
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Rellevancia
 :Rellevancia rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
              rdf:type owl:FunctionalProperty ;
@@ -197,43 +190,50 @@
              rdfs:range xsd:integer .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala
 :Sala rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Tematica
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Tematica
 :Tematica rdf:type owl:DatatypeProperty ;
           rdfs:subPropertyOf owl:topDataProperty .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Tipus
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Tipus
 :Tipus rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
        rdfs:domain :Visita .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-2#Edat
+<http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-2#Edat> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                                                               rdfs:domain :Visita ;
+                                                                               rdfs:range xsd:string .
 
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Author
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Author
 :Author rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Preferencia
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Preferencia
 :Preferencia rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Quadre
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Quadre
 :Quadre rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala
 :Sala rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Visita
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Visita
 :Visita rdf:type owl:Class .
 
 
@@ -241,10 +241,10 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Bernard_Tschumi
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Bernard_Tschumi
 :Bernard_Tschumi rdf:type owl:NamedIndividual ,
                           :Author ;
-                 :Pinta <http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park> ;
+                 :Pinta <http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park> ;
                  :AnyMort 1992 ;
                  :AnyNeixement 1944 ;
                  :ArtistID 7056 ;
@@ -252,39 +252,227 @@
                  :Nacionalitat "Georgian" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Otto
-:Otto rdf:type owl:NamedIndividual ,
-               :Author ;
-      :AnyMort 1918 ;
-      :AnyNeixement 1841 ;
-      :Genere "male" ;
-      :Nacionalitat "Austrian" ;
-      :Nom "Otto Wagner" .
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Otto_Wagner
+:Otto_Wagner rdf:type owl:NamedIndividual ,
+                      :Author ;
+             :AnyMort 1918 ;
+             :AnyNeixement 1841 ;
+             :Genere "male" ;
+             :Nacionalitat "Austrian" ;
+             :Nom "Otto Wagner" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_1
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_1
 :Sala_1 rdf:type owl:NamedIndividual ,
                  :Sala ;
         :Connecta_Amb :Sala_2 .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_2
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_2
 :Sala_2 rdf:type owl:NamedIndividual ,
                  :Sala ;
         :Connecta_Amb :Sala_1 .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park
-<http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park> rdf:type owl:NamedIndividual ,
-                                                                                                                                                              :Quadre ;
-                                                                                                                                                     :Es_De :Bernard_Tschumi ;
-                                                                                                                                                     :Esta_En :Sala_1 ;
-                                                                                                                                                     :Altura 35.6 ;
-                                                                                                                                                     :Amplada 45.7 ;
-                                                                                                                                                     :ArtistID 7056 ;
-                                                                                                                                                     :Data 1976 ;
-                                                                                                                                                     :Medi "Gelatin silver photograph" ;
-                                                                                                                                                     :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" .
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park
+<http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park> rdf:type owl:NamedIndividual ,
+                                                                                                                                                          :Quadre ;
+                                                                                                                                                 :Es_De :Bernard_Tschumi ;
+                                                                                                                                                 :Esta_En :Sala_1 ;
+                                                                                                                                                 :Altura 35.6 ;
+                                                                                                                                                 :Amplada 45.7 ;
+                                                                                                                                                 :ArtistID 7056 ;
+                                                                                                                                                 :Data 1976 ;
+                                                                                                                                                 :Medi "Gelatin silver photograph" ;
+                                                                                                                                                 :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" .
+
+
+###########################
+### Dades autogenerades ###
+###########################
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor6210
+:Autor6210 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 6210 ;
+	:Nom "Otto Wagner" ;
+	:Nacionalitat "Austrian" ;
+	:AnyNeixement 1841 ;
+	:AnyMort 1918 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7470
+:Autor7470 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 7470 ;
+	:Nom "Christian de Portzamparc" ;
+	:Nacionalitat "French" ;
+	:AnyNeixement 1944 ;
+	:AnyMort 1976 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7605
+:Autor7605 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 7605 ;
+	:Nom "Emil Hoppe" ;
+	:Nacionalitat "Austrian" ;
+	:AnyNeixement 1876 ;
+	:AnyMort 1957 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7056
+:Autor7056 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 7056 ;
+	:Nom "Bernard Tschumi" ;
+	:Nacionalitat "Georgian" ;
+	:AnyNeixement 1944 ;
+	:AnyMort 1992 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor2964
+:Autor2964 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 2964 ;
+	:Nom "Louis I. Kahn" ;
+	:Nacionalitat "American" ;
+	:AnyNeixement 1901 ;
+	:AnyMort 1974 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7607
+:Autor7607 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 7607 ;
+	:Nom "Marcel Kammerer" ;
+	:Nacionalitat "Austrian" ;
+	:AnyNeixement 1878 ;
+	:AnyMort 1969 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7608
+:Autor7608 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 7608 ;
+	:Nom "Otto Schönthal" ;
+	:Nacionalitat "Austrian" ;
+	:AnyNeixement 1878 ;
+	:AnyMort 1961 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor8100
+:Autor8100 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 8100 ;
+	:Nom "Hans Poelzig" ;
+	:Nacionalitat "German" ;
+	:AnyNeixement 1869 ;
+	:AnyMort 1936 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor47
+:Autor47 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:ArtistID 47 ;
+	:Nom "Raimund Abraham" ;
+	:Nacionalitat "American" ;
+	:AnyNeixement 1933 ;
+	:AnyMort 2010 ;
+	:Genere "male" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art1
+:Art1 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 6210 ;
+	:Nom "Ferdinandsbrücke Project, Vienna, Austria (Elevation, preliminary version)" ;
+	:Data 1896 ;
+	:Medi "Ink and cut-and-pasted painted pages on paper" ;
+	:Amplada 168.9 ;
+	:Altura 48.6 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art2
+:Art2 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 7470 ;
+	:Nom "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard" ;
+	:Data 1987 ;
+	:Medi "Paint and colored pencil on print" ;
+	:Amplada 29.8451 ;
+	:Altura 40.6401 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art3
+:Art3 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 7605 ;
+	:Nom "Villa near Vienna Project, Outside Vienna, Austria, Elevation" ;
+	:Data 1903 ;
+	:Medi "Graphite, pen, color pencil, ink, and gouache on tracing paper" ;
+	:Amplada 31.8 ;
+	:Altura 34.3 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art4
+:Art4 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 7056 ;
+	:Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park" ;
+	:Data 1980 ;
+	:Medi "Photographic reproduction with colored synthetic laminate" ;
+	:Amplada 50.8 ;
+	:Altura 50.8 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art5
+:Art5 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 7605 ;
+	:Nom "Villa, project, outside Vienna, Austria, Exterior perspective" ;
+	:Data 1903 ;
+	:Medi "Graphite, color pencil, ink, and gouache on tracing paper" ;
+	:Amplada 19.1 ;
+	:Altura 38.4 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art6
+:Art6 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 7056 ;
+	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
+	:Data 1976 ;
+	:Medi "Gelatin silver photograph" ;
+	:Amplada 45.7 ;
+	:Altura 35.6 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art7
+:Art7 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 7056 ;
+	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
+	:Data 1976 ;
+	:Medi "Gelatin silver photographs" ;
+	:Amplada 45.7 ;
+	:Altura 35.6 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art8
+:Art8 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 7056 ;
+	:Nom "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park" ;
+	:Data 1976 ;
+	:Medi "Gelatin silver photograph" ;
+	:Amplada 45.7 ;
+	:Altura 35.6 .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art9
+:Art9 rdf:type owl:NamedIndividual ,
+		:Quadre ;
+	:ArtistID 2964 ;
+	:Nom "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier" ;
+	:Data 1968 ;
+	:Medi "Charcoal and graphite on tracing paper" ;
+	:Amplada 167.6 ;
+	:Altura 113.0 .
+
+
 
 
 #################################################################
