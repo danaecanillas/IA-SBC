@@ -16,47 +16,87 @@
 ;;-------------------------------------------------------------------------------------------------------------
 
 
-;;; Inicio de la solucion implementada
+;;; Inici de la solucio implementada
 
-;;; ------------------------ Declaracion de modulos ----------------------------
+;;; ------------------------- Declaracio de moduls -----------------------------
 
-;;; Modulo principal de utilidades, indicamos que exportamos todo
+;;; Modulo principal
 (defmodule MAIN (export ?ALL))
 
-;;; Modulo de recopilacion de los datos del usuario
-(defmodule recopilacion-usuario
+;;; Modulo de recopilacio de los dades de l'usuari
+(defmodule recopilacio-usuari
 	(import MAIN ?ALL)
 	(export ?ALL)
 )
 
-(defmodule recopilacion-prefs
+(defmodule recopilacio-prefs
 	(import MAIN ?ALL)
-	(import recopilacion-usuario deftemplate ?ALL)
+	(import recopilacio-usuari deftemplate ?ALL)
 	(export ?ALL)
 )
 ;;; Modulo de filtrado y procesado del contenido adequado al usuario
-(defmodule procesado
+(defmodule processat
 	(import MAIN ?ALL)
-	(import recopilacion-usuario deftemplate ?ALL)
-	(import recopilacion-prefs deftemplate ?ALL)
+	(import recopilacio-usuari deftemplate ?ALL)
+	(import recopilacio-prefs deftemplate ?ALL)
 	(export ?ALL)
 )
 
 ;;; Modulo de generacion de soluciones
-(defmodule generacion
+(defmodule generacio
 	(import MAIN ?ALL)
 	(export ?ALL)
 )
 
 ;;; Modulo de presentacion de resultados
-(defmodule presentacion
+(defmodule presentacio
 	(import MAIN ?ALL)
 	(export ?ALL)
 )
-;;; ------------------------ Fin declaracion de modulos ------------------------
+;;; -------------------------- Fi: Declaracio de moduls ------------------------
 
-;;; ------------------------ Declaracion de messages ---------------------------
-; Imprimir contingut, recomanacio i dia
+;;; ------------------------ Declaracio de missatges ---------------------------
+
+(defmessage-handler MAIN::Quadre print ()
+		(format t "Nom: %s %n" ?self:Nom)
+	(printout t crlf)
+		(format t "Autor: %s" (send ?self:Autor get-Nom))
+	(printout t crlf)
+		(format t "Tematica del quadre: %s" (send ?self:Tematica_quadre get-Nom_tematica))
+	(printout t crlf)
+		(format t "Epoca del quadre: %s" (send ?self:Epoca_quadre get-Nom_epoca))
+	(printout t crlf)
+		(format t "Estil del quadre: %s" (send ?self:Estil_quadre get-Nom_estil))
+	(printout t crlf)
+    (format t "Dimensions: %s" ?self:Dimensions)
+	(printout t crlf)
+		(format t "Rellevancia: %s" ?self:Rellevancia)
+	(printout t crlf)
+    (format t "Sala: %d" ?self:Sala)
+	(printout t crlf)
+)
+
+(defmessage-handler MAIN::Recomanacio print ()
+	(printout t "-----------------------------------" crlf)
+	(printout t (send ?self:nom_quadre imprimir))
+	(printout t crlf)
+	(format t "Nivell de recomanacio: %d %n" ?self:score)
+	(printout t "Justificacio: " crlf)
+	(progn$ (?curr-just ?self:justificacions)
+		(printout t ?curr-just crlf)
+	)
+	(printout t crlf)
+	(printout t "-----------------------------------" crlf)
+)
+
+(defmessage-handler MAIN::Dia print ()
+	(printout t "============================================" crlf)
+	(bind $?recs ?self:recomanacions)
+	(progn$ (?curr-rec $?recs)
+		(printout t (send ?curr-rec print))
+	)
+	(printout t "============================================" crlf)
+)
 ;;; ------------------------ Fin declaracion de messages -----------------------
 
 ;;; ------------------------ Declaracion de templates --------------------------
