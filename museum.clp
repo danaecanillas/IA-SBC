@@ -24,21 +24,21 @@
 (defmodule MAIN (export ?ALL))
 
 ;;; Modulo de recopilacio de los dades de l'usuari
-(defmodule recopilacio-visita
+(defmodule dades-visita
 	(import MAIN ?ALL)
 	(export ?ALL)
 )
 
-(defmodule recopilacio-prefs
+(defmodule dades-preferencies
 	(import MAIN ?ALL)
-	(import recopilacio-visita deftemplate ?ALL)
+	(import dades-visita deftemplate ?ALL)
 	(export ?ALL)
 )
 ;;; Modulo de filtrado y procesado del contenido adequado al usuario
 (defmodule processat
 	(import MAIN ?ALL)
-	(import recopilacio-visita deftemplate ?ALL)
-	(import recopilacio-prefs deftemplate ?ALL)
+	(import dades-visita deftemplate ?ALL)
+	(import dades-preferencies deftemplate ?ALL)
 	(export ?ALL)
 )
 
@@ -210,7 +210,7 @@
             (bind ?linea (format nil "  %d. %s" ?var-index ?var))
             (printout t ?linea crlf)
     )
-    (format t "%s" "Indica els números separats per un espaci: ")
+    (format t "%s" "Indica els números separats per un espai: ")
     (bind ?resp (readline))
     (bind ?numeros (str-explode ?resp))
     (bind $?lista (create$ ))
@@ -255,6 +255,138 @@
 	(focus recopilacio-visita)
 )
 
-;;; Modulo recopilacion
+;;; Modul de recopilacio d'informació
 
+(defrule dades-visita::definicio_tipus "Tipus de Visita"
+	(not (Visita))
+	=>
+	(bind ?t (pregunta-numerica "Quanta gent sou? " 1 50))
+    (if (= ?t 1) then (bind ?tipus "Individu"))
+    (if (= ?t 2) then (bind ?tipus "Parella"))
+    (if (and(> ?t 2) (< ?d 11)) then (bind ?tipus "Grup petit"))
+    (if (> ?t 10) then (bind ?tipus "Grup gran"))
+	(assert (Visita (tipus ?tipus)))
+)
+
+(defrule dades-visita::definicio_dies "Dies de la visita"
+	?d <- (Visita (dies ?dies))
+    (test (< ?dies 0))
+		(test (> ?dies 15))
+	=>
+	(bind ?dies (pregunta-numerica "Quants dies durara la vostra visita?" 1 14))
+	(modify ?e (dies ?dies))
+)
+
+(defrule dades-visita::definicio_hores "Hores de la visita"
+	?h <- (Visita (hores ?hores))
+    (test (< ?hores 0))
+		(test (> ?hores 9))
+    =>
+    (bind ?hores (pregunta-numerica "Durant quantes hores diaries vol planificar la visita?" 1 8))
+	(modify ?h (hores ?hores))
+)
+
+(defrule dades-visita::definicio_coneixement "Grau de coneixement de l'art"
+    ?c <- (Visita (coneixement ?coneixement))
+    (test( < ?coneixement 0))
+	=>
+  (bind ?score 0)
+
+	(bind ?var (create$ "Si" "No"))
+	(bind ?resposta (pregunta-index "Acostuma a visitar museus?" ?var))
+		(if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
+
+  (bind ?var (create$ "Si" "No"))
+	(bind ?resposta (pregunta-index "Ha cursat estudis d'art?" ?var))
+		(if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
+
+  (bind ?var (create$ "Si" "No"))
+	(bind ?resposta (pregunta-index "Es dedica professionalment a l'art?" ?var))
+		(if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
+
+	(bind ?var (create$ "Una plaça de toros" "Un bombardeig"))
+	(bind ?resposta (pregunta-index "¿Qué representa el quadre de Guérnica de Pablo Picasso?" ?var))
+		(if (= ?respota 2) then (bind ?score (+ 1 ?score)))
+
+  (bind ?var (create$ "Impressionisme" "Surrealisme" "Dadaisme" "K-Pop"))
+	(bind ?resposta (pregunta-index "Claude Monet va ser un pintor francès i és un dels creadors d'aquest moviment artístic:" ?var))
+		(if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
+
+  (bind ?var (create$ "Risto Mejide" "Zaha Hadid" "Diego Velazquez" "Frank O. Gehry"))
+	(bind ?resposta (pregunta-index "El Museu Guggenheim Bilbao és un lloc dedicat a l'art contemporani dissenyat per:" ?var))
+		(if (= ?resposta 4) then (bind ?score (+ 1 ?score)))
+
+  (bind ?var (create$ "AC DC" "Alfa i omega"))
+	(bind ?resposta (pregunta-index "En l'art medieval ¿quines dues lletres s'associen a Crist?" ?var))
+		(if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
+
+	(bind ?var (create$ "Sandro Botticelli" "Papa Francesc" "Miguel Àngel" "Pinturillo"))
+	(bind ?resposta (pregunta-index "El Judici Final o El Judici Universal és un mural realitzat a la fresca que es troba a la Capella Sixtina i va ser pintat per:" ?var))
+		(if (= ?resposta 3) then (bind ?score (+ 1 ?score)))
+
+	(bind ?var (create$ "El Moulin de la Galette" "Razzmatazz" "El Parc de la Ciutadella"))
+	(bind ?resposta (pregunta-index "Cap a l'any 1900 els artistes bohemis es trobaven al barri de Montmartre (París). Quin era l'espai d'esbarjo que acostumaven a freqüentar?" ?var))
+		(if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
+
+	(bind ?var (create$ "Ratafia" "Absenta" "carajillo" "Vodka Naranja"))
+	(bind ?resposta (pregunta-index "Moltes obres d'inicis de segle XX mostren personatges amb la mirada perduda i en estat d'embriaguesa. Quina beguda provocava aquests efectes?" ?var))
+		(if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
+
+  (modify ?c (coneixement ?score))
+)
+
+(defrule dades-visita::definicio_edat "Edat mitjana de la Visita"
+	?e <- (Visita (edat ?edat))
+	(test (< ?edat 0))
+	(test (> ?edat 121))
+	=>
+	(bind ?edat (pregunta-numerica "Indiqui l'edat mitjana de la visita " 1 120))
+	(modify ?e (edat ?edat))
+)
+
+(defrule dades-visita::definicio_nacionalitat "Nacionalitat de la Visita"
+	(not (Visita))
+	=>
+	(bind ?nacionalitat (pregunta-general "Quina es la vostra nacionalitat?" ))
+	(modify ?n (nacionalitat ?nacionalitat))
+)
+
+
+(defrule dades-visita::passar-a-preferencies "Passem al modul de recopilacio de preferencies"
+    (declare (salience 10))
+				?g <- (Visita (tipus ~"indefinit")(edat ?edat) (dies ?dies) (hores ?hores) (coneixement ?coneixement) (nacionalitat ~"indefinit"))
+    (test (> ?edat -1))
+    (test (> ?dies -1))
+    (test (> ?hores -1))
+    (test (> ?coneixement -1))
+		=>
+		(focus preferencies-visita)
+)
+
+(deffacts dades-preferencies::fets-inicials "Establim fets per poder recopilar informacio"
+    (autors_preferits ask)
+    (tematiques_preferides ask)
+    (estils_preferits ask)
+		(epoques_preferides ask)
+    (preferencies_visita )
+)
+
+;; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+;; Definir:
+;; - autors_preferits
+;; - tematiques_preferides
+;; - estils_preferits
+;; - epoques_preferides
+;; !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+(defrule dades-preferencies::passar_processat "Passem al modul de processament de les dades"
+	(declare (salience -1))
+	?h1 <- (autors_preferits TRUE|FALSE)
+	?h2 <- (tematiques_preferides TRUE|FALSE)
+	?h3 <- (estils_preferits TRUE|FALSE)
+	?h4 <- (epoques_preferides TRUE|FALSE)
+	=>
+	(focus processat)
+    (printout t "Processant les dades obtingudes..." crlf)
+)
 ;;; ------------------- Fin declaracion de reglas ------------------------------
