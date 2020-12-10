@@ -138,7 +138,9 @@
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil
 :Estil rdf:type owl:DatatypeProperty ;
        rdfs:subPropertyOf owl:topDataProperty ;
-       rdfs:domain :Preferencia ;
+       rdf:type owl:FunctionalProperty ;
+       rdfs:domain :Preferencia ,
+                   :Quadre ;
        rdfs:range xsd:string .
 
 
@@ -242,134 +244,139 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park
-<http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park> rdf:type owl:NamedIndividual ,
-                                                                                                                                                          :Quadre ;
-                                                                                                                                                 :Es_De :Bernard_Tschumi ;
-                                                                                                                                                 :Esta_En :Sala_1 ;
-                                                                                                                                                 :Altura 35.6 ;
-                                                                                                                                                 :Amplada 45.7 ;
-                                                                                                                                                 :ArtistID 7056 ;
-                                                                                                                                                 :Data 1976 ;
-                                                                                                                                                 :Medi "Gelatin silver photograph" ;
-                                                                                                                                                 :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" .
-
-
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art1
 :Art1 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor6210 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_10 ;
       :Altura 48.6 ;
       :Amplada 168.9 ;
       :ArtistID 6210 ;
       :Data 1896 ;
+      :Estil "Clasicismo" ;
       :Medi "Ink and cut-and-pasted painted pages on paper" ;
-      :Nom "Ferdinandsbrücke Project, Vienna, Austria (Elevation, preliminary version)" .
+      :Nom "Ferdinandsbrücke Project, Vienna, Austria (Elevation, preliminary version)" ;
+      :Rellevancia 4 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art2
 :Art2 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor7470 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_3 ;
       :Altura 40.6401 ;
       :Amplada 29.8451 ;
       :ArtistID 7470 ;
       :Data 1987 ;
+      :Estil "Abstractismo" ;
       :Medi "Paint and colored pencil on print" ;
-      :Nom "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard" .
+      :Nom "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard" ;
+      :Rellevancia 2 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art3
 :Art3 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor7605 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_6 ;
       :Altura 34.3 ;
       :Amplada 31.8 ;
       :ArtistID 7605 ;
       :Data 1903 ;
+      :Estil "Expresionismo" ;
       :Medi "Graphite, pen, color pencil, ink, and gouache on tracing paper" ;
-      :Nom "Villa near Vienna Project, Outside Vienna, Austria, Elevation" .
+      :Nom "Villa near Vienna Project, Outside Vienna, Austria, Elevation" ;
+      :Rellevancia 2 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art4
 :Art4 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor7056 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_9 ;
       :Altura 50.8 ;
       :Amplada 50.8 ;
       :ArtistID 7056 ;
       :Data 1980 ;
+      :Estil "Expresionismo" ;
       :Medi "Photographic reproduction with colored synthetic laminate" ;
-      :Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park" .
+      :Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park" ;
+      :Rellevancia 2 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art5
 :Art5 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor7605 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_6 ;
       :Altura 38.4 ;
       :Amplada 19.1 ;
       :ArtistID 7605 ;
       :Data 1903 ;
+      :Estil "Cubismo" ;
       :Medi "Graphite, color pencil, ink, and gouache on tracing paper" ;
-      :Nom "Villa, project, outside Vienna, Austria, Exterior perspective" .
+      :Nom "Villa, project, outside Vienna, Austria, Exterior perspective" ;
+      :Rellevancia 3 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art6
 :Art6 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor7056 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_9 ;
       :Altura 35.6 ;
       :Amplada 45.7 ;
       :ArtistID 7056 ;
       :Data 1976 ;
+      :Estil "Expresionismo" ;
       :Medi "Gelatin silver photograph" ;
-      :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" .
+      :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
+      :Rellevancia 4 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art7
 :Art7 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor7056 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_9 ;
       :Altura 35.6 ;
       :Amplada 45.7 ;
       :ArtistID 7056 ;
       :Data 1976 ;
+      :Estil "Expresionismo" ;
       :Medi "Gelatin silver photographs" ;
-      :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" .
+      :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
+      :Rellevancia 2 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art8
 :Art8 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor7056 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_9 ;
       :Altura 35.6 ;
       :Amplada 45.7 ;
       :ArtistID 7056 ;
       :Data 1976 ;
+      :Estil "Arte Naif" ;
       :Medi "Gelatin silver photograph" ;
-      :Nom "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park" .
+      :Nom "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park" ;
+      :Rellevancia 2 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art9
 :Art9 rdf:type owl:NamedIndividual ,
                :Quadre ;
       :Es_De :Autor2964 ;
-      :Esta_En :Sala_1 ;
+      :Esta_En :Sala_5 ;
       :Altura 113.0 ;
       :Amplada 167.6 ;
       :ArtistID 2964 ;
       :Data 1968 ;
+      :Estil "Romanticismo" ;
       :Medi "Charcoal and graphite on tracing paper" ;
-      :Nom "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier" .
+      :Nom "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier" ;
+      :Rellevancia 4 .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor2964
@@ -480,41 +487,80 @@
            :Nom "Hans Poelzig" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Bernard_Tschumi
-:Bernard_Tschumi rdf:type owl:NamedIndividual ,
-                          :Author ;
-                 :Pinta <http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#The_Manhattan_Transcripts_Project,_New_York,_New_York,_Episode_1:_The_Park> ,
-                        :Art1 ;
-                 :AnyMort 1992 ;
-                 :AnyNeixement 1944 ;
-                 :ArtistID 7056 ;
-                 :Genere "male" ;
-                 :Nacionalitat "Georgian" ;
-                 :Nom "Bernard Tschumi" .
-
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Otto_Wagner
-:Otto_Wagner rdf:type owl:NamedIndividual ,
-                      :Author ;
-             :AnyMort 1918 ;
-             :AnyNeixement 1841 ;
-             :Genere "male" ;
-             :Nacionalitat "Austrian" ;
-             :Nom "Otto Wagner" .
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_0
+:Sala_0 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Connecta_Amb :Sala_1 ,
+                      :Sala_2 ;
+        :Nom "Entrada" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_1
 :Sala_1 rdf:type owl:NamedIndividual ,
                  :Sala ;
-        :Connecta_Amb :Sala_2 ;
+        :Connecta_Amb :Sala_0 ,
+                      :Sala_4 ;
         :Nom "Sala_1" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_10
+:Sala_10 rdf:type owl:NamedIndividual ,
+                  :Sala ;
+         :Nom "10" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_2
 :Sala_2 rdf:type owl:NamedIndividual ,
                  :Sala ;
-        :Connecta_Amb :Sala_1 ;
+        :Connecta_Amb :Sala_0 ,
+                      :Sala_3 ,
+                      :Sala_4 ;
         :Nom "Sala_2" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_3
+:Sala_3 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Connecta_Amb :Sala_2 ;
+        :Nom "Sala_3" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_4
+:Sala_4 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Connecta_Amb :Sala_1 ,
+                      :Sala_2 ;
+        :Nom "Sortida" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_5
+:Sala_5 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Nom "5" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_6
+:Sala_6 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Nom "6" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_7
+:Sala_7 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Nom "7" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_8
+:Sala_8 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Nom "8" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_9
+:Sala_9 rdf:type owl:NamedIndividual ,
+                 :Sala ;
+        :Nom "9" .
 
 
 #################################################################
