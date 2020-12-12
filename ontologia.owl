@@ -23,6 +23,7 @@
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Es_De
 :Es_De rdf:type owl:ObjectProperty ;
        rdfs:subPropertyOf owl:topObjectProperty ;
+       rdf:type owl:FunctionalProperty ;
        rdfs:domain :Quadre ;
        rdfs:range :Author ;
        rdfs:comment "Un quadre esta pintat per un Autor" .
@@ -31,9 +32,17 @@
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Esta_En
 :Esta_En rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:FunctionalProperty ;
          rdfs:domain :Quadre ;
          rdfs:range :Sala ;
          rdfs:comment "Un quadre esta situat en una sala dins del museu" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil_Quadre
+:Estil_Quadre rdf:type owl:ObjectProperty ,
+                       owl:FunctionalProperty ;
+              rdfs:domain :Quadre ;
+              rdfs:range :Estil .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Pinta
@@ -42,6 +51,18 @@
        rdfs:domain :Author ;
        rdfs:range :Quadre ;
        rdfs:comment "Un autor pinta uns quadres" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Pintors_Estil
+:Pintors_Estil rdf:type owl:ObjectProperty ;
+               rdfs:domain :Estil ;
+               rdfs:range :Author .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Quadres_Estil
+:Quadres_Estil rdf:type owl:ObjectProperty ;
+               rdfs:domain :Estil ;
+               rdfs:range :Quadre .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Te
@@ -186,6 +207,7 @@
      rdfs:subPropertyOf owl:topDataProperty ;
      rdf:type owl:FunctionalProperty ;
      rdfs:domain :Author ,
+                 :Estil ,
                  :Quadre ,
                  :Sala ;
      rdfs:range xsd:string .
@@ -224,6 +246,10 @@
 :Author rdf:type owl:Class .
 
 
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil
+:Estil rdf:type owl:Class .
+
+
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Preferencia
 :Preferencia rdf:type owl:Class .
 
@@ -249,6 +275,7 @@
                :Quadre ;
       :Es_De :Autor6210 ;
       :Esta_En :Sala_10 ;
+      :Estil_Quadre :Estil1 ;
       :Altura 48.6 ;
       :Amplada 168.9 ;
       :ArtistID 6210 ;
@@ -264,6 +291,7 @@
                :Quadre ;
       :Es_De :Autor7470 ;
       :Esta_En :Sala_3 ;
+      :Estil_Quadre :Estil2 ;
       :Altura 40.6401 ;
       :Amplada 29.8451 ;
       :ArtistID 7470 ;
@@ -279,6 +307,7 @@
                :Quadre ;
       :Es_De :Autor7605 ;
       :Esta_En :Sala_6 ;
+      :Estil_Quadre :Estil3 ;
       :Altura 34.3 ;
       :Amplada 31.8 ;
       :ArtistID 7605 ;
@@ -294,6 +323,7 @@
                :Quadre ;
       :Es_De :Autor7056 ;
       :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil3 ;
       :Altura 50.8 ;
       :Amplada 50.8 ;
       :ArtistID 7056 ;
@@ -309,6 +339,7 @@
                :Quadre ;
       :Es_De :Autor7605 ;
       :Esta_En :Sala_6 ;
+      :Estil_Quadre :Estil4 ;
       :Altura 38.4 ;
       :Amplada 19.1 ;
       :ArtistID 7605 ;
@@ -324,6 +355,7 @@
                :Quadre ;
       :Es_De :Autor7056 ;
       :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil3 ;
       :Altura 35.6 ;
       :Amplada 45.7 ;
       :ArtistID 7056 ;
@@ -339,6 +371,7 @@
                :Quadre ;
       :Es_De :Autor7056 ;
       :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil3 ;
       :Altura 35.6 ;
       :Amplada 45.7 ;
       :ArtistID 7056 ;
@@ -354,6 +387,7 @@
                :Quadre ;
       :Es_De :Autor7056 ;
       :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil5 ;
       :Altura 35.6 ;
       :Amplada 45.7 ;
       :ArtistID 7056 ;
@@ -369,6 +403,7 @@
                :Quadre ;
       :Es_De :Autor2964 ;
       :Esta_En :Sala_5 ;
+      :Estil_Quadre :Estil6 ;
       :Altura 113.0 ;
       :Amplada 167.6 ;
       :ArtistID 2964 ;
@@ -485,6 +520,58 @@
            :Genere "male" ;
            :Nacionalitat "German" ;
            :Nom "Hans Poelzig" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil1
+:Estil1 rdf:type owl:NamedIndividual ,
+                 :Estil ;
+        :Pintors_Estil :Autor6210 ;
+        :Quadres_Estil :Art1 ;
+        :Nom "Clasicismo" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil2
+:Estil2 rdf:type owl:NamedIndividual ,
+                 :Estil ;
+        :Pintors_Estil :Autor7470 ;
+        :Quadres_Estil :Art2 ;
+        :Nom "Abstractismo" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil3
+:Estil3 rdf:type owl:NamedIndividual ,
+                 :Estil ;
+        :Pintors_Estil :Autor7056 ,
+                       :Autor7605 ;
+        :Quadres_Estil :Art3 ,
+                       :Art4 ,
+                       :Art6 ,
+                       :Art7 ;
+        :Nom "Expresionismo" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil4
+:Estil4 rdf:type owl:NamedIndividual ,
+                 :Estil ;
+        :Pintors_Estil :Autor7605 ;
+        :Quadres_Estil :Art5 ;
+        :Nom "Cubismo" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil5
+:Estil5 rdf:type owl:NamedIndividual ,
+                 :Estil ;
+        :Pintors_Estil :Autor7056 ;
+        :Quadres_Estil :Art8 ;
+        :Nom "Arte Naif" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil6
+:Estil6 rdf:type owl:NamedIndividual ,
+                 :Estil ;
+        :Pintors_Estil :Autor2964 ;
+        :Quadres_Estil :Art9 ;
+        :Nom "Romanticismo" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Sala_0

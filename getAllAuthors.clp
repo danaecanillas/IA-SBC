@@ -2,100 +2,16 @@
 ;;                    ONTOLOGIA
 ;;-------------------------------------------------------------------------------------------------------------
 
-(defclass Visita
-    (is-a USER)
-    (role concrete)
-    (pattern-match reactive)
-    (multislot Te
-        (type INSTANCE)
-        (create-accessor read-write))
-    (multislot Hores
-        (type FLOAT)
-        (create-accessor read-write))
-    (multislot Tipus
-        (type SYMBOL)
-        (create-accessor read-write))
-    (single-slot Nacionalitat
-        (type STRING)
-        (create-accessor read-write))
-    (multislot Edat
-        (type STRING)
-        (create-accessor read-write))
-    (single-slot Dies
-        (type INTEGER)
-        (create-accessor read-write))
-)
-
-(defclass Sala
-    (is-a USER)
-    (role concrete)
-    (pattern-match reactive)
-    (single-slot Nom
-        (type STRING)
-        (create-accessor read-write))
-    ;;; Una Sala pot estar connectada amb una altra sala
-    (multislot Connecta_Amb
-        (type INSTANCE)
-        (create-accessor read-write))
-)
-
-(defclass Quadre
-    (is-a USER)
-    (role concrete)
-    (pattern-match reactive)
-    (single-slot Estil
-        (type STRING)
-        (create-accessor read-write))
-    (single-slot Amplada
-        (type FLOAT)
-        (create-accessor read-write))
-    (single-slot Data
-        (type SYMBOL)
-        (create-accessor read-write))
-    ;;; Un quadre esta pintat per un Autor
-    (multislot Es_De
-        (type INSTANCE)
-        (create-accessor read-write))
-    (single-slot Altura
-        (type FLOAT)
-        (create-accessor read-write))
-    (single-slot Rellevancia
-        (type INTEGER)
-        (create-accessor read-write))
-    (single-slot ArtistID
-        (type INTEGER)
-        (create-accessor read-write))
-    ;;; Un quadre esta situat en una sala dins del museu
-    (multislot Esta_En
-        (type INSTANCE)
-        (create-accessor read-write))
-    (single-slot Nom
-        (type STRING)
-        (create-accessor read-write))
-    (single-slot Medi
-        (type STRING)
-        (create-accessor read-write))
-)
-
-(defclass Preferencia
-    (is-a USER)
-    (role concrete)
-    (pattern-match reactive)
-    (multislot Estil
-        (type STRING)
-        (create-accessor read-write))
-    (multislot Autors
-        (type STRING)
-        (create-accessor read-write))
-    (single-slot Rellevancia
-        (type INTEGER)
-        (create-accessor read-write))
-)
-
 (defclass Author
     (is-a USER)
     (role concrete)
     (pattern-match reactive)
+    (single-slot AnyNeixement
+        (type INTEGER)
+        (create-accessor read-write))
+    (single-slot Genere
+        (type STRING)
+        (create-accessor read-write))
     (single-slot AnyMort
         (type INTEGER)
         (create-accessor read-write))
@@ -105,260 +21,407 @@
     (single-slot Nacionalitat
         (type STRING)
         (create-accessor read-write))
-    (single-slot Genere
-        (type STRING)
-        (create-accessor read-write))
     ;;; Un autor pinta uns quadres
     (multislot Pinta
         (type INSTANCE)
         (create-accessor read-write))
-    (single-slot AnyNeixement
+)
+
+(defclass Preferencia
+    (is-a USER)
+    (role concrete)
+    (pattern-match reactive)
+    (multislot Autors
+        (type STRING)
+        (create-accessor read-write))
+    (single-slot Rellevancia
         (type INTEGER)
+        (create-accessor read-write))
+    (single-slot Estil
+        (type INSTANCE)
+        (create-accessor read-write))
+)
+
+(defclass Visita
+    (is-a USER)
+    (role concrete)
+    (pattern-match reactive)
+    (multislot Te
+        (type INSTANCE)
+        (create-accessor read-write))
+    (single-slot Dies
+        (type INTEGER)
+        (create-accessor read-write))
+    (multislot Edat
+        (type STRING)
+        (create-accessor read-write))
+    (multislot Tipus
+        (type SYMBOL)
+        (create-accessor read-write))
+    (multislot Hores
+        (type FLOAT)
+        (create-accessor read-write))
+    (single-slot Nacionalitat
+        (type STRING)
+        (create-accessor read-write))
+)
+
+(defclass Sala
+    (is-a USER)
+    (role concrete)
+    (pattern-match reactive)
+    ;;; Una Sala pot estar connectada amb una altra sala
+    (multislot Connecta_Amb
+        (type INSTANCE)
+        (create-accessor read-write))
+    (single-slot Nom
+        (type STRING)
+        (create-accessor read-write))
+)
+
+(defclass Quadre
+    (is-a USER)
+    (role concrete)
+    (pattern-match reactive)
+    (single-slot Amplada
+        (type FLOAT)
+        (create-accessor read-write))
+    (single-slot Estil
+        (type INSTANCE)
+        (create-accessor read-write))
+    (single-slot Altura
+        (type FLOAT)
+        (create-accessor read-write))
+    (single-slot Estil_Quadre
+        (type SYMBOL)
+        (create-accessor read-write))
+    (single-slot ArtistID
+        (type INTEGER)
+        (create-accessor read-write))
+    (single-slot Data
+        (type SYMBOL)
+        (create-accessor read-write))
+    (single-slot Medi
+        (type STRING)
+        (create-accessor read-write))
+    (single-slot Nom
+        (type STRING)
+        (create-accessor read-write))
+    ;;; Un quadre esta situat en una sala dins del museu
+    (single-slot Esta_En
+        (type SYMBOL)
+        (create-accessor read-write))
+    (single-slot Rellevancia
+        (type INTEGER)
+        (create-accessor read-write))
+    ;;; Un quadre esta pintat per un Autor
+    (single-slot Es_De
+        (type INSTANCE)
+        (create-accessor read-write))
+)
+
+(defclass Estil
+    (is-a USER)
+    (role concrete)
+    (pattern-match reactive)
+    (multislot Pintors_Estil
+        (type INSTANCE)
+        (create-accessor read-write))
+    (multislot Quadres_Estil
+        (type INSTANCE)
+        (create-accessor read-write))
+    (single-slot Nom
+        (type STRING)
         (create-accessor read-write))
 )
 
 (definstances instances
-    ([Art9] of Quadre
-         (Estil  "Romanticismo")
-         (Amplada  "167.6")
-         (Data  1968)
-         (Es_De  [Autor2964])
-         (Altura  "113.0")
-         (Rellevancia  4)
-         (ArtistID  2964)
-         (Esta_En  [Sala_5])
-         (Nom  "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier")
-         (Medi  "Charcoal and graphite on tracing paper")
-    )
-
-    ([Autor7608] of Author
-         (AnyMort  1961)
-         (Nom  "Otto Sch�nthal")
-         (Nacionalitat  "Austrian")
-         (Genere  "male")
-         (AnyNeixement  1878)
-    )
-
-    ([Art6] of Quadre
-         (Estil  "Expresionismo")
-         (Amplada  "45.7")
-         (Data  1976)
-         (Es_De  [Autor7056])
-         (Altura  "35.6")
-         (Rellevancia  4)
-         (ArtistID  7056)
-         (Esta_En  [Sala_9])
-         (Nom  "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park")
-         (Medi  "Gelatin silver photograph")
-    )
-
-    ([Art4] of Quadre
-         (Estil  "Expresionismo")
-         (Amplada  "50.8")
-         (Data  1980)
-         (Es_De  [Autor7056])
-         (Altura  "50.8")
-         (Rellevancia  2)
-         (ArtistID  7056)
-         (Esta_En  [Sala_9])
-         (Nom  "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park")
-         (Medi  "Photographic reproduction with colored synthetic laminate")
-    )
-
-    ([Sala_2] of Sala
-         (Nom  "Sala_2")
-         (Connecta_Amb  [Sala_0] [Sala_3] [Sala_4])
-    )
-
-    ([Autor7056] of Author
-         (AnyMort  1992)
-         (Nom  "Bernard Tschumi")
-         (Nacionalitat  "Georgian")
-         (Genere  "male")
-         (Pinta  [Art6] [Art4] [Art7] [Art8])
-         (AnyNeixement  1944)
-    )
-
-    ([Sala_8] of Sala
-         (Nom  "8")
-    )
-
-    ([Art5] of Quadre
-         (Estil  "Cubismo")
-         (Amplada  "19.1")
-         (Data  1903)
-         (Es_De  [Autor7605])
-         (Altura  "38.4")
-         (Rellevancia  3)
-         (ArtistID  7605)
-         (Esta_En  [Sala_6])
-         (Nom  "Villa, project, outside Vienna, Austria, Exterior perspective")
-         (Medi  "Graphite, color pencil, ink, and gouache on tracing paper")
-    )
-
-    ([Autor6210] of Author
-         (AnyMort  1918)
-         (Nom  "Otto Wagner")
-         (Nacionalitat  "Austrian")
-         (Genere  "male")
-         (Pinta  [Art1])
-         (AnyNeixement  1841)
-    )
-
-    ([Art3] of Quadre
-         (Estil  "Expresionismo")
-         (Amplada  "31.8")
-         (Data  1903)
-         (Es_De  [Autor7605])
-         (Altura  "34.3")
-         (Rellevancia  2)
-         (ArtistID  7605)
-         (Esta_En  [Sala_6])
-         (Nom  "Villa near Vienna Project, Outside Vienna, Austria, Elevation")
-         (Medi  "Graphite, pen, color pencil, ink, and gouache on tracing paper")
-    )
-
-    ([Art8] of Quadre
-         (Estil  "Arte Naif")
-         (Amplada  "45.7")
-         (Data  1976)
-         (Es_De  [Autor7056])
-         (Altura  "35.6")
-         (Rellevancia  2)
-         (ArtistID  7056)
-         (Esta_En  [Sala_9])
-         (Nom  "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park")
-         (Medi  "Gelatin silver photograph")
-    )
-
-    ([Art7] of Quadre
-         (Estil  "Expresionismo")
-         (Amplada  "45.7")
-         (Data  1976)
-         (Es_De  [Autor7056])
-         (Altura  "35.6")
-         (Rellevancia  2)
-         (ArtistID  7056)
-         (Esta_En  [Sala_9])
-         (Nom  "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park")
-         (Medi  "Gelatin silver photographs")
-    )
-
-    ([Sala_1] of Sala
-         (Nom  "Sala_1")
-         (Connecta_Amb  [Sala_0] [Sala_4])
-    )
-
-    ([Sala_0] of Sala
-         (Nom  "Entrada")
-         (Connecta_Amb  [Sala_2] [Sala_1])
-    )
-
-    ([Autor2964] of Author
-         (AnyMort  1974)
-         (Nom  "Louis I. Kahn")
-         (Nacionalitat  "American")
-         (Genere  "male")
-         (Pinta  [Art9])
-         (AnyNeixement  1901)
-    )
-
-    ([Sala_3] of Sala
-         (Nom  "Sala_3")
-         (Connecta_Amb  [Sala_2])
-    )
-
-    ([Autor47] of Author
-         (AnyMort  2010)
-         (Nom  "Raimund Abraham")
-         (Nacionalitat  "American")
-         (Genere  "female")
-         (AnyNeixement  1933)
-    )
-
-    ([Sala_4] of Sala
-         (Nom  "Sortida")
-         (Connecta_Amb  [Sala_2] [Sala_1])
-    )
-
-    ([Art1] of Quadre
-         (Estil  "Clasicismo")
-         (Amplada  "168.9")
-         (Data  1896)
-         (Es_De  [Autor6210])
-         (Altura  "48.6")
-         (Rellevancia  4)
-         (ArtistID  6210)
-         (Esta_En  [Sala_10])
-         (Nom  "Ferdinandsbr�cke Project, Vienna, Austria (Elevation, preliminary version)")
-         (Medi  "Ink and cut-and-pasted painted pages on paper")
-    )
-
     ([Autor7605] of Author
+         (AnyNeixement  1876)
+         (Genere  "male")
          (AnyMort  1957)
          (Nom  "Emil Hoppe")
          (Nacionalitat  "Austrian")
-         (Genere  "male")
          (Pinta  [Art3] [Art5])
-         (AnyNeixement  1876)
     )
 
-    ([Sala_10] of Sala
-         (Nom  "10")
-    )
-
-    ([Art2] of Quadre
-         (Estil  "Abstractismo")
-         (Amplada  "29.8451")
-         (Data  1987)
-         (Es_De  [Autor7470])
-         (Altura  "40.6401")
+    ([Art3] of Quadre
+         (Amplada  "31.8")
+         (Estil  "Expresionismo")
+         (Altura  "34.3")
+         (Estil_Quadre  [Estil3])
+         (ArtistID  7605)
+         (Data  1903)
+         (Medi  "Graphite, pen, color pencil, ink, and gouache on tracing paper")
+         (Nom  "Villa near Vienna Project, Outside Vienna, Austria, Elevation")
+         (Esta_En  [Sala_6])
          (Rellevancia  2)
-         (ArtistID  7470)
-         (Esta_En  [Sala_3])
-         (Nom  "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard")
-         (Medi  "Paint and colored pencil on print")
+         (Es_De  [Autor7605])
     )
 
-    ([Sala_7] of Sala
-         (Nom  "7")
-    )
-
-    ([Autor8100] of Author
-         (AnyMort  1936)
-         (Nom  "Hans Poelzig")
-         (Nacionalitat  "German")
+    ([Autor7607] of Author
+         (AnyNeixement  1878)
          (Genere  "male")
-         (AnyNeixement  1869)
+         (AnyMort  1969)
+         (Nom  "Marcel Kammerer")
+         (Nacionalitat  "Austrian")
     )
 
-    ([Autor7470] of Author
-         (AnyMort  1976)
-         (Nom  "Christian de Portzamparc")
-         (Nacionalitat  "French")
-         (Genere  "male")
-         (Pinta  [Art2])
-         (AnyNeixement  1944)
+    ([Art5] of Quadre
+         (Amplada  "19.1")
+         (Estil  "Cubismo")
+         (Altura  "38.4")
+         (Estil_Quadre  [Estil4])
+         (ArtistID  7605)
+         (Data  1903)
+         (Medi  "Graphite, color pencil, ink, and gouache on tracing paper")
+         (Nom  "Villa, project, outside Vienna, Austria, Exterior perspective")
+         (Esta_En  [Sala_6])
+         (Rellevancia  3)
+         (Es_De  [Autor7605])
+    )
+
+    ([Estil6] of Estil
+         (Pintors_Estil  [Autor2964])
+         (Quadres_Estil  [Art9])
+         (Nom  "Romanticismo")
+    )
+
+    ([Sala_1] of Sala
+         (Connecta_Amb  [Sala_4] [Sala_0])
+         (Nom  "Sala_1")
+    )
+
+    ([Estil1] of Estil
+         (Pintors_Estil  [Autor6210])
+         (Quadres_Estil  [Art1])
+         (Nom  "Clasicismo")
+    )
+
+    ([Estil2] of Estil
+         (Pintors_Estil  [Autor7470])
+         (Quadres_Estil  [Art2])
+         (Nom  "Abstractismo")
     )
 
     ([Sala_9] of Sala
          (Nom  "9")
     )
 
-    ([Autor7607] of Author
-         (AnyMort  1969)
-         (Nom  "Marcel Kammerer")
-         (Nacionalitat  "Austrian")
-         (Genere  "male")
-         (AnyNeixement  1878)
-    )
-
     ([Sala_6] of Sala
          (Nom  "6")
     )
 
+    ([Sala_7] of Sala
+         (Nom  "7")
+    )
+
+    ([Estil5] of Estil
+         (Pintors_Estil  [Autor7056])
+         (Quadres_Estil  [Art8])
+         (Nom  "Arte Naif")
+    )
+
+    ([Art7] of Quadre
+         (Amplada  "45.7")
+         (Estil  "Expresionismo")
+         (Altura  "35.6")
+         (Estil_Quadre  [Estil3])
+         (ArtistID  7056)
+         (Data  1976)
+         (Medi  "Gelatin silver photographs")
+         (Nom  "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park")
+         (Esta_En  [Sala_9])
+         (Rellevancia  2)
+         (Es_De  [Autor7056])
+    )
+
+    ([Sala_10] of Sala
+         (Nom  "10")
+    )
+
+    ([Autor6210] of Author
+         (AnyNeixement  1841)
+         (Genere  "male")
+         (AnyMort  1918)
+         (Nom  "Otto Wagner")
+         (Nacionalitat  "Austrian")
+         (Pinta  [Art1])
+    )
+
+    ([Autor7470] of Author
+         (AnyNeixement  1944)
+         (Genere  "male")
+         (AnyMort  1976)
+         (Nom  "Christian de Portzamparc")
+         (Nacionalitat  "French")
+         (Pinta  [Art2])
+    )
+
+    ([Sala_0] of Sala
+         (Connecta_Amb  [Sala_1] [Sala_2])
+         (Nom  "Entrada")
+    )
+
+    ([Autor7056] of Author
+         (AnyNeixement  1944)
+         (Genere  "male")
+         (AnyMort  1992)
+         (Nom  "Bernard Tschumi")
+         (Nacionalitat  "Georgian")
+         (Pinta  [Art6] [Art4] [Art7] [Art8])
+    )
+
+    ([Autor47] of Author
+         (AnyNeixement  1933)
+         (Genere  "male")
+         (AnyMort  2010)
+         (Nom  "Raimund Abraham")
+         (Nacionalitat  "American")
+    )
+
+    ([Art2] of Quadre
+         (Amplada  "29.8451")
+         (Estil  "Abstractismo")
+         (Altura  "40.6401")
+         (Estil_Quadre  [Estil2])
+         (ArtistID  7470)
+         (Data  1987)
+         (Medi  "Paint and colored pencil on print")
+         (Nom  "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard")
+         (Esta_En  [Sala_3])
+         (Rellevancia  2)
+         (Es_De  [Autor7470])
+    )
+
+    ([Art1] of Quadre
+         (Amplada  "168.9")
+         (Estil  "Clasicismo")
+         (Altura  "48.6")
+         (Estil_Quadre  [Estil1])
+         (ArtistID  6210)
+         (Data  1896)
+         (Medi  "Ink and cut-and-pasted painted pages on paper")
+         (Nom  "Ferdinandsbr�cke Project, Vienna, Austria (Elevation, preliminary version)")
+         (Esta_En  [Sala_10])
+         (Rellevancia  4)
+         (Es_De  [Autor6210])
+    )
+
+    ([Art8] of Quadre
+         (Amplada  "45.7")
+         (Estil  "Arte Naif")
+         (Altura  "35.6")
+         (Estil_Quadre  [Estil5])
+         (ArtistID  7056)
+         (Data  1976)
+         (Medi  "Gelatin silver photograph")
+         (Nom  "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park")
+         (Esta_En  [Sala_9])
+         (Rellevancia  2)
+         (Es_De  [Autor7056])
+    )
+
+    ([Sala_8] of Sala
+         (Nom  "8")
+    )
+
+    ([Autor2964] of Author
+         (AnyNeixement  1901)
+         (Genere  "male")
+         (AnyMort  1974)
+         (Nom  "Louis I. Kahn")
+         (Nacionalitat  "American")
+         (Pinta  [Art9])
+    )
+
+    ([Autor8100] of Author
+         (AnyNeixement  1869)
+         (Genere  "male")
+         (AnyMort  1936)
+         (Nom  "Hans Poelzig")
+         (Nacionalitat  "German")
+    )
+
+    ([Sala_2] of Sala
+         (Connecta_Amb  [Sala_0] [Sala_4] [Sala_3])
+         (Nom  "Sala_2")
+    )
+
+    ([Sala_3] of Sala
+         (Connecta_Amb  [Sala_2])
+         (Nom  "Sala_3")
+    )
+
+    ([Art6] of Quadre
+         (Amplada  "45.7")
+         (Estil  "Expresionismo")
+         (Altura  "35.6")
+         (Estil_Quadre  [Estil3])
+         (ArtistID  7056)
+         (Data  1976)
+         (Medi  "Gelatin silver photograph")
+         (Nom  "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park")
+         (Esta_En  [Sala_9])
+         (Rellevancia  4)
+         (Es_De  [Autor7056])
+    )
+
+    ([Art9] of Quadre
+         (Amplada  "167.6")
+         (Estil  "Romanticismo")
+         (Altura  "113.0")
+         (Estil_Quadre  [Estil6])
+         (ArtistID  2964)
+         (Data  1968)
+         (Medi  "Charcoal and graphite on tracing paper")
+         (Nom  "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier")
+         (Esta_En  [Sala_5])
+         (Rellevancia  4)
+         (Es_De  [Autor2964])
+    )
+
     ([Sala_5] of Sala
          (Nom  "5")
+    )
+
+    ([Estil3] of Estil
+         (Pintors_Estil  [Autor7605] [Autor7056])
+         (Quadres_Estil  [Art6] [Art4] [Art7] [Art3])
+         (Nom  "Expresionismo")
+    )
+
+    ([Sala_4] of Sala
+         (Connecta_Amb  [Sala_1] [Sala_2])
+         (Nom  "Sortida")
+    )
+
+    ([Art4] of Quadre
+         (Amplada  "50.8")
+         (Estil  "Expresionismo")
+         (Altura  "50.8")
+         (Estil_Quadre  [Estil3])
+         (ArtistID  7056)
+         (Data  1980)
+         (Medi  "Photographic reproduction with colored synthetic laminate")
+         (Nom  "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park")
+         (Esta_En  [Sala_9])
+         (Rellevancia  2)
+         (Es_De  [Autor7056])
+    )
+
+    ([Estil4] of Estil
+         (Pintors_Estil  [Autor7605])
+         (Quadres_Estil  [Art5])
+         (Nom  "Cubismo")
+    )
+
+    ([Autor7608] of Author
+         (AnyNeixement  1878)
+         (Genere  "male")
+         (AnyMort  1961)
+         (Nom  "Otto Sch�nthal")
+         (Nacionalitat  "Austrian")
     )
 
 )
@@ -423,16 +486,12 @@
 	(printout t crlf)
     (format t "  Medi: %s" ?self:Medi)
 	(printout t crlf)
-    (format t "  Estil: %s" ?self:Estil)
+    (format t "  Estil: %s" (send ?self:Estil_Quadre get-Nom))
 	(printout t crlf)
-    (progn$ (?curr-sala ?self:Esta_En)
-        (format t "  Sala: %s" (send ?curr-sala obtenirNom))
-        (printout t crlf)
-    )
-    (progn$ (?curr-autor ?self:Es_De)
-        (format t "  Autor: %s" (send ?curr-autor get-Nom))
-        (printout t crlf)
-    )
+    (format t "  Sala: %s" (send ?self:Esta_En get-Nom))
+    (printout t crlf)
+    (format t "  Autor: %s" (send ?self:Es_De get-Nom))
+    (printout t crlf)
     ; (format t "Pintado por: %s" (send ?self:Es_De get-Nom))
 	; (printout t crlf)
 )
@@ -448,6 +507,17 @@
 	(printout t crlf)
     (printout t "Quadres de l'autor: " crlf)
     (progn$ (?curr-quadre ?self:Pinta)
+        (send ?curr-quadre imprimir)
+    )
+    (printout t "===================================" crlf)
+    (printout t crlf)
+)
+
+(defmessage-handler MAIN::Estil imprimir ()
+    (format t "Estil Nom: %s" ?self:Nom)
+	(printout t crlf)
+    (printout t "Quadres de l'estil: " crlf)
+    (progn$ (?curr-quadre ?self:Quadres_Estil)
         (send ?curr-quadre imprimir)
     )
     (printout t "===================================" crlf)
@@ -573,6 +643,11 @@
     )
     ?lista
 )
+
+
+;;; ---- FUNCIONS RANDOM DE PROVA ----
+
+
 
 ;;; ----------------------- Fin declaracion de funciones -----------------------
 
@@ -712,7 +787,7 @@
     (autors_preferits ask)
     (tematiques_preferides ask)
     (estils_preferits ask)
-		(epoques_preferides ask)
+	(epoques_preferides ask)
     (preferencies_visita )
 )
 
@@ -771,8 +846,31 @@
         (send ?i imprimir))
 )
 
+
+(defrule mostrar::totsElsEstils "Mostrar tots els autors"
+    =>
+    (bind ?llista_instancies (find-all-instances ((?instancia Estil)) TRUE))
+        
+    (progn$ (?i ?llista_instancies)
+        (send ?i imprimir))
+)
+
 ; ;;; Funció per obtenir l'area del quadre
 ; (deffunction obtenir-area (?quadre)
-;     (bind ?resposta quadre:Altura * quadre:Amplada)
+;     (bind ?resposta (* quadre:Altura quadre:Amplada))
 ;     ?resposta
+; )
+
+
+; (deffunction dades-visita::info-grup ()
+;     (Visita (tipus ?tipus) (dies ?dies) (hores ?hores) (coneixement) (edat ?edat))
+;     =>
+;     (format t "  Tipus: %s" ?tipus)
+;     (printout t crlf)
+;     (format t "  Dies: %s" ?dies)
+;     (printout t crlf)
+;     (format t "  Hores: %s" ?hores)
+;     (printout t crlf)
+;     (format t "  Coneixement: %s" ?edat)
+;     (printout t crlf)
 ; )
