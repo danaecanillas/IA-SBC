@@ -792,7 +792,7 @@
 (defrule dades-preferencies::ask_autors_preferits "Pregunta a l'usuari si té autors preferits"
 	?fet <- (autors_preferits ask)
 	=>
-	(bind ?resposta (pregunta-si-no "Té preferències pel que fa als autors de les obres? "))
+	(bind ?resposta (pregunta-si-no "Te preferencies pel que fa als autors de les obres? "))
 	(retract ?fet)
 	(if (eq ?resposta TRUE)
 		then (assert (autors_preferits choose))
@@ -828,7 +828,7 @@
 (defrule dades-preferencies::ask_estils_preferits "Pregunta a l'usuari si té estils preferits"
 	?fet <- (estils_preferits ask)
 	=>
-	(bind ?resposta (pregunta-si-no "Té preferències pel que fa a l'estil de les obres? "))
+	(bind ?resposta (pregunta-si-no "Te preferencies pel que fa a l'estil de les obres? "))
 	(retract ?fet)
 	(if (eq ?resposta TRUE)
 		then (assert (estils_preferits choose))
