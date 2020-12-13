@@ -445,10 +445,13 @@
 (defclass Dia
 	(is-a USER)
 	(role concrete)
-	(multislot recomendacions
+	(multislot recomanacions
 		(type INSTANCE)
 		(create-accessor read-write))
 	(slot temps-maxim
+		(type INTEGER)
+		(create-accessor read-write))
+    (slot hores_dia
 		(type INTEGER)
 		(create-accessor read-write))
 )
@@ -991,6 +994,42 @@
 )
 
 ;;; ----------- Apliquem els filtres de les preguntes ----------
+
+(defrule processat_dades::valorar-coneixement-superior-a-4 "Se mejora la puntuacion de los cuadros"
+	(Visita (coneixement ?nivel))
+	(test (> ?nivel 4)) 
+	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
+	?cont <-(object (is-a Quadre) (Rellevancia ?relevancia))
+	(test (eq (instance-name ?cont) (instance-name ?conta)))
+	(not (valorado-nivel ?cont ?nivel))
+	=>
+    (if (> ?relevancia 4) then
+        (bind ?p (+ ?p 70))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia alta acord al coneixement del visitant -> +70")) 
+	)
+	(send ?rec put-puntuacio ?p)
+    (send ?rec put-justificacions $?just) 
+    (assert (valorado-nivel ?cont ?nivel))
+    (printout t "Valorant nivell del grup..." crlf)
+)
+
+(defrule processat_dades::valorar-coneixement-inferior-a-4 "Se mejora la puntuacion de los cuadros"
+	(Visita (coneixement ?nivel))
+	(test (<= ?nivel 4)) 
+	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
+	?cont <-(object (is-a Quadre) (Rellevancia ?relevancia))
+	(test (eq (instance-name ?cont) (instance-name ?conta)))
+	(not (valorado-nivel ?cont ?nivel))
+	=>
+    (if (< ?relevancia 4) then
+        (bind ?p (+ ?p 40))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia mitjana/baixa acord al nivell del visitant -> +40")) 
+	)
+	(send ?rec put-puntuacio ?p)
+    (send ?rec put-justificacions $?just) 
+    (assert (valorado-nivel ?cont ?nivel))
+    (printout t "Valorant nivell del grup..." crlf)
+)
 
 (defrule processat_dades::valorar-autors-preferits "Es millora la puntuacio de quadres d'autorss preferits"
 	?hecho <- (autors ?auto)
