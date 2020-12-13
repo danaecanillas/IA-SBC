@@ -1925,7 +1925,7 @@
 )
 
 (defmessage-handler MAIN::Dia imprimir ()
-	(printout t "============================================" crlf)    
+	(printout t "============================================" crlf)
 	(bind $?recs ?self:recomanacions)
 	(progn$ (?curr-rec $?recs)
 		(printout t (send ?curr-rec imprimir))
@@ -2100,26 +2100,15 @@
 (defrule MAIN::initialRule "Regla inicial"
 	(declare (salience 10))
 	=>
-	(printout t " ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  " crlf)
-	(printout t "▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌" crlf)
-	(printout t " ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  " crlf)
-	(printout t " ▄▄       ▄▄  ▄         ▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄         ▄  ▄▄       ▄▄  " crlf)
-	(printout t "▐░░▌     ▐░░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░░▌     ▐░░▌" crlf)
-	(printout t "▐░▌░▌   ▐░▐░▌▐░▌       ▐░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌▐░▌░▌   ▐░▐░▌" crlf)
-	(printout t "▐░▌▐░▌ ▐░▌▐░▌▐░▌       ▐░▌▐░▌          ▐░▌          ▐░▌       ▐░▌▐░▌▐░▌ ▐░▌▐░▌" crlf)
-	(printout t "▐░▌ ▐░▐░▌ ▐░▌▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄▄▄ ▐░▌       ▐░▌▐░▌ ▐░▐░▌ ▐░▌" crlf)
-	(printout t "▐░▌  ▐░▌  ▐░▌▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌▐░▌  ▐░▌  ▐░▌" crlf)
-	(printout t "▐░▌   ▀   ▐░▌▐░▌       ▐░▌ ▀▀▀▀▀▀▀▀▀█░▌▐░█▀▀▀▀▀▀▀▀▀ ▐░▌       ▐░▌▐░▌   ▀   ▐░▌" crlf)
-	(printout t "▐░▌       ▐░▌▐░▌       ▐░▌          ▐░▌▐░▌          ▐░▌       ▐░▌▐░▌       ▐░▌" crlf)
-	(printout t "▐░▌       ▐░▌▐░█▄▄▄▄▄▄▄█░▌ ▄▄▄▄▄▄▄▄▄█░▌▐░█▄▄▄▄▄▄▄▄▄ ▐░█▄▄▄▄▄▄▄█░▌▐░▌       ▐░▌" crlf)
-	(printout t "▐░▌       ▐░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░▌       ▐░▌" crlf)
-	(printout t " ▀         ▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀         ▀  " crlf)
-	(printout t " ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄▄▄▄▄  " crlf)
-	(printout t "▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌▐░░░░░░░░░░░▌" crlf)
-	(printout t " ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀▀▀▀▀  " crlf)
-    (printout t crlf)
-	(printout t "Benvingut al nostre sistema de recomanació de visites! " crlf)
-	(printout t "Si us plau contesteu les preguntes que venen a continuació per tal d'oferir-li un tour per el nostre museu." crlf)
+  (printout t " _________________________ " crlf)
+  (printout t "                           " crlf)
+  (printout t "   -   -   -   -   -   -   " crlf)
+	(printout t " ( M | U | S | E | U | M ) " crlf)
+  (printout t "   -   -   -   -   -   -   " crlf)
+  (printout t " _________________________ " crlf)
+  (printout t crlf)
+	(printout t "Benvingut al nostre sistema de recomanacio de visites! " crlf)
+	(printout t "Si us plau contesteu les preguntes que venen a continuacio per tal d'oferir-li un tour per el nostre museu." crlf)
 	(printout t crlf)
 	(focus dades-visita)
 )
@@ -2217,7 +2206,7 @@
 
 (defrule dades-visita::passar-a-preferencies "Passem al modul de recopilacio de preferencies"
     (declare (salience 10))
- 			?g <- (Visita (tipus ~"indefinit")(edat ?edat) (dies ?dies) (hores ?hores) (coneixement ?coneixement) (nacionalitat ~"indefinit"))
+ 			?g <- (Visita (tipus ~"indefinit")(edat ?edat) (dies ?dies) (hores ?hores) (coneixement ?coneixement))
      (test (> ?edat -1))
      (test (> ?dies -1))
      (test (> ?hores -1))
@@ -2599,30 +2588,30 @@
 		;   (bind ?a (send ?cont get-Altura))
       		(bind ?a (* (string_to_float (send ?cont get-Amplada)) (string_to_float (send ?cont get-Altura))))
             (if (eq ?tipus "Individu") then
-                (if (> ?a 5000) then (bind ?t 12))
-                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 10))
-                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 6))
-                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 4))
-            )
-            (if (eq ?tipus "Parella") then
-                (if (> ?a 5000) then (bind ?t 13))
-                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 11))
-                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 7))
-                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 5))
-
-            )
-            (if (eq ?tipus "Grup petit") then
                 (if (> ?a 5000) then (bind ?t 14))
                 (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 12))
                 (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 8))
                 (if (and (> ?a 0) (< ?a 500)) then (bind ?t 6))
+            )
+            (if (eq ?tipus "Parella") then
+                (if (> ?a 5000) then (bind ?t 15))
+                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 13))
+                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 9))
+                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 7))
 
             )
-            (if (eq ?tipus "Grup gran") then
+            (if (eq ?tipus "Grup petit") then
                 (if (> ?a 5000) then (bind ?t 16))
                 (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 14))
                 (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 10))
                 (if (and (> ?a 0) (< ?a 500)) then (bind ?t 8))
+
+            )
+            (if (eq ?tipus "Grup gran") then
+                (if (> ?a 5000) then (bind ?t 18))
+                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 16))
+                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 12))
+                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 10))
             )
       ;;
 			(if (< (+ ?t-ocu ?t) ?t-max)
