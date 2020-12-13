@@ -428,6 +428,125 @@
 	:AnyMort 2015 ;
 	:Genere "male" .
 
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor27
+:Autor27 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:Pinta
+		:Art38,
+		:Art39,
+		:Art40,
+		:Art41,
+		:Art42,
+		:Art43,
+		:Art44,
+		:Art45,
+		:Art46,
+		:Art47,
+		:Art48,
+		:Art49,
+		:Art50,
+		:Art51,
+		:Art52,
+		:Art53,
+		:Art54,
+		:Art55,
+		:Art56,
+		:Art57,
+		:Art58,
+		:Art59,
+		:Art60,
+		:Art61,
+		:Art62,
+		:Art63,
+		:Art64,
+		:Art65,
+		:Art66,
+		:Art67,
+		:Art68;
+	:ArtistID 27 ;
+	:Nom "Erik Gunnar Asplund" ;
+	:Nacionalitat "Swedish" ;
+	:AnyNeixement 1885 ;
+	:AnyMort 1940 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor2702
+:Autor2702 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:Pinta
+		:Art69,
+		:Art70,
+		:Art72,
+		:Art75,
+		:Art77,
+		:Art79,
+		:Art81,
+		:Art83,
+		:Art85,
+		:Art87,
+		:Art89,
+		:Art91,
+		:Art93;
+	:ArtistID 2702 ;
+	:Nom "Steven Holl" ;
+	:Nacionalitat "American" ;
+	:AnyNeixement 1947 ;
+	:AnyMort 1984 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor8219
+:Autor8219 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:Pinta
+		:Art71,
+		:Art73,
+		:Art76,
+		:Art78,
+		:Art80,
+		:Art82,
+		:Art84,
+		:Art86,
+		:Art88,
+		:Art90,
+		:Art92,
+		:Art94,
+		:Art96,
+		:Art98;
+	:ArtistID 8219 ;
+	:Nom "Erich Mendelsohn" ;
+	:Nacionalitat "American" ;
+	:AnyNeixement 1887 ;
+	:AnyMort 1953 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor8101
+:Autor8101 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:Pinta
+		:Art74;
+	:ArtistID 8101 ;
+	:Nom "Paolo Soleri" ;
+	:Nacionalitat "American" ;
+	:AnyNeixement 1919 ;
+	:AnyMort 2013 ;
+	:Genere "male" .
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor5076
+:Autor5076 rdf:type owl:NamedIndividual ,
+		:Author ;
+	:Pinta
+		:Art95,
+		:Art97,
+		:Art99;
+	:ArtistID 5076 ;
+	:Nom "Paul Rudolph" ;
+	:Nacionalitat "American" ;
+	:AnyNeixement 1918 ;
+	:AnyMort 1997 ;
+	:Genere "male" .
+
+
+
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art1
 :Art1 rdf:type owl:NamedIndividual ,
 		:Quadre ;

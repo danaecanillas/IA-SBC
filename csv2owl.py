@@ -47,7 +47,7 @@ with open('artworks_2.csv') as csv_file:
             break
 f.close()
 
-print(artistes)
+print(len(artistes.keys()), artistes.keys())
 
 #ID,Name,Nationality,BeginDate,EndDate,Gender
 f = open('autors.txt', 'w')
@@ -55,25 +55,26 @@ with open('artists.csv') as csv_file:
     csv_reader = csv.reader(csv_file, delimiter=',')
     line_count = 0
     for row in csv_reader:
-        if line_count == 0:
-            line_count += 1
-        # elif line_count < 10:
-        elif row[0] in artistes.keys():
-            f.write(IRI+"Autor"+row[0])
-            
-            f.write(f'\n:Autor{row[0]} '+tipusAuthor)
-            
-            if row[0] in artistes:
-                f.write(f'\t:Pinta\n')
-                f.write(f'\t\t:{artistes[row[0]][0]}')
-                for quadre in artistes[row[0]][1:]:
-                    f.write(f',\n\t\t:{quadre}')
-                f.write(';\n')
-            f.write(f'\t:ArtistID {row[0]} ;\n\t:Nom \"{row[1]}\" ;\n\t:Nacionalitat \"{row[2]}\" ;\n\t:AnyNeixement {row[3]} ;\n\t:AnyMort {row[4]} ;\n\t:Genere \"{row[5]}\" .\n\n')
-            
-            line_count += 1
-        else:
-            break
+        try:
+            if line_count == 0:
+                line_count += 1
+            # elif line_count < 10:
+            elif row[0] in artistes.keys():
+                f.write(IRI+"Autor"+row[0])
+                
+                f.write(f'\n:Autor{row[0]} '+tipusAuthor)
+                
+                if row[0] in artistes:
+                    f.write(f'\t:Pinta\n')
+                    f.write(f'\t\t:{artistes[row[0]][0]}')
+                    for quadre in artistes[row[0]][1:]:
+                        f.write(f',\n\t\t:{quadre}')
+                    f.write(';\n')
+                f.write(f'\t:ArtistID {row[0]} ;\n\t:Nom \"{row[1]}\" ;\n\t:Nacionalitat \"{row[2]}\" ;\n\t:AnyNeixement {row[3]} ;\n\t:AnyMort {row[4]} ;\n\t:Genere \"{row[5]}\" .\n\n')
+                
+                line_count += 1
+        except:
+            pass
 f.close()
 
 
