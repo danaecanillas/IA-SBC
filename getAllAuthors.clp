@@ -1003,7 +1003,7 @@
 	(test (eq (instance-name ?cont) (instance-name ?conta)))
 	(not (valorado-nivel ?cont ?nivel))
 	=>
-    (if (> ?relevancia 4) then
+    (if (> ?relevancia 3) then
         (bind ?p (+ ?p 70))
 		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia alta acord al coneixement del visitant -> +70")) 
 	)
@@ -1029,6 +1029,53 @@
     (send ?rec put-justificacions $?just) 
     (assert (valorado-nivel ?cont ?nivel))
     (printout t "Valorant nivell del grup..." crlf)
+)
+
+(defmethod processat_dades::string_to_float ((?s STRING))
+   (float (string-to-field ?s)))
+
+(defrule processat_dades::valorar-tamany-quadre-grup-petit "Se mejora la puntuacion de los cuadros"
+	(Visita (tipus ?tipus))
+	(test (eq ?tipus "Grup petit")) 
+	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
+	?cont <- (object (is-a Quadre)  (Altura ?h) (Amplada ?w))
+	(test (eq (instance-name ?cont) (instance-name ?conta)))
+	(not (valorat-tamany ?cont))
+	=>
+    (if (> (string_to_float ?h) 40.0) then
+        (bind ?p (+ ?p 20))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup -> +20")) 
+	)
+    (if (> (string_to_float ?w) 40.0) then
+        (bind ?p (+ ?p 20))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup -> +20")) 
+	)
+	(send ?rec put-puntuacio ?p)
+    (send ?rec put-justificacions $?just) 
+    (assert (valorat-tamany ?cont))
+    (printout t "Valorant tamany del quadre..." crlf)
+)
+
+(defrule processat_dades::valorar-tamany-quadre-grup-gran "Se mejora la puntuacion de los cuadros"
+	(Visita (tipus ?tipus))
+	(test (eq ?tipus "Grup gran")) 
+	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
+	?cont <- (object (is-a Quadre)  (Altura ?h) (Amplada ?w))
+	(test (eq (instance-name ?cont) (instance-name ?conta)))
+	(not (valorat-tamany ?cont))
+	=>
+    (if (> (string_to_float ?h) 80.0) then
+        (bind ?p (+ ?p 30))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup gran -> +30")) 
+	)
+    (if (> (string_to_float ?w) 80.0) then
+        (bind ?p (+ ?p 30))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup gran -> +30")) 
+	)
+	(send ?rec put-puntuacio ?p)
+    (send ?rec put-justificacions $?just) 
+    (assert (valorat-tamany ?cont))
+    (printout t "Valorant tamany del quadre..." crlf)
 )
 
 (defrule processat_dades::valorar-autors-preferits "Es millora la puntuacio de quadres d'autorss preferits"
