@@ -1,6 +1,17 @@
-;;-------------------------------------------------------------------------------------------------------------
+;;------------------------------------------------------------------------------
+;;------------------------------------------------------------------------------
+;;
+;;                PRACTICA 2 IA: SBC
+;;
+;; Alumnos: Dànae Canillas
+;;          Miquel Escobar
+;;          Arnau Soler
+;;------------------------------------------------------------------------------
+;;------------------------------------------------------------------------------
+
+;;------------------------------------------------------------------------------
 ;;                    ONTOLOGIA
-;;-------------------------------------------------------------------------------------------------------------
+;;------------------------------------------------------------------------------
 
 (defclass Author
     (is-a USER)
@@ -456,13 +467,14 @@
 		(create-accessor read-write))
 )
 
-
+;;; Inici de la solucio implementada
 ;;-------------------------------------------------------------------------------------------------------------
 ;;                    MAIN
 ;;-------------------------------------------------------------------------------------------------------------
 
-;;; Modulo principal de utilidades
+;;; ------------------------- Declaracio de moduls -----------------------------
 
+;;; Modul principal
 (defmodule MAIN (export ?ALL))
 
 ;;; Modul de recopilacio de les dades de l'usuari
@@ -478,6 +490,7 @@
 	(export ?ALL)
 )
 
+;;; Modul de processat del contingut adequat a l'usuari
 (defmodule processat_dades
     (import MAIN ?ALL)
     (import dades-visita deftemplate ?ALL)
@@ -485,15 +498,20 @@
     (export ?ALL)
 )
 
-(defmodule generacio_solucions
-    (import MAIN ?ALL)
-    (export ?ALL)
+;;; Modulo de generacio de resultats
+(defmodule resultats
+	(import MAIN ?ALL)
+	(export ?ALL)
 )
 
+;;; Modul de resultats
 (defmodule mostrar
     (import MAIN ?ALL)
     (export ?ALL)
 )
+;;; -------------------------- Fi: Declaracio de moduls ------------------------
+
+;;; ------------------------ Declaracio de missatges ---------------------------
 
 ; Funcio per obtenir el nom d'una Sala
 (defmessage-handler MAIN::Sala obtenirNom ()
@@ -519,8 +537,6 @@
     (printout t crlf)
     (format t "  Autor: %s" (send ?self:Es_De get-Nom))
     (printout t crlf)
-    ; (format t "Pintado por: %s" (send ?self:Es_De get-Nom))
-	; (printout t crlf)
 )
 
 (defmessage-handler MAIN::Author imprimir ()
@@ -551,7 +567,28 @@
     (printout t crlf)
 )
 
-;;; ------------------------ Declaracion de templates --------------------------
+(defmessage-handler MAIN::Recomanacio print ()
+	(printout t "-----------------------------------" crlf)
+	(printout t (send ?self:nom_quadre imprimir))
+	(printout t crlf)
+	(format t "Score de recomanacio: %d %n" ?self:puntuacio)
+	(printout t "Justificacio: " crlf)
+	(progn$ (?curr-just ?self:justificacions)
+		(printout t ?curr-just crlf)
+	)
+	(printout t crlf)
+	(printout t "-----------------------------------" crlf)
+)
+
+(defmessage-handler MAIN::Dia print ()
+	(printout t "============================================" crlf)
+	(bind $?recs ?self:recomanacions)
+	(progn$ (?curr-rec $?recs)
+		(printout t (send ?curr-rec print))
+	)
+	(printout t "============================================" crlf)
+
+;;; ------------------------ Declaracio de templates ---------------------------
 
 (deftemplate MAIN::Visita
 	(slot tipus (type STRING) (default "indefinit"))
@@ -562,7 +599,6 @@
 	(slot nacionalitat (type STRING) (default "indefinit"))
 )
 
-;;; Template para las preferencias del usuario
 (deftemplate MAIN::preferencies_visita
 	(multislot autors_preferits (type INSTANCE))
 	(multislot estils_preferits (type INSTANCE))
@@ -579,9 +615,17 @@
 (deftemplate MAIN::sorted_recomanacions
 	(multislot recomanacions (type INSTANCE))
 )
-;;; ------------------------ Fin declaracion de templates ----------------------
 
-;;; ------------------------ Declaracion de funciones --------------------------
+;;; Modul de generacio de respostes -------------------------------------------------
+(defrule resultats::tour_desordenat "Creacio d'una llista de recomanacions per ordenar"
+	(not (unsorted_recomanacions))
+	=>
+	(assert (unsorted_recomanacions))
+)
+
+;;; ------------------------ Fi declaracio de templates ------------------------
+
+;;; ------------------------ Declaracio de funcions ----------------------------
 
 ;;; Funcio de test per preguntar el sexe de l'autor
 (deffunction MAIN::pregunta-sexe (?pregunta ?a ?b)
@@ -688,14 +732,23 @@
     ?lista
 )
 
+(deffunction max-puntuacio ($?tour)
+	(bind ?max -1)
+	(bind ?element nil)
+	(progn$ (?curr-rec $?tour)
+		(bind ?curr-cont (send ?curr-rec get-nom_quadre))
+		(bind ?curr-punt (send ?curr-rec get-puntuacio))
+		(if (> ?curr-punt ?max)
+			then
+			(bind ?max ?curr-punt)
+			(bind ?element ?curr-rec)
+		)
+	)
+	?element
+)
+;;; ----------------------- Fi declaracio de funcions --------------------------
 
-;;; ---- FUNCIONS RANDOM DE PROVA ----
-
-
-
-;;; ----------------------- Fin declaracion de funciones -----------------------
-
-;;; ----------------------- Declaracion de reglas y hechos ---------------------
+;;; ----------------------- Declaracio de regles y fet -------------------------
 
 (defrule MAIN::initialRule "Regla inicial"
 	(declare (salience 10))
@@ -786,7 +839,7 @@
         (if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "Sandro Botticelli" "Papa Francesc" "Miguel Àngel" "Pinturillo"))
-    (bind ?resposta (pregunta-index "El Judici Final o El Judici Universal és un mural realitzat a la fresca que es troba a la Capella Sixtina i va ser pintat per:" ?var))
+    (bind ?resposta (pregunta-index "El Judici Final o El Judici Universal és un mural que es troba a la Capella Sixtina i va ser pintat per:" ?var))
         (if (= ?resposta 3) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "El Moulin de la Galette" "Razzmatazz" "El Parc de la Ciutadella"))
@@ -967,10 +1020,10 @@
 
 (defrule processat_dades::aux-estils "Crea fets per poder processar els estils preferits"
     (preferencies_visita (estils_preferits $?gen))
-	?hecho <- (estils_pref ?aux)
+	?fet <- (estils_pref ?aux)
 	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
 	=>
-	(retract ?hecho)
+	(retract ?fet)
 	(if (eq ?aux TRUE)then
 		(progn$ (?curr-gen $?gen)
 			(assert (estils ?curr-gen))
@@ -981,10 +1034,10 @@
 
 (defrule processat_dades::aux-epoca "Crea fets per poder processar l'epoca preferida"
     (preferencies_visita (epoca_inici ?inici) (epoca_final ?final))
-	?hecho <- (epoca_pref ?aux)
+	?fet <- (epoca_pref ?aux)
 	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
 	=>
-	(retract ?hecho)
+	(retract ?fet)
 	(if (eq ?aux TRUE)then
 		(loop-for-count (?cnt1 ?inici ?final) do
 			(assert (epoca ?cnt1))
@@ -995,48 +1048,48 @@
 
 ;;; ----------- Apliquem els filtres de les preguntes ----------
 
-(defrule processat_dades::valorar-coneixement-superior-a-4 "Se mejora la puntuacion de los cuadros"
-	(Visita (coneixement ?nivel))
-	(test (> ?nivel 4)) 
+(defrule processat_dades::valorar-coneixement-superior-a-4 "Millorar puntuacio dels quadres"
+	(Visita (coneixement ?coneixement))
+	(test (> ?coneixement 4))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
 	?cont <-(object (is-a Quadre) (Rellevancia ?relevancia))
 	(test (eq (instance-name ?cont) (instance-name ?conta)))
-	(not (valorado-nivel ?cont ?nivel))
+	(not (valoracio ?cont ?coneixement))
 	=>
     (if (> ?relevancia 3) then
         (bind ?p (+ ?p 70))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia alta acord al coneixement del visitant -> +70")) 
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia alta acord al coneixement del visitant -> +70"))
 	)
 	(send ?rec put-puntuacio ?p)
-    (send ?rec put-justificacions $?just) 
-    (assert (valorado-nivel ?cont ?nivel))
-    (printout t "Valorant nivell del grup..." crlf)
+    (send ?rec put-justificacions $?just)
+    (assert (valoracio ?cont ?coneixement))
+    (printout t "Valorant coneixement del grup..." crlf)
 )
 
-(defrule processat_dades::valorar-coneixement-inferior-a-4 "Se mejora la puntuacion de los cuadros"
-	(Visita (coneixement ?nivel))
-	(test (<= ?nivel 4)) 
+(defrule processat_dades::valorar-coneixement-inferior-a-4 "Millorar puntuacio dels quadres"
+	(Visita (coneixement ?coneixement))
+	(test (<= ?coneixement 4))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
 	?cont <-(object (is-a Quadre) (Rellevancia ?relevancia))
 	(test (eq (instance-name ?cont) (instance-name ?conta)))
-	(not (valorado-nivel ?cont ?nivel))
+	(not (valoracio ?cont ?coneixement))
 	=>
     (if (< ?relevancia 4) then
         (bind ?p (+ ?p 40))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia mitjana/baixa acord al nivell del visitant -> +40")) 
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia mitjana/baixa acord al coneixement del visitant -> +40"))
 	)
 	(send ?rec put-puntuacio ?p)
-    (send ?rec put-justificacions $?just) 
-    (assert (valorado-nivel ?cont ?nivel))
-    (printout t "Valorant nivell del grup..." crlf)
+    (send ?rec put-justificacions $?just)
+    (assert (valoracio ?cont ?coneixement))
+    (printout t "Valorant coneixement del grup..." crlf)
 )
 
 (defmethod processat_dades::string_to_float ((?s STRING))
    (float (string-to-field ?s)))
 
-(defrule processat_dades::valorar-tamany-quadre-grup-petit "Se mejora la puntuacion de los cuadros"
+(defrule processat_dades::valorar-tamany-quadre-grup-petit "Millorar tamany dels quadres"
 	(Visita (tipus ?tipus))
-	(test (eq ?tipus "Grup petit")) 
+	(test (eq ?tipus "Grup petit"))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
 	?cont <- (object (is-a Quadre)  (Altura ?h) (Amplada ?w))
 	(test (eq (instance-name ?cont) (instance-name ?conta)))
@@ -1044,21 +1097,21 @@
 	=>
     (if (> (string_to_float ?h) 40.0) then
         (bind ?p (+ ?p 20))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup -> +20")) 
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup -> +20"))
 	)
     (if (> (string_to_float ?w) 40.0) then
         (bind ?p (+ ?p 20))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup -> +20")) 
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup -> +20"))
 	)
 	(send ?rec put-puntuacio ?p)
-    (send ?rec put-justificacions $?just) 
+    (send ?rec put-justificacions $?just)
     (assert (valorat-tamany ?cont))
     (printout t "Valorant tamany del quadre..." crlf)
 )
 
-(defrule processat_dades::valorar-tamany-quadre-grup-gran "Se mejora la puntuacion de los cuadros"
+(defrule processat_dades::valorar-tamany-quadre-grup-gran "Millorar tamany dels quadres"
 	(Visita (tipus ?tipus))
-	(test (eq ?tipus "Grup gran")) 
+	(test (eq ?tipus "Grup gran"))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
 	?cont <- (object (is-a Quadre)  (Altura ?h) (Amplada ?w))
 	(test (eq (instance-name ?cont) (instance-name ?conta)))
@@ -1066,20 +1119,20 @@
 	=>
     (if (> (string_to_float ?h) 80.0) then
         (bind ?p (+ ?p 30))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup gran -> +30")) 
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup gran -> +30"))
 	)
     (if (> (string_to_float ?w) 80.0) then
         (bind ?p (+ ?p 30))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup gran -> +30")) 
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup gran -> +30"))
 	)
 	(send ?rec put-puntuacio ?p)
-    (send ?rec put-justificacions $?just) 
+    (send ?rec put-justificacions $?just)
     (assert (valorat-tamany ?cont))
     (printout t "Valorant tamany del quadre..." crlf)
 )
 
-(defrule processat_dades::valorar-autors-preferits "Es millora la puntuacio de quadres d'autorss preferits"
-	?hecho <- (autors ?auto)
+(defrule processat_dades::valorar-autors-preferits "Es millora la puntuacio de quadres d'autors preferits"
+	?fet <- (autors ?auto)
 	?cont <-(object (is-a Quadre) (Es_De ?autor))
 	(test (eq (instance-name ?auto) ?autor))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
@@ -1096,7 +1149,7 @@
 )
 
 (defrule processat_dades::valorar-estilos-preferits "Es millora la puntuacio de quadres amb estils preferits"
-	?hecho <- (estils ?estil)
+	?fet <- (estils ?estil)
 	?cont <-(object (is-a Quadre) (Estil_Quadre ?estilos))
 	(test (eq (instance-name ?estil) ?estilos))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
@@ -1113,8 +1166,8 @@
 )
 
 (defrule processat_dades::valorar-epoca-preferida "Es millora la puntuacio de quadres de l'epoca"
-	?hecho <- (epoca ?any)
-    ; ?hecho <- (preferencies_visita (epoca_inici ?inici) (epoca_final ?final))
+	?fet <- (epoca ?any)
+    ; ?fet <- (preferencies_visita (epoca_inici ?inici) (epoca_final ?final))
 	?cont <-(object (is-a Quadre) (Data ?data))
 	(test (eq ?any ?data))
     ; (test (or (>= ?data ?inici) (<= ?data ?final)))
@@ -1134,23 +1187,116 @@
 (defrule processat_dades::passar-a-generacio "Passa al modul de generacio de respostes"
 	(declare(salience -10))
 	=>
-	(printout t "Generando respuesta..." crlf)
+	(printout t "Generant resposta..." crlf)
 	(focus generacio_solucions)
 )
 
-;;; ------------ Modul generacio solucions ----------------
+;;; ---------------------- Modul generacio solucions ---------------------------
 
-(defrule generacio_solucions::crea-llista-recomanacions "Se crea una lista de recomendaciones para ordenarlas"
-	(not (llista-rec-desordenada))
+(defrule resultats::tour_desordenat "Creacio d'una llista de recomanacions per ordenar"
+	(not (unsorted_recomanacions))
 	=>
-	(assert (llista-rec-desordenada))
+	(assert (unsorted_recomanacions))
 )
 
-;;; La resta de funcions
+(defrule resultats::add_recomanacio "Afegir recomanacio"
+	(declare (salience 10))
+	?add <- (object (is-a Recomanacio))
+	?fet <- (unsorted_recomanacions (recomanacions $?tour))
+	(test (not (member$ ?add $?tour)))
+	=>
+	(bind $?tour (insert$ $?tour (+ (length$ $?tour) 1) ?add))
+	(modify ?fet (recomanacions $?tour))
+)
 
-(defrule generacio_solucions::passar-a-mostrar "Se pasa al modulo de presentacion"
-    ; (dias-orden-sala)
-    (llista-rec-desordenada)
+(defrule resultats::tour_ordenat "Ordenar tour"
+	(not (sorted_recomanacions))
+	(unsorted_recomanacions (recomanacions $?tour))
+	=>
+	(bind $?resposta (create$ ))
+	(while (not (eq (length$ $?tour) 0))  do
+		(bind ?curr-rec (max-puntuacio $?tour))
+		(bind $?tour (delete-member$ $?tour ?curr-rec))
+		(bind $?resposta (insert$ $?resposta (+ (length$ $?resposta) 1) ?curr-rec))
+	)
+  (printout t "Ordenant..." crlf)
+	(assert (sorted_recomanacions (recomanacions $?resposta)))
+)
+
+;;; FALTA ACABAR!!!!
+(defrule resultats::creacio_tour "Assignacio de recomanacions"
+    ?g <- (Visita (dies ?dies) (tipus ?tipus) (hores ?hores) (coneixement ?coneixement));
+	(lista-rec-ordenada (recomendaciones $?recs))
+	(not (lista-dies))
+	=>
+    (bind ?hores (* ?hores 60))
+	(bind $?tour (create$ ))
+    (while (not(= (length$ $?tour) ?dies)) do
+        (bind $?tour (insert$ $?tour (+ (length$ $?tour) 1) (make-instance (gensym) of Dia (hores_dia ?hores))))
+    )
+	(bind ?i 1)
+	(bind ?rec-ant FALSE)
+	(while (and (> (length$ $?recs) 0) (<= ?i ?dies))
+		(bind ?dia (nth$ ?i $?tour))
+		(bind $?recs-dia (create$ ))
+		(bind ?t-max (send ?dia get-hores_dia))
+		(bind ?t-ocu 0)
+		(bind ?try 1)
+		(bind ?asignados 0)
+    ;;
+        (bind ?j 1)
+		(while (and(and(< ?t-ocu ?t-max) (< ?try 4)) (> (length$ $?recs) 0) (<= ?j (length$ ?recs))) do
+			(bind ?rec (nth$ ?j $?recs))
+			(bind ?cont (send ?rec get-nom_quadre))
+			(bind ?a (send ?cont get-Amplada(* send ?cont get-Altura)))
+            (if (or (eq ?tipus "Individu") then
+                (if (> ?a 120000) then (bind ?t 12))
+                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 10))
+                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 6))
+                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 4))
+            )
+            (if (eq ?tipus "Parella") then
+                (if (> ?a 120000) then (bind ?t 13))
+                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 11))
+                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 7))
+                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 5))
+
+            )
+            (if (eq ?tipus "Grup petit") then
+                (if (> ?a 120000) then (bind ?t 14))
+                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 12))
+                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 8))
+                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 6))
+
+            )
+            (if (eq ?tipus "Grup gran") then
+                (if (> ?a 120000) then (bind ?t 16))
+                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 14))
+                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 10))
+                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 8))
+            )
+      ;;
+			(if (< (+ ?t-ocu ?t) ?t-max)
+				then
+					(bind ?t-ocu (+ ?t-ocu ?t))
+					(bind ?try 1)
+					(bind ?asignados (+ ?asignados 1))
+					(bind ?recs-dia (insert$ $?recs-dia (+ (length$ $?recs-dia) 1) ?rec))
+					(bind $?recs (delete-member$ $?recs ?rec))
+				else
+					(bind ?try (+ ?try 1))
+			)
+        (bind ?j (+ ?j 1))
+		)
+		(send ?dia put-recomendaciones $?recs-dia)
+        (bind ?i (+ ?i 1))
+	)
+	(assert (tour-dies (dies $?lista)))
+  (printout t "Assignacio de dies al tour..." crlf)
+  )
+)
+
+(defrule resultats::passar-a-mostrar "Se pasa al modulo de presentacion"
 	=>
 	(focus mostrar)
 )
