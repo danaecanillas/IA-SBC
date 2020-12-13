@@ -30,7 +30,7 @@ with open('artworks_2.csv') as csv_file:
     for row in csv_reader:
         if line_count == 0:
             line_count += 1
-        elif line_count < 10:
+        elif line_count < 100 :
             nom = f'Art{line_count}'
             nomAutor = f'Autor{row[0]}'
             f.write(IRI+f'Art{line_count}')
@@ -47,7 +47,7 @@ with open('artworks_2.csv') as csv_file:
             break
 f.close()
 
-# print(artistes)
+print(artistes)
 
 #ID,Name,Nationality,BeginDate,EndDate,Gender
 f = open('autors.txt', 'w')
@@ -57,7 +57,8 @@ with open('artists.csv') as csv_file:
     for row in csv_reader:
         if line_count == 0:
             line_count += 1
-        elif line_count < 10:
+        # elif line_count < 10:
+        elif row[0] in artistes.keys():
             f.write(IRI+"Autor"+row[0])
             
             f.write(f'\n:Autor{row[0]} '+tipusAuthor)
