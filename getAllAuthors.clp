@@ -825,15 +825,16 @@
 
 
 (deffacts dades-preferencies::fets-inicials "Establim fets per poder recopilar informacio"
-    (autors_pref ask)
-    (estils_pref ask)
+    (autors_preferits ask)
+    (estils_preferits ask)
+;    (epoca_preferits ask)
     (preferencies_visita)
 )
 
 (defrule dades-preferencies::ask_autors_preferits "Pregunta a l'usuari si té autors preferits"
 	?fet <- (autors_pref ask)
 	=>
-	(bind ?resposta (pregunta-si-no "Té preferències pel que fa als autors de les obres? "))
+	(bind ?resposta (pregunta-si-no "Te preferencies pel que fa als autors de les obres? "))
 	(retract ?fet)
 	(if (eq ?resposta TRUE)
 		then (assert (autors_pref choose))
@@ -869,7 +870,7 @@
 (defrule dades-preferencies::ask_estils_preferits "Pregunta a l'usuari si té estils preferits"
 	?fet <- (estils_pref ask)
 	=>
-	(bind ?resposta (pregunta-si-no "Té preferències pel que fa a l'estil de les obres? "))
+	(bind ?resposta (pregunta-si-no "Te preferencies pel que fa a l'estil de les obres? "))
 	(retract ?fet)
 	(if (eq ?resposta TRUE)
 		then (assert (estils_pref choose))
@@ -952,6 +953,41 @@
 	)
     (printout t "Creant fets estils..." crlf)
 )
+;(defrule dades-preferencies::ask_epoca_preferida "Pregunta a l'usuari si té època preferida"
+;	?fet <- (epoca_preferida ask)
+;	=>
+;	(bind ?resposta (pregunta-si-no "Te preferencies pel que fa a l'epoca de les obres? "))
+;	(retract ?fet)
+;	(if (eq ?resposta TRUE)
+;		then (assert (epoca_preferida choose))
+;		else
+;		(assert (epoca_preferida FALSE))
+;	)
+;);
+
+;(defrule dades-preferencies::epoca_preferida "Establim les epoques preferides"
+;    ?fet <- (epoca_preferida choose)
+;      ?preferencies <- (preferencies_visita)
+;      =>
+;	     (bind $?obj-epoques (find-all-instances ((?inst Author)) TRUE))
+;       (bind $?nom-epoques (create$ ))
+;       (loop-for-count (?i 1 (length$ $?obj-epoques)) do
+;           (bind ?curr-obj (nth$ ?i ?obj-epoques))
+;      		 (bind ?curr-nom (send ?curr-obj get-Nom))
+;      		 (bind $?nom-epoques(insert$ $?nom-epoques (+ (length$ $?nom-epoques) 1) ?curr-nom))
+;	)
+;	(bind ?chosen (pregunta-multi "Esculli les seves epoques preferides: " $?nom-epoques))
+;  (bind $?resposta (create$ ))
+;	(loop-for-count (?i 1 (length$ ?chosen)) do
+;		(bind ?curr-index (nth$ ?i ?chosen))
+;		(bind ?curr-autor (nth$ ?curr-index ?obj-epoques))
+;		(bind $?resposta(insert$ $?resposta (+ (length$ $?resposta) 1) ?curr-autor))
+;	)
+
+;	(retract ?fet)
+;  (assert (epoques_preferits TRUE))
+;  (modify ?preferencies (epoques_preferits $?resposta))
+;)
 
 ;;; ----------- Apliquem els filtres de les preguntes ----------
 
