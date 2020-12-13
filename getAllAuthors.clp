@@ -2052,7 +2052,7 @@
             (bind ?linea (format nil "  %d. %s" ?var-index ?var))
             (printout t ?linea crlf)
     )
-    (bind ?resposta (pregunta-numerica "Escull una opció:" 1 (length$ ?valores-posibles)))
+    (bind ?resposta (pregunta-numerica "Esculli una opcio:" 1 (length$ ?valores-posibles)))
 	?resposta
 )
 
@@ -2064,7 +2064,7 @@
             (bind ?linea (format nil "  %d. %s" ?var-index ?var))
             (printout t ?linea crlf)
     )
-    (format t "%s" "Indica els números separats per un espai: ")
+    (format t "%s" "Indica els numeros separats per un espai: ")
     (bind ?resp (readline))
     (bind ?numeros (str-explode ?resp))
     (bind $?lista (create$ ))
@@ -2108,7 +2108,8 @@
   (printout t " _________________________ " crlf)
   (printout t crlf)
 	(printout t "Benvingut al nostre sistema de recomanacio de visites! " crlf)
-	(printout t "Si us plau contesteu les preguntes que venen a continuacio per tal d'oferir-li un tour per el nostre museu." crlf)
+	(printout t "Si us plau, contesti les preguntes que venen a continuacio " crlf)
+  (printout t "per tal d'oferir-vos un tour pel nostre museu." crlf)
 	(printout t crlf)
 	(focus dades-visita)
 )
@@ -2116,7 +2117,7 @@
 (defrule dades-visita::definicio_tipus "Tipus de Visita"
 	(not (Visita))
 	=>
-	(bind ?t (pregunta-numerica "Quanta gent sou? " 1 50))
+	(bind ?t (pregunta-numerica "Quanta gent son? " 1 50))
     (if (= ?t 1) then (bind ?tipus "Individu"))
     (if (= ?t 2) then (bind ?tipus "Parella"))
     (if (and(> ?t 2) (< ?t 11)) then (bind ?tipus "Grup petit"))
@@ -2158,32 +2159,32 @@
     (bind ?resposta (pregunta-index "Es dedica professionalment a l'art?" ?var))
         (if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
 
-    (bind ?var (create$ "Una plaça de toros" "Un bombardeig"))
-    (bind ?resposta (pregunta-index "¿Qué representa el quadre de Guérnica de Pablo Picasso?" ?var))
+    (bind ?var (create$ "Una placa de toros" "Un bombardeig"))
+    (bind ?resposta (pregunta-index "¿Qué representa el quadre de Guernica de Pablo Picasso?" ?var))
         (if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "Impressionisme" "Surrealisme" "Dadaisme" "K-Pop"))
-    (bind ?resposta (pregunta-index "Claude Monet va ser un pintor francès i és un dels creadors d'aquest moviment artístic:" ?var))
+    (bind ?resposta (pregunta-index "Claude Monet va ser un dels creadors d'aquest moviment artistic:" ?var))
         (if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "Risto Mejide" "Zaha Hadid" "Diego Velazquez" "Frank O. Gehry"))
-    (bind ?resposta (pregunta-index "El Museu Guggenheim Bilbao és un lloc dedicat a l'art contemporani dissenyat per:" ?var))
+    (bind ?resposta (pregunta-index "El Museu Guggenheim Bilbao va ser dissenyat per:" ?var))
         (if (= ?resposta 4) then (bind ?score (+ 1 ?score)))
 
-    (bind ?var (create$ "AC DC" "Alfa i omega"))
+    (bind ?var (create$ "AC DC" "Alfa i Omega"))
     (bind ?resposta (pregunta-index "En l'art medieval ¿quines dues lletres s'associen a Crist?" ?var))
         (if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
 
-    (bind ?var (create$ "Sandro Botticelli" "Papa Francesc" "Miguel Àngel" "Pinturillo"))
-    (bind ?resposta (pregunta-index "El Judici Final o El Judici Universal és un mural que es troba a la Capella Sixtina i va ser pintat per:" ?var))
+    (bind ?var (create$ "Sandro Botticelli" "Papa Francesc" "Miguel Angel" "Pinturillo"))
+    (bind ?resposta (pregunta-index "El Judici Final va ser pintat per:" ?var))
         (if (= ?resposta 3) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "El Moulin de la Galette" "Razzmatazz" "El Parc de la Ciutadella"))
-    (bind ?resposta (pregunta-index "Cap a l'any 1900 els artistes bohemis es trobaven al barri de Montmartre (París). Quin era l'espai d'esbarjo que acostumaven a freqüentar?" ?var))
+    (bind ?resposta (pregunta-index "Quin era l'espai d'esbarjo que acostumaven a frequentar  els artistes bohemis l'any 1900?" ?var))
         (if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "Ratafia" "Absenta" "Carajillo" "Vodka Naranja"))
-    (bind ?resposta (pregunta-index "Moltes obres d'inicis de segle XX mostren personatges amb la mirada perduda i en estat d'embriaguesa. Quina beguda provocava aquests efectes?" ?var))
+    (bind ?resposta (pregunta-index "Moltes obres d'inicis de segle XX mostren personatges en estat d'embriaguesa. Quina beguda provocava aquests efectes?" ?var))
         (if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
 
     (modify ?c (coneixement ?score))
@@ -2384,7 +2385,7 @@
 
 ;;; ----------- Apliquem els filtres de les preguntes ----------
 
-(defrule processat_dades::valorar-coneixement-superior-a-4 "Millorar puntuacio dels quadres"
+(defrule processat_dades::valorar-coneixement-alt "Millorar puntuacio dels quadres"
 	(Visita (coneixement ?coneixement))
 	(test (> ?coneixement 4))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
@@ -2394,7 +2395,7 @@
 	=>
     (if (> ?relevancia 3) then
         (bind ?p (+ ?p 70))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia alta acord al coneixement del visitant -> +70"))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una rellevancia alta acord al coneixement del visitant -> +70"))
 	)
 	(send ?rec put-puntuacio ?p)
     (send ?rec put-justificacions $?just)
@@ -2402,7 +2403,7 @@
     (printout t "Valorant coneixement del grup..." crlf)
 )
 
-(defrule processat_dades::valorar-coneixement-inferior-a-4 "Millorar puntuacio dels quadres"
+(defrule processat_dades::valorar-coneixement-baix "Millorar puntuacio dels quadres"
 	(Visita (coneixement ?coneixement))
 	(test (<= ?coneixement 4))
 	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
@@ -2412,7 +2413,7 @@
 	=>
     (if (< ?relevancia 4) then
         (bind ?p (+ ?p 40))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una rellevancia mitjana/baixa acord al coneixement del visitant -> +40"))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una rellevancia mitjana/baixa acord al coneixement del visitant -> +40"))
 	)
 	(send ?rec put-puntuacio ?p)
     (send ?rec put-justificacions $?just)
@@ -2433,11 +2434,11 @@
 	=>
     (if (> (string_to_float ?h) 40.0) then
         (bind ?p (+ ?p 20))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup -> +20"))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una altura suficient per un grup -> +20"))
 	)
     (if (> (string_to_float ?w) 40.0) then
         (bind ?p (+ ?p 20))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup -> +20"))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una amplada suficient per un grup -> +20"))
 	)
 	(send ?rec put-puntuacio ?p)
     (send ?rec put-justificacions $?just)
@@ -2455,11 +2456,11 @@
 	=>
     (if (> (string_to_float ?h) 80.0) then
         (bind ?p (+ ?p 30))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una altura suficient per un grup gran -> +30"))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una altura suficient per un grup gran -> +30"))
 	)
     (if (> (string_to_float ?w) 80.0) then
         (bind ?p (+ ?p 30))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Té una amplada suficient per un grup gran -> +30"))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una amplada suficient per un grup gran -> +30"))
 	)
 	(send ?rec put-puntuacio ?p)
     (send ?rec put-justificacions $?just)
@@ -2484,7 +2485,7 @@
     (printout t "Comprovant autors preferits..." crlf)
 )
 
-(defrule processat_dades::valorar-estilos-preferits "Es millora la puntuacio de quadres amb estils preferits"
+(defrule processat_dades::valorar-estils-preferits "Es millora la puntuacio de quadres amb estils preferits"
 	?fet <- (estils ?estil)
 	?cont <-(object (is-a Quadre) (Estil_Quadre ?estilos))
 	(test (eq (instance-name ?estil) ?estilos))
@@ -2579,7 +2580,7 @@
 		(bind ?t-max (send ?dia get-hores_dia))
 		(bind ?t-ocu 0)
 		(bind ?try 1)
-		(bind ?asignados 0)
+		(bind ?asignats 0)
     ;;
         (bind ?j 1)
 		(while (and(and(< ?t-ocu ?t-max) (< ?try 4)) (> (length$ $?recs) 0) (<= ?j (length$ ?recs))) do
@@ -2618,7 +2619,7 @@
 				then
 					(bind ?t-ocu (+ ?t-ocu ?t))
 					(bind ?try 1)
-					(bind ?asignados (+ ?asignados 1))
+					(bind ?asignats (+ ?asignats 1))
 					(bind ?recs-dia (insert$ $?recs-dia (+ (length$ $?recs-dia) 1) ?rec))
 					(bind $?recs (delete-member$ $?recs ?rec))
 				else
@@ -2634,7 +2635,7 @@
 )
 
 
-(defrule resultats::passar-a-mostrar "Se pasa al modulo de presentacion"
+(defrule resultats::passar-a-mostrar "Mostrar resultats"
     (llista_dies)
 	=>
 	(focus mostrar)
@@ -2647,7 +2648,7 @@
     (not (final))
     =>
     (printout t crlf)
-	(format t "Esta es nuestra recomendacion de ruta para el grupo. Esperamos que la disfruteis.")
+	(format t "El vostre tour per el museu:")
 	(printout t crlf)
     (format t "%n")
     (printout t crlf)
