@@ -428,7 +428,7 @@
 
 ;;; ----- Classes propies del generador de solucions -----
 
-(defclass Recomanacio 
+(defclass Recomanacio
 	(is-a USER)
 	(role concrete)
     (slot nom_quadre
@@ -445,10 +445,10 @@
 (defclass Dia
 	(is-a USER)
 	(role concrete)
-	(multislot recomendacions
+	(multislot recomanacions
 		(type INSTANCE)
 		(create-accessor read-write))
-	(slot temps-maxim
+	(slot hores_dia
 		(type INTEGER)
 		(create-accessor read-write))
 )
@@ -567,14 +567,14 @@
 	(slot epoca_final (type INTEGER) (default 2020))
 )
 
-;;; Template para una lista de recomendaciones sin orden
-(deftemplate MAIN::llista-rec-desordenada
+;;; Template para una llista de recomanacions sense ordre
+(deftemplate MAIN::unsorted_recomanacions
 	(multislot recomanacions (type INSTANCE))
 )
 
-;;; Template para una lista de recomendaciones con orden
-(deftemplate MAIN::lista-rec-ordenada
-	(multislot recomendaciones (type INSTANCE))
+;;; Template para una llista de recomanacions amb ordre
+(deftemplate MAIN::sorted_recomanacions
+	(multislot recomanacions (type INSTANCE))
 )
 ;;; ------------------------ Fin declaracion de templates ----------------------
 
@@ -944,7 +944,7 @@
 	(bind $?llista_instancies (find-all-instances ((?inst Quadre)) TRUE))
 	(progn$ (?i ?llista_instancies)
 		(make-instance (gensym) of Recomanacio (nom_quadre ?i)(puntuacio 0))
-	)	
+	)
    (printout t "Afegint quadres..." crlf)
 )
 
@@ -954,7 +954,7 @@
 	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
 	=>
 	(retract ?fet)
-	(if (eq ?aux TRUE)then 
+	(if (eq ?aux TRUE)then
 		(progn$ (?curr-gen $?gen)
 			(assert (autors ?curr-gen))
 		)
@@ -968,7 +968,7 @@
 	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
 	=>
 	(retract ?hecho)
-	(if (eq ?aux TRUE)then 
+	(if (eq ?aux TRUE)then
 		(progn$ (?curr-gen $?gen)
 			(assert (estils ?curr-gen))
 		)
@@ -982,7 +982,7 @@
 	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
 	=>
 	(retract ?hecho)
-	(if (eq ?aux TRUE)then 
+	(if (eq ?aux TRUE)then
 		(loop-for-count (?cnt1 ?inici ?final) do
 			(assert (epoca ?cnt1))
 		)

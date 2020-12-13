@@ -81,7 +81,7 @@
 ;;; FALTA ACABAR!!!!
 
 (defrule generacion_soluciones::creacio_tour "Assignacio de recomanacions"
-    ?g <- (Visita (dies ?dies) (hores ?hores) (coneixement ?coneixement));
+    ?g <- (Visita (dies ?dies) (tipus ?tipus) (hores ?hores) (coneixement ?coneixement));
 	(lista-rec-ordenada (recomendaciones $?recs))
 	(not (lista-dies))
 	=>
