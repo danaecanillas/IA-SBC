@@ -557,7 +557,7 @@
 )
 
 ;;; Funcio per fer una pregunta amb respostes qualssevol
-(deffunction pregunta-general (?pregunta)
+(deffunction MAIN::pregunta-general (?pregunta)
     (format t "%s " ?pregunta)
 	(bind ?resposta (read))
 	(while (not (lexemep ?resposta)) do
@@ -764,12 +764,12 @@
 	(modify ?e (edat ?edat))
 )
 
-; (defrule dades-visita::definicio_nacionalitat "Nacionalitat de la Visita"
-; 	?n <- (Visita (nacionalitat ?nacionalitat))
-; 	=>
-; 	(bind ?nacionalitat (pregunta-general "Quina es la vostra nacionalitat?" ))
-; 	(modify ?n (nacionalitat ?nacionalitat))
-; )
+(defrule dades-visita::definicio_nacionalitat "Nacionalitat de la Visita"
+ 	?n <- (Visita (nacionalitat ?nacionalitat))
+ 	=>
+ 	(bind ?nacionalitat (pregunta-general "Quina es la vostra nacionalitat?" ))
+ 	(modify ?n (nacionalitat ?nacionalitat))
+ )
 
 (defrule dades-visita::passar-a-preferencies "Passem al modul de recopilacio de preferencies"
     ; (declare (salience 10))
@@ -841,7 +841,7 @@
     (bind ?sexe (pregunta-sexe "Escull el sexe" male female))
     (printout t crlf)
     (bind ?llista_instancies (find-all-instances ((?instancia Author)) (eq ?instancia:Genere ?sexe)))
-    
+
     (progn$ (?i ?llista_instancies)
         (send ?i imprimir))
 )
@@ -850,7 +850,7 @@
 (defrule mostrar::totsElsEstils "Mostrar tots els autors"
     =>
     (bind ?llista_instancies (find-all-instances ((?instancia Estil)) TRUE))
-        
+
     (progn$ (?i ?llista_instancies)
         (send ?i imprimir))
 )
