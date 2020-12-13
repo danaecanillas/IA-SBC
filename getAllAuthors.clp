@@ -535,6 +535,14 @@
 	(slot nacionalitat (type STRING) (default "indefinit"))
 )
 
+;;; Template para las preferencias del usuario
+(deftemplate MAIN::preferencies_grup
+	(multislot autors_pref (type INSTANCE))
+	(multislot estils_pref (type INSTANCE))
+	(single-slot epoca_inici (type INTEGER))
+	(single-slot epoca_final (type INTEGER))
+)
+
 ;;; ------------------------ Fin declaracion de templates ----------------------
 
 ;;; ------------------------ Declaracion de funciones --------------------------
