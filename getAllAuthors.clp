@@ -426,25 +426,37 @@
 
 )
 
+;;; ----- Classes propies del generador de solucions -----
+
+(defclass Recomanacio 
+	(is-a USER)
+	(role concrete)
+    (slot nom_quadre
+		(type INSTANCE)
+		(create-accessor read-write))
+    (slot puntuacio
+        (type INTEGER)
+        (create-accessor read-write))
+    (multislot justificacions
+		(type STRING)
+		(create-accessor read-write))
+)
+
+(defclass Dia
+	(is-a USER)
+	(role concrete)
+	(multislot recomendacions
+		(type INSTANCE)
+		(create-accessor read-write))
+	(slot temps-maxim
+		(type INTEGER)
+		(create-accessor read-write))
+)
 
 
 ;;-------------------------------------------------------------------------------------------------------------
 ;;                    MAIN
 ;;-------------------------------------------------------------------------------------------------------------
-
-; (defrule retorna_instancies
-;     =>
-;     (bind ?llista_instancies (find-all-instances ((?instancia Author)) TRUE))
-;     (progn$ (?i ?llista_instancies)
-;       (printout t (send ?i get-Nom) " " (send ?i get-Nacionalitat) " " (send ?i get-Genere) crlf))
-; )
-
-; (defrule retorna_homes
-;     =>
-;     (bind ?llista_instancies (find-all-instances ((?instancia Author)) (eq ?instancia:Genere "male")))
-;     (progn$ (?i ?llista_instancies)
-;       (printout t (send ?i get-Nom) " " (send ?i get-Nacionalitat) " " (send ?i get-Genere) crlf))
-; )
 
 ;;; Modulo principal de utilidades
 
@@ -461,6 +473,18 @@
 	(import MAIN ?ALL)
 	(import dades-visita deftemplate ?ALL)
 	(export ?ALL)
+)
+
+(defmodule processat_dades
+    (import MAIN ?ALL)
+    (import dades-visita deftemplate ?ALL)
+    (import dades-preferencies deftemplate ?ALL)
+    (export ?ALL)
+)
+
+(defmodule generacio_solucions
+    (import MAIN ?ALL)
+    (export ?ALL)
 )
 
 (defmodule mostrar
@@ -539,10 +563,19 @@
 (deftemplate MAIN::preferencies_grup
 	(multislot autors_pref (type INSTANCE))
 	(multislot estils_pref (type INSTANCE))
-	(single-slot epoca_inici (type INTEGER))
-	(single-slot epoca_final (type INTEGER))
+	(slot epoca_inici (type INTEGER))
+	(slot epoca_final (type INTEGER))
 )
 
+;;; Template para una lista de recomendaciones sin orden
+(deftemplate MAIN::llista-rec-desordenada
+	(multislot recomanacions (type INSTANCE))
+)
+
+;;; Template para una lista de recomendaciones con orden
+(deftemplate MAIN::lista-rec-ordenada
+	(multislot recomendaciones (type INSTANCE))
+)
 ;;; ------------------------ Fin declaracion de templates ----------------------
 
 ;;; ------------------------ Declaracion de funciones --------------------------
@@ -772,12 +805,12 @@
 	(modify ?e (edat ?edat))
 )
 
-(defrule dades-visita::definicio_nacionalitat "Nacionalitat de la Visita"
- 	?n <- (Visita (nacionalitat ?nacionalitat))
- 	=>
- 	(bind ?nacionalitat (pregunta-general "Quina es la vostra nacionalitat?" ))
- 	(modify ?n (nacionalitat ?nacionalitat))
- )
+; (defrule dades-visita::definicio_nacionalitat "Nacionalitat de la Visita"
+;  	?n <- (Visita (nacionalitat ?nacionalitat))
+;  	=>
+;  	(bind ?nacionalitat (pregunta-general "Quina es la vostra nacionalitat?" ))
+;  	(modify ?n (nacionalitat ?nacionalitat))
+;  )
 
 (defrule dades-visita::passar-a-preferencies "Passem al modul de recopilacio de preferencies"
     ; (declare (salience 10))
@@ -826,12 +859,62 @@
 
 (defrule dades-preferencies::passar_processat "Passem al modul de processament de les dades"
 	=>
-	(focus mostrar)
+	(focus processat_dades)
     (printout t "Processant les dades obtingudes..." crlf)
 )
 
 
+;;; ----------------- Modul processat de dades -------------------
 
+(defrule processat_dades::afegir-quadres "Afegint tots els quadres"
+    (declare (salience 10))
+	=>
+	(bind $?llista_instancies (find-all-instances ((?inst Quadre)) TRUE))
+	(progn$ (?i ?llista_instancies)
+		(make-instance (gensym) of Recomanacio (nom_quadre ?i)(puntuacio 0))
+	)	
+   (printout t "..." crlf)
+)
+
+(defrule processat_dades::aux-authors "Crea fets per poder processar els autors preferits"
+    (preferencies_visita (autors_favoritos $?gen))
+	?hecho <- (autores_fav ?aux)
+	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
+	=>
+	(retract ?hecho)
+	(if (eq ?aux TRUE)then 
+		(progn$ (?curr-gen $?gen)
+			(assert (autores ?curr-gen))
+		)
+	)
+    (printout t "..." crlf)
+)
+
+;; La resta nde funcions
+
+(defrule processat_dades::passar-a-generacio "Passa al modul de generacio de respostes"
+	(declare(salience -10))
+	=>
+	(printout t "Generando respuesta..." crlf)
+	(focus generacio_solucions)
+)
+
+;;; ------------ Modul generacio solucions ----------------
+
+(defrule generacio_solucions::crea-llista-recomanacions "Se crea una lista de recomendaciones para ordenarlas"
+	(not (llista-rec-desordenada))
+	=>
+	(assert (llista-rec-desordenada))
+)
+
+;;; La rsesta de funcions
+
+(defrule generacio_solucions::passar-a-mostrar "Se pasa al modulo de presentacion"
+    ; (dias-orden-sala)
+    (llista-rec-desordenada)
+	=>
+	(focus mostrar)
+)
 
 ;;; ---------------- FUNCIONS MEVES -----------------------
 
