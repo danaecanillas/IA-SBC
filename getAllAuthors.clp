@@ -2125,7 +2125,7 @@
     (bind ?resposta (pregunta-index "Cap a l'any 1900 els artistes bohemis es trobaven al barri de Montmartre (París). Quin era l'espai d'esbarjo que acostumaven a freqüentar?" ?var))
         (if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
 
-    (bind ?var (create$ "Ratafia" "Absenta" "carajillo" "Vodka Naranja"))
+    (bind ?var (create$ "Ratafia" "Absenta" "Carajillo" "Vodka Naranja"))
     (bind ?resposta (pregunta-index "Moltes obres d'inicis de segle XX mostren personatges amb la mirada perduda i en estat d'embriaguesa. Quina beguda provocava aquests efectes?" ?var))
         (if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
 
