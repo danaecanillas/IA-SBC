@@ -1763,9 +1763,6 @@
 	(slot hores_dia
 		(type INTEGER)
 		(create-accessor read-write))
-    (slot hores_dia
-		(type INTEGER)
-		(create-accessor read-write))
 )
 
 ;;; Inici de la solucio implementada
@@ -1868,27 +1865,6 @@
     (printout t crlf)
 )
 
-(defmessage-handler MAIN::Recomanacio print ()
-	(printout t "-----------------------------------" crlf)
-	(printout t (send ?self:nom_quadre imprimir))
-	(printout t crlf)
-	(format t "Score de recomanacio: %d %n" ?self:puntuacio)
-	(printout t "Justificacio: " crlf)
-	(progn$ (?curr-just ?self:justificacions)
-		(printout t ?curr-just crlf)
-	)
-	(printout t crlf)
-	(printout t "-----------------------------------" crlf)
-)
-
-(defmessage-handler MAIN::Dia print ()
-	(printout t "============================================" crlf)
-	(bind $?recs ?self:recomanacions)
-	(progn$ (?curr-rec $?recs)
-		(printout t (send ?curr-rec print))
-	)
-	(printout t "============================================" crlf)
-
 ;;; ------------------------ Declaracio de templates ---------------------------
 
 (deftemplate MAIN::Visita
@@ -1915,13 +1891,6 @@
 ;;; Template para una llista de recomanacions amb ordre
 (deftemplate MAIN::sorted_recomanacions
 	(multislot recomanacions (type INSTANCE))
-)
-
-;;; Modul de generacio de respostes -------------------------------------------------
-(defrule resultats::tour_desordenat "Creacio d'una llista de recomanacions per ordenar"
-	(not (unsorted_recomanacions))
-	=>
-	(assert (unsorted_recomanacions))
 )
 
 ;;; ------------------------ Fi declaracio de templates ------------------------
@@ -2489,7 +2458,7 @@
 	(declare(salience -10))
 	=>
 	(printout t "Generant resposta..." crlf)
-	(focus generacio_solucions)
+	(focus resultats)
 )
 
 ;;; ---------------------- Modul generacio solucions ---------------------------
@@ -2527,9 +2496,10 @@
 ;;; FALTA ACABAR!!!!
 (defrule resultats::creacio_tour "Assignacio de recomanacions"
     ?g <- (Visita (dies ?dies) (tipus ?tipus) (hores ?hores) (coneixement ?coneixement));
-	(lista-rec-ordenada (recomendaciones $?recs))
-	(not (lista-dies))
+	(sorted_recomanacions (recomanacions $?recs))
+	(not (tour-dies))
 	=>
+    ; to minutes
     (bind ?hores (* ?hores 60))
 	(bind $?tour (create$ ))
     (while (not(= (length$ $?tour) ?dies)) do
@@ -2549,8 +2519,9 @@
 		(while (and(and(< ?t-ocu ?t-max) (< ?try 4)) (> (length$ $?recs) 0) (<= ?j (length$ ?recs))) do
 			(bind ?rec (nth$ ?j $?recs))
 			(bind ?cont (send ?rec get-nom_quadre))
-			(bind ?a (send ?cont get-Amplada(* send ?cont get-Altura)))
-            (if (or (eq ?tipus "Individu") then
+		  (bind ?a (send ?cont get-Altura))
+      			;(bind ?a (send (string_to_float ?cont get-Amplada) (* send (string_to_float ?cont) get-Altura)))
+            (if (eq ?tipus "Individu") then
                 (if (> ?a 120000) then (bind ?t 12))
                 (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 10))
                 (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 6))
@@ -2589,18 +2560,17 @@
 			)
         (bind ?j (+ ?j 1))
 		)
-		(send ?dia put-recomendaciones $?recs-dia)
+		(send ?dia put-recomanacions $?recs-dia)
         (bind ?i (+ ?i 1))
 	)
-	(assert (tour-dies (dies $?lista)))
   (printout t "Assignacio de dies al tour..." crlf)
-  )
 )
 
-(defrule resultats::passar-a-mostrar "Se pasa al modulo de presentacion"
-	=>
-	(focus mostrar)
-)
+
+;(defrule resultats::passar-a-mostrar "Se pasa al modulo de presentacion"
+;	=>
+;	(focus mostrar)
+;)
 
 ;;; ---------------- FUNCIONS MEVES -----------------------
 
@@ -2612,25 +2582,25 @@
 ;         (send ?i imprimir))
 ; )
 
-(defrule mostrar::totsElsAutors "Mostrar tots els autors"
-    =>
-    ; (bind ?llista_instancies (find-all-instances ((?instancia Author)) TRUE))
-    (bind ?sexe (pregunta-sexe "Escull el sexe" male female))
-    (printout t crlf)
-    (bind ?llista_instancies (find-all-instances ((?instancia Author)) (eq ?instancia:Genere ?sexe)))
+;(defrule mostrar::totsElsAutors "Mostrar tots els autors"
+;    =>
+;    ; (bind ?llista_instancies (find-all-instances ((?instancia Author)) TRUE))
+;    (bind ?sexe (pregunta-sexe "Escull el sexe" male female))
+;    (printout t crlf)
+;    (bind ?llista_instancies (find-all-instances ((?instancia Author)) (eq ?instancia:Genere ?sexe)))
 
-    (progn$ (?i ?llista_instancies)
-        (send ?i imprimir))
-)
+;    (progn$ (?i ?llista_instancies)
+;        (send ?i imprimir))
+;)
 
 
-(defrule mostrar::totsElsEstils "Mostrar tots els autors"
-    =>
-    (bind ?llista_instancies (find-all-instances ((?instancia Estil)) TRUE))
+;(defrule mostrar::totsElsEstils "Mostrar tots els autors"
+;    =>
+;    (bind ?llista_instancies (find-all-instances ((?instancia Estil)) TRUE))
 
-    (progn$ (?i ?llista_instancies)
-        (send ?i imprimir))
-)
+;    (progn$ (?i ?llista_instancies)
+;        (send ?i imprimir))
+;)
 
 ; ;;; Funció per obtenir l'area del quadre
 ; (deffunction obtenir-area (?quadre)
