@@ -1893,6 +1893,15 @@
 	(multislot recomanacions (type INSTANCE))
 )
 
+(deftemplate MAIN::llista_dies
+	(multislot dies (type INSTANCE))
+)
+
+
+(deftemplate MAIN::dies_ordre_sala
+	(multislot dies (type INSTANCE))
+)
+
 ;;; ------------------------ Fi declaracio de templates ------------------------
 
 ;;; ------------------------ Declaracio de funcions ----------------------------
@@ -2354,7 +2363,7 @@
     (printout t "Valorant coneixement del grup..." crlf)
 )
 
-(defmethod processat_dades::string_to_float ((?s STRING))
+(defmethod MAIN::string_to_float ((?s STRING))
    (float (string-to-field ?s)))
 
 (defrule processat_dades::valorar-tamany-quadre-grup-petit "Millorar tamany dels quadres"
@@ -2519,8 +2528,8 @@
 		(while (and(and(< ?t-ocu ?t-max) (< ?try 4)) (> (length$ $?recs) 0) (<= ?j (length$ ?recs))) do
 			(bind ?rec (nth$ ?j $?recs))
 			(bind ?cont (send ?rec get-nom_quadre))
-		  (bind ?a (send ?cont get-Altura))
-      			;(bind ?a (send (string_to_float ?cont get-Amplada) (* send (string_to_float ?cont) get-Altura)))
+		;   (bind ?a (send ?cont get-Altura))
+      		(bind ?a (* (string_to_float (send ?cont get-Amplada)) (string_to_float (send ?cont get-Altura))))
             (if (eq ?tipus "Individu") then
                 (if (> ?a 120000) then (bind ?t 12))
                 (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 10))
@@ -2563,17 +2572,38 @@
 		(send ?dia put-recomanacions $?recs-dia)
         (bind ?i (+ ?i 1))
 	)
-  (printout t "Assignacio de dies al tour..." crlf)
+    (assert (llista_dies (dies $?tour)))
+    (printout t "Assignacio de dies al tour..." crlf)
 )
 
 
-;(defrule resultats::passar-a-mostrar "Se pasa al modulo de presentacion"
-;	=>
-;	(focus mostrar)
-;)
+(defrule resultats::passar-a-mostrar "Se pasa al modulo de presentacion"
+    (llista_dies)
+	=>
+	(focus mostrar)
+)
 
 ;;; ---------------- FUNCIONS MEVES -----------------------
 
+(defrule mostrar::totsElsQuadres "Mostrar tots els quadres"
+    (llista_dies (dies $?tour))
+    (not (final))
+    =>
+    (printout t crlf)
+	(format t "Esta es nuestra recomendacion de ruta para el grupo. Esperamos que la disfruteis.")
+	(printout t crlf)
+    (format t "%n")
+    (printout t crlf)
+    (printout t "============================================" crlf)
+    (bind ?i 0)
+	(progn$ (?curr-dia $?tour)
+        (bind ?i(+ ?i 1))
+        	(format t "Dia %d" ?i)
+            (printout t crlf)
+		(printout t (send ?curr-dia imprimir))
+	)
+	(assert (final))
+)
 
 ; (defrule mostrar::totsElsQuadres "Mostrar tots els quadres"
 ;     =>
