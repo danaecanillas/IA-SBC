@@ -560,9 +560,9 @@
 )
 
 ;;; Template para las preferencias del usuario
-(deftemplate MAIN::preferencies_grup
-	(multislot autors_pref (type INSTANCE))
-	(multislot estils_pref (type INSTANCE))
+(deftemplate MAIN::preferencies_visita
+	(multislot autors_preferits (type INSTANCE))
+	(multislot estils_preferits (type INSTANCE))
 	(slot epoca_inici (type INTEGER))
 	(slot epoca_final (type INTEGER))
 )
@@ -825,39 +825,88 @@
 
 
 (deffacts dades-preferencies::fets-inicials "Establim fets per poder recopilar informacio"
-    (autors_preferits ask)
-    (tematiques_preferides ask)
-    (estils_preferits ask)
-	(epoques_preferides ask)
-    (preferencies_visita )
+    (autors_pref ask)
+    (estils_pref ask)
+    (preferencies_visita)
 )
 
+(defrule dades-preferencies::ask_autors_preferits "Pregunta a l'usuari si té autors preferits"
+	?fet <- (autors_pref ask)
+	=>
+	(bind ?resposta (pregunta-si-no "Té preferències pel que fa als autors de les obres? "))
+	(retract ?fet)
+	(if (eq ?resposta TRUE)
+		then (assert (autors_pref choose))
+		else
+		(assert (autors_preferits FALSE))
+	)
+)
 
 (defrule dades-preferencies::autors_preferits "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
+    ?fet <- (autors_pref choose)
+      ?preferencies <- (preferencies_visita)
+      =>
+	     (bind $?obj-autors (find-all-instances ((?inst Author)) TRUE))
+       (bind $?nom-autors (create$ ))
+       (loop-for-count (?i 1 (length$ $?obj-autors)) do
+           (bind ?curr-obj (nth$ ?i ?obj-autors))
+      		 (bind ?curr-nom (send ?curr-obj get-Nom))
+      		 (bind $?nom-autors(insert$ $?nom-autors (+ (length$ $?nom-autors) 1) ?curr-nom))
+	)
+	(bind ?chosen (pregunta-multi "Esculli els seus autors preferits: " $?nom-autors))
+  (bind $?resposta (create$ ))
+	(loop-for-count (?i 1 (length$ ?chosen)) do
+		(bind ?curr-index (nth$ ?i ?chosen))
+		(bind ?curr-autor (nth$ ?curr-index ?obj-autors))
+		(bind $?resposta(insert$ $?resposta (+ (length$ $?resposta) 1) ?curr-autor))
+	)
+
+	(retract ?fet)
+  (assert (autors_pref TRUE))
+  (modify ?preferencies (autors_preferits $?resposta))
 )
 
-
-(defrule dades-preferencies::tematiques_preferides "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
+(defrule dades-preferencies::ask_estils_preferits "Pregunta a l'usuari si té estils preferits"
+	?fet <- (estils_pref ask)
+	=>
+	(bind ?resposta (pregunta-si-no "Té preferències pel que fa a l'estil de les obres? "))
+	(retract ?fet)
+	(if (eq ?resposta TRUE)
+		then (assert (estils_pref choose))
+		else
+		(assert (estils_preferits FALSE))
+	)
 )
 
+(defrule dades-preferencies::estils_preferits "Establim els estils preferits"
+    ?fet <- (estils_pref choose)
+      ?preferencies <- (preferencies_visita)
+      =>
+	     (bind $?obj-estils (find-all-instances ((?inst Estil)) TRUE))
+       (bind $?nom-estils (create$ ))
+       (loop-for-count (?i 1 (length$ $?obj-estils)) do
+           (bind ?curr-obj (nth$ ?i ?obj-estils))
+      		 (bind ?curr-nom (send ?curr-obj get-Nom))
+      		 (bind $?nom-estils(insert$ $?nom-estils (+ (length$ $?nom-estils) 1) ?curr-nom))
+	)
+	(bind ?chosen (pregunta-multi "Esculli els seus estils preferits: " $?nom-estils))
+  (bind $?resposta (create$ ))
+	(loop-for-count (?i 1 (length$ ?chosen)) do
+		(bind ?curr-index (nth$ ?i ?chosen))
+		(bind ?curr-autor (nth$ ?curr-index ?obj-estils))
+		(bind $?resposta(insert$ $?resposta (+ (length$ $?resposta) 1) ?curr-autor))
+	)
 
-(defrule dades-preferencies::estils_preferits "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
-)
-
-
-(defrule dades-preferencies::epoques_preferides "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
+	(retract ?fet)
+  (assert (estils_pref TRUE))
+  (modify ?preferencies (estils_preferits $?resposta))
 )
 
 
 (defrule dades-preferencies::passar_processat "Passem al modul de processament de les dades"
+    (declare (salience -1))
+    ; ?h1 <- (autors_pref TRUE|FALSE)
+    ; ?h2 <- (estils_pref TRUE|FALSE)
 	=>
 	(focus processat_dades)
     (printout t "Processant les dades obtingudes..." crlf)
@@ -873,21 +922,71 @@
 	(progn$ (?i ?llista_instancies)
 		(make-instance (gensym) of Recomanacio (nom_quadre ?i)(puntuacio 0))
 	)	
-   (printout t "..." crlf)
+   (printout t "Afegint quadres..." crlf)
 )
 
 (defrule processat_dades::aux-authors "Crea fets per poder processar els autors preferits"
-    (preferencies_visita (autors_favoritos $?gen))
-	?hecho <- (autores_fav ?aux)
+    (preferencies_visita (autors_preferits $?gen))
+	?fet <- (autors_pref ?aux)
+	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
+	=>
+	(retract ?fet)
+	(if (eq ?aux TRUE)then 
+		(progn$ (?curr-gen $?gen)
+			(assert (autors ?curr-gen))
+		)
+	)
+    (printout t "Creant fets autors..." crlf)
+)
+
+(defrule processat_dades::aux-estils "Crea fets per poder processar els estils preferits"
+    (preferencies_visita (estils_preferits $?gen))
+	?hecho <- (estils_pref ?aux)
 	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
 	=>
 	(retract ?hecho)
 	(if (eq ?aux TRUE)then 
 		(progn$ (?curr-gen $?gen)
-			(assert (autores ?curr-gen))
+			(assert (estils ?curr-gen))
 		)
 	)
-    (printout t "..." crlf)
+    (printout t "Creant fets estils..." crlf)
+)
+
+;;; ----------- Apliquem els filtres de les preguntes ----------
+
+(defrule processat_dades::valorar-autors-preferits "Es millora la puntuacio de quadres d'autorss preferits"
+	?hecho <- (autors ?auto)
+	?cont <-(object (is-a Quadre) (Es_De ?autor))
+	(test (eq (instance-name ?auto) ?autor))
+	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
+	(test (eq (instance-name ?cont) (instance-name ?conta)))
+	(not (valorat-autor-preferit ?cont ?auto)) ;?auto al final
+	=>
+	(bind ?p (+ ?p 50))
+	(bind ?text (str-cat "Pertany a l'autor preferit: " (send ?auto get-Nom) " -> +50"))
+    (bind $?just (insert$ $?just (+ (length$ $?just) 1) ?text))
+	(send ?rec put-puntuacio ?p)
+    (send ?rec put-justificacions $?just)
+	(assert (valorat-autor-preferit ?cont ?auto))
+    (printout t "Comprovant autors preferits..." crlf)
+)
+
+(defrule processat_dades::valorar-estilos-preferits "Es millora la puntuacio de quadres amb estils preferits"
+	?hecho <- (estils ?estil)
+	?cont <-(object (is-a Quadre) (Estil_Quadre ?estilos))
+	(test (eq (instance-name ?estil) ?estilos))
+	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
+	(test (eq (instance-name ?cont) (instance-name ?conta)))
+	(not (valorat-estil-preferit ?cont ?estil))
+	=>
+	(bind ?p (+ ?p 50))
+	(bind ?text (str-cat "Pertany a l'estil preferit: " (send ?estil get-Nom) " -> +50"))
+    (bind $?just (insert$ $?just (+ (length$ $?just) 1) ?text))
+	(send ?rec put-puntuacio ?p)
+    (send ?rec put-justificacions $?just)
+	(assert (valorat-estil-preferit ?cont ?estil))
+    (printout t "Comprovant estils preferits..." crlf)
 )
 
 ;; La resta nde funcions
