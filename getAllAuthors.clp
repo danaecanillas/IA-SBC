@@ -99,7 +99,7 @@
         (type INTEGER)
         (create-accessor read-write))
     (single-slot Data
-        (type SYMBOL)
+        (type INTEGER)
         (create-accessor read-write))
     (single-slot Medi
         (type STRING)
@@ -563,8 +563,8 @@
 (deftemplate MAIN::preferencies_visita
 	(multislot autors_preferits (type INSTANCE))
 	(multislot estils_preferits (type INSTANCE))
-	(slot epoca_inici (type INTEGER))
-	(slot epoca_final (type INTEGER))
+	(slot epoca_inici (type INTEGER) (default -1))
+	(slot epoca_final (type INTEGER) (default 2020))
 )
 
 ;;; Template para una lista de recomendaciones sin orden
@@ -825,9 +825,9 @@
 
 
 (deffacts dades-preferencies::fets-inicials "Establim fets per poder recopilar informacio"
-    (autors_preferits ask)
-    (estils_preferits ask)
-;    (epoca_preferits ask)
+    (autors_pref ask)
+    (estils_pref ask)
+    (epoca_pref ask)
     (preferencies_visita)
 )
 
@@ -903,6 +903,28 @@
   (modify ?preferencies (estils_preferits $?resposta))
 )
 
+(defrule dades-preferencies::ask_epoca_preferida "Pregunta a l'usuari si té època preferida"
+	?fet <- (epoca_pref ask)
+	=>
+	(bind ?resposta (pregunta-si-no "Te preferencies pel que fa a l'epoca de les obres? "))
+	(retract ?fet)
+	(if (eq ?resposta TRUE)
+		then (assert (epoca_pref choose))
+		else
+		(assert (epoca_pref FALSE))
+	)
+)
+
+(defrule dades-preferencies::epoca_preferida "Establim les epoques preferides"
+    ?fet <- (epoca_pref choose)
+    ?preferencies <- (preferencies_visita)
+    =>
+    (bind ?any_ini (pregunta-numerica "Esculli l'any d'inici de la epoca: " 0 2020))
+    (bind ?any_fi (pregunta-numerica "Esculli l'any de final de la epoca: " 0 2020))
+    (retract ?fet)
+    (assert (epoca_pref TRUE))
+    (modify ?preferencies (epoca_inici ?any_ini) (epoca_final ?any_fi))
+)
 
 (defrule dades-preferencies::passar_processat "Passem al modul de processament de les dades"
     (declare (salience -1))
@@ -953,41 +975,20 @@
 	)
     (printout t "Creant fets estils..." crlf)
 )
-;(defrule dades-preferencies::ask_epoca_preferida "Pregunta a l'usuari si té època preferida"
-;	?fet <- (epoca_preferida ask)
-;	=>
-;	(bind ?resposta (pregunta-si-no "Te preferencies pel que fa a l'epoca de les obres? "))
-;	(retract ?fet)
-;	(if (eq ?resposta TRUE)
-;		then (assert (epoca_preferida choose))
-;		else
-;		(assert (epoca_preferida FALSE))
-;	)
-;);
 
-;(defrule dades-preferencies::epoca_preferida "Establim les epoques preferides"
-;    ?fet <- (epoca_preferida choose)
-;      ?preferencies <- (preferencies_visita)
-;      =>
-;	     (bind $?obj-epoques (find-all-instances ((?inst Author)) TRUE))
-;       (bind $?nom-epoques (create$ ))
-;       (loop-for-count (?i 1 (length$ $?obj-epoques)) do
-;           (bind ?curr-obj (nth$ ?i ?obj-epoques))
-;      		 (bind ?curr-nom (send ?curr-obj get-Nom))
-;      		 (bind $?nom-epoques(insert$ $?nom-epoques (+ (length$ $?nom-epoques) 1) ?curr-nom))
-;	)
-;	(bind ?chosen (pregunta-multi "Esculli les seves epoques preferides: " $?nom-epoques))
-;  (bind $?resposta (create$ ))
-;	(loop-for-count (?i 1 (length$ ?chosen)) do
-;		(bind ?curr-index (nth$ ?i ?chosen))
-;		(bind ?curr-autor (nth$ ?curr-index ?obj-epoques))
-;		(bind $?resposta(insert$ $?resposta (+ (length$ $?resposta) 1) ?curr-autor))
-;	)
-
-;	(retract ?fet)
-;  (assert (epoques_preferits TRUE))
-;  (modify ?preferencies (epoques_preferits $?resposta))
-;)
+(defrule processat_dades::aux-epoca "Crea fets per poder processar l'epoca preferida"
+    (preferencies_visita (epoca_inici ?inici) (epoca_final ?final))
+	?hecho <- (epoca_pref ?aux)
+	(test (or (eq ?aux TRUE) (eq ?aux FALSE)))
+	=>
+	(retract ?hecho)
+	(if (eq ?aux TRUE)then 
+		(loop-for-count (?cnt1 ?inici ?final) do
+			(assert (epoca ?cnt1))
+		)
+	)
+    (printout t "Creant fets epoca..." crlf)
+)
 
 ;;; ----------- Apliquem els filtres de les preguntes ----------
 
@@ -1025,7 +1026,24 @@
     (printout t "Comprovant estils preferits..." crlf)
 )
 
-;; La resta nde funcions
+(defrule processat_dades::valorar-epoca-preferida "Es millora la puntuacio de quadres de l'epoca"
+	?hecho <- (epoca ?any)
+    ; ?hecho <- (preferencies_visita (epoca_inici ?inici) (epoca_final ?final))
+	?cont <-(object (is-a Quadre) (Data ?data))
+	(test (eq ?any ?data))
+    ; (test (or (>= ?data ?inici) (<= ?data ?final)))
+	?rec <- (object (is-a Recomanacio) (nom_quadre ?conta) (puntuacio ?p) (justificacions $?just))
+	(test (eq (instance-name ?cont) (instance-name ?conta)))
+	(not (valorat-any-preferit ?cont ?any))
+	=>
+	(bind ?p (+ ?p 50))
+	(bind ?text (str-cat "Pertany a un any de l'epoca preferida: " ?data " -> +50"))
+    (bind $?just (insert$ $?just (+ (length$ $?just) 1) ?text))
+	(send ?rec put-puntuacio ?p)
+    (send ?rec put-justificacions $?just)
+	(assert (valorat-any-preferit ?cont ?any))
+    (printout t "Comprovant anys preferits..." crlf)
+)
 
 (defrule processat_dades::passar-a-generacio "Passa al modul de generacio de respostes"
 	(declare(salience -10))
@@ -1042,7 +1060,7 @@
 	(assert (llista-rec-desordenada))
 )
 
-;;; La rsesta de funcions
+;;; La resta de funcions
 
 (defrule generacio_solucions::passar-a-mostrar "Se pasa al modulo de presentacion"
     ; (dias-orden-sala)
