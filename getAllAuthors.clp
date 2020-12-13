@@ -785,41 +785,90 @@
 
 (deffacts dades-preferencies::fets-inicials "Establim fets per poder recopilar informacio"
     (autors_preferits ask)
-    (tematiques_preferides ask)
     (estils_preferits ask)
-	(epoques_preferides ask)
-    (preferencies_visita )
+    (preferencies_visita)
 )
 
+(defrule dades-preferencies::ask_autors_preferits "Pregunta a l'usuari si té autors preferits"
+	?fet <- (autors_preferits ask)
+	=>
+	(bind ?resposta (pregunta-si-no "Té preferències pel que fa als autors de les obres? "))
+	(retract ?fet)
+	(if (eq ?resposta TRUE)
+		then (assert (autors_preferits choose))
+		else
+		(assert (autors_preferits FALSE))
+	)
+)
 
 (defrule dades-preferencies::autors_preferits "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
+    ?fet <- (autors_preferits choose)
+      ?preferencies <- (preferencies_visita)
+      =>
+	     (bind $?obj-autors (find-all-instances ((?inst Author)) TRUE))
+       (bind $?nom-autors (create$ ))
+       (loop-for-count (?i 1 (length$ $?obj-autors)) do
+           (bind ?curr-obj (nth$ ?i ?obj-autors))
+      		 (bind ?curr-nom (send ?curr-obj get-Nom))
+      		 (bind $?nom-autors(insert$ $?nom-autors (+ (length$ $?nom-autors) 1) ?curr-nom))
+	)
+	(bind ?chosen (pregunta-multi "Esculli els seus autors preferits: " $?nom-autors))
+  (bind $?resposta (create$ ))
+	(loop-for-count (?i 1 (length$ ?chosen)) do
+		(bind ?curr-index (nth$ ?i ?chosen))
+		(bind ?curr-autor (nth$ ?curr-index ?obj-autors))
+		(bind $?resposta(insert$ $?resposta (+ (length$ $?resposta) 1) ?curr-autor))
+	)
+
+	(retract ?fet)
+  (assert (autors_preferits TRUE))
+  (modify ?preferencies (autors_preferits $?resposta))
 )
 
-
-(defrule dades-preferencies::tematiques_preferides "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
+(defrule dades-preferencies::ask_estils_preferits "Pregunta a l'usuari si té estils preferits"
+	?fet <- (estils_preferits ask)
+	=>
+	(bind ?resposta (pregunta-si-no "Té preferències pel que fa a l'estil de les obres? "))
+	(retract ?fet)
+	(if (eq ?resposta TRUE)
+		then (assert (estils_preferits choose))
+		else
+		(assert (estils_preferits FALSE))
+	)
 )
 
+(defrule dades-preferencies::estils_preferits "Establim els estils preferits"
+    ?fet <- (estils_preferits choose)
+      ?preferencies <- (preferencies_visita)
+      =>
+	     (bind $?obj-estils (find-all-instances ((?inst Estil)) TRUE))
+       (bind $?nom-estils (create$ ))
+       (loop-for-count (?i 1 (length$ $?obj-estils)) do
+           (bind ?curr-obj (nth$ ?i ?obj-estils))
+      		 (bind ?curr-nom (send ?curr-obj get-Nom))
+      		 (bind $?nom-estils(insert$ $?nom-estils (+ (length$ $?nom-estils) 1) ?curr-nom))
+	)
+	(bind ?chosen (pregunta-multi "Esculli els seus estils preferits: " $?nom-estils))
+  (bind $?resposta (create$ ))
+	(loop-for-count (?i 1 (length$ ?chosen)) do
+		(bind ?curr-index (nth$ ?i ?chosen))
+		(bind ?curr-autor (nth$ ?curr-index ?obj-estils))
+		(bind $?resposta(insert$ $?resposta (+ (length$ $?resposta) 1) ?curr-autor))
+	)
 
-(defrule dades-preferencies::estils_preferits "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
-)
-
-
-(defrule dades-preferencies::epoques_preferides "Establim els autors preferits"
-    =>
-    (printout t "Encara no esta fet :)" crlf)
+	(retract ?fet)
+  (assert (estils_preferits TRUE))
+  (modify ?preferencies (estils_preferits $?resposta))
 )
 
 
 (defrule dades-preferencies::passar_processat "Passem al modul de processament de les dades"
+; (declare (salience -1))
+; ?h1 <- (autors_preferits TRUE|FALSE)
+; ?h2 <- (estils_preferits TRUE|FALSE)
 	=>
+  (printout t "Processant les dades obtingudes..." crlf)
 	(focus mostrar)
-    (printout t "Processant les dades obtingudes..." crlf)
 )
 
 
