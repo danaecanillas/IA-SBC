@@ -2193,7 +2193,7 @@
     (bind ?resposta (pregunta-index "Cap a l'any 1900 els artistes bohemis es trobaven al barri de Montmartre (París). Quin era l'espai d'esbarjo que acostumaven a freqüentar?" ?var))
         (if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
 
-    (bind ?var (create$ "Ratafia" "Absenta" "carajillo" "Vodka Naranja"))
+    (bind ?var (create$ "Ratafia" "Absenta" "Carajillo" "Vodka Naranja"))
     (bind ?resposta (pregunta-index "Moltes obres d'inicis de segle XX mostren personatges amb la mirada perduda i en estat d'embriaguesa. Quina beguda provocava aquests efectes?" ?var))
         (if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
 
@@ -2216,12 +2216,12 @@
 ;  )
 
 (defrule dades-visita::passar-a-preferencies "Passem al modul de recopilacio de preferencies"
-    ; (declare (salience 10))
-	; 			?g <- (Visita (tipus ~"indefinit")(edat ?edat) (dies ?dies) (hores ?hores) (coneixement ?coneixement) (nacionalitat ~"indefinit"))
-    ; (test (> ?edat -1))
-    ; (test (> ?dies -1))
-    ; (test (> ?hores -1))
-    ; (test (> ?coneixement -1))
+    (declare (salience 10))
+ 			?g <- (Visita (tipus ~"indefinit")(edat ?edat) (dies ?dies) (hores ?hores) (coneixement ?coneixement) (nacionalitat ~"indefinit"))
+     (test (> ?edat -1))
+     (test (> ?dies -1))
+     (test (> ?hores -1))
+     (test (> ?coneixement -1))
 		=>
 		(focus dades-preferencies)
 )
@@ -2599,30 +2599,30 @@
 		;   (bind ?a (send ?cont get-Altura))
       		(bind ?a (* (string_to_float (send ?cont get-Amplada)) (string_to_float (send ?cont get-Altura))))
             (if (eq ?tipus "Individu") then
-                (if (> ?a 120000) then (bind ?t 12))
-                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 10))
-                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 6))
-                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 4))
+                (if (> ?a 5000) then (bind ?t 12))
+                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 10))
+                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 6))
+                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 4))
             )
             (if (eq ?tipus "Parella") then
-                (if (> ?a 120000) then (bind ?t 13))
-                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 11))
-                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 7))
-                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 5))
+                (if (> ?a 5000) then (bind ?t 13))
+                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 11))
+                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 7))
+                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 5))
 
             )
             (if (eq ?tipus "Grup petit") then
-                (if (> ?a 120000) then (bind ?t 14))
-                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 12))
-                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 8))
-                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 6))
+                (if (> ?a 5000) then (bind ?t 14))
+                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 12))
+                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 8))
+                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 6))
 
             )
             (if (eq ?tipus "Grup gran") then
-                (if (> ?a 120000) then (bind ?t 16))
-                (if (and (> ?a 13000) (< ?a 120000)) then (bind ?t 14))
-                (if (and (> ?a 2000) (< ?a 13000)) then (bind ?t 10))
-                (if (and (> ?a 0) (< ?a 2000)) then (bind ?t 8))
+                (if (> ?a 5000) then (bind ?t 16))
+                (if (and (> ?a 1500) (< ?a 5000)) then (bind ?t 14))
+                (if (and (> ?a 500) (< ?a 1500)) then (bind ?t 10))
+                (if (and (> ?a 0) (< ?a 500)) then (bind ?t 8))
             )
       ;;
 			(if (< (+ ?t-ocu ?t) ?t-max)
