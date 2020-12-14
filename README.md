@@ -36,7 +36,7 @@ CLIPS> (run)
  _________________________ 
 
 Benvingut al nostre sistema de recomanacio de visites! 
-Si us plau, contesti les preguntes que venen a continuacio  per tal d'oferir-vos un tour pel nostre museu.
+Si us plau, contesti les preguntes que venen a continuacio per tal d'oferir-vos un tour pel nostre museu.
 ```
 * <code>Input</code>: Answer the questions to personalize the museum tour
 
