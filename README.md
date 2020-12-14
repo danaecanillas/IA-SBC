@@ -11,21 +11,36 @@
 ## Table of Contents
 
 1. [Problem Description](#Problem-Description)
-2. [Main Goal](#Main-Goal)
-3. [Usage](#Usage)
+2. [Usage](#Usage)
    1. [Project files](#Project-files)
    2. [Execution steps](#Execution-steps)
-4. [LICENSE](#LICENSE)
+3. [LICENSE](#LICENSE)
 
 ## Problem Description
-
-## Main Goal
+In this project, we are asked to implement a recommendation system for the visitors of an artmuseum. The reason for this is that the amount of artworks to see in this museum is humongous,and thus the visitors must prioritize and decide which artworks will they want to see, and howmuch time will they want to spend on each of them. Obviously, each visitor or visiting group will have their own characteristics (demographics, nationality, age, group size, art knowledge,etc.) and consequently they will have a preferred route and artworks.
 
 ## Usage
 
 ### Project files
 
-### Execution steps
+### Execution
+```
+CLIPS> (load "museum.clp")
+CLIPS> (reset)
+CLIPS> (run)
+ _________________________ 
+                           
+   -   -   -   -   -   -   
+ ( M | U | S | E | U | M ) 
+   -   -   -   -   -   -   
+ _________________________ 
+
+Benvingut al nostre sistema de recomanacio de visites! 
+Si us plau, contesti les preguntes que venen a continuacio  per tal d'oferir-vos un tour pel nostre museu.
+```
+* <code>Input</code>: Answer the questions to personalize the museum tour
+
+* <code>Output</code>: Tour suggestion.
 
 ## LICENCE
 MIT © Dànae/Miquel/Arnau
