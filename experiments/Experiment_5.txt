@@ -1,0 +1,1700 @@
+TRUE
+CLIPS> (reset)
+CLIPS> (run)
+ _________________________ 
+                           
+   -   -   -   -   -   -   
+ ( M | U | S | E | U | M ) 
+   -   -   -   -   -   -   
+ _________________________ 
+
+Benvingut al nostre sistema de recomanacio de visites! 
+Si us plau, contesti les preguntes que venen a continuacio 
+per tal d'oferir-vos un tour pel nostre museu.
+
+Quanta gent son?  [1, 50] 40
+Quants dies durara la vostra visita? [1, 14] 10
+Durant quantes hores diaries vol planificar la visita? [1, 8] 3
+Acostuma a visitar museus?
+  1. Si
+  2. No
+Esculli una opcio: [1, 2] 1
+Ha cursat estudis d'art?
+  1. Si
+  2. No
+Esculli una opcio: [1, 2] 2
+Es dedica professionalment a l'art?
+  1. Si
+  2. No
+Esculli una opcio: [1, 2] 2
+¿Qué representa el quadre de Guernica de Pablo Picasso?
+  1. Una placa de toros
+  2. Un bombardeig
+Esculli una opcio: [1, 2] 2
+Claude Monet va ser un dels creadors d'aquest moviment artistic:
+  1. Impressionisme
+  2. Surrealisme
+  3. Dadaisme
+  4. K-Pop
+Esculli una opcio: [1, 4] 1
+El Museu Guggenheim Bilbao va ser dissenyat per:
+  1. Risto Mejide
+  2. Zaha Hadid
+  3. Diego Velazquez
+  4. Frank O. Gehry
+Esculli una opcio: [1, 4] 1
+En l'art medieval ¿quines dues lletres s'associen a Crist?
+  1. AC DC
+  2. Alfa i Omega
+Esculli una opcio: [1, 2] 1
+El Judici Final va ser pintat per:
+  1. Sandro Botticelli
+  2. Papa Francesc
+  3. Miguel Angel
+  4. Pinturillo
+Esculli una opcio: [1, 4] 1
+Quin era l'espai d'esbarjo que acostumaven a frequentar  els artistes bohemis l'any 1900?
+  1. El Moulin de la Galette
+  2. Razzmatazz
+  3. El Parc de la Ciutadella
+Esculli una opcio: [1, 3] 1
+Moltes obres d'inicis de segle XX mostren personatges en estat d'embriaguesa. Quina beguda provocava aquests efectes?
+  1. Ratafia
+  2. Absenta
+  3. Carajillo
+  4. Vodka Naranja
+Esculli una opcio: [1, 4] 1
+Indiqui l'edat mitjana de la visita  [1, 120] 16
+Te preferencies pel que fa a l'epoca de les obres?  [si][no]: si
+Esculli l'any d'inici de la epoca:  [0, 2020] 1970
+Esculli l'any de final de la epoca:  [0, 2020] 2020
+Te preferencies pel que fa a l'estil de les obres?  [si][no]: si
+Esculli els seus estils preferits: 
+  1. Abstractismo
+  2. Arte Naif
+  3. Expresionismo
+  4. Fauvismo
+  5. Surrealismo
+  6. Cubismo
+  7. Clasicismo
+  8. Arte Pop
+  9. Romanticismo
+Indica els numeros separats per un espai: 2 4 7
+Te preferencies pel que fa als autors de les obres?  [si][no]: no
+Processant les dades obtingudes...
+Afegint quadres...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Valorant coneixement del grup...
+Valorant tamany del quadre...
+Creant fets estils...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Comprovant estils preferits...
+Creant fets epoca...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Comprovant anys preferits...
+Generant resposta...
+Ordenant...
+Assignacio de dies al tour...
+
+El vostre tour per el museu:
+
+
+============================================
+Dia 1
+============================================
+-----------------------------------
+  Titulo: Public Library, Stockholm, Sweden, Section
+  Anyo: 1933
+  Altura: 90.2 - Amplada: 93.7
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 110 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Earth-Cloud House, project
+  Anyo: 1970
+  Altura: 87.3127 - Amplada: 135.8903
+  Estil: Fauvismo
+  Sala: Sala_4
+  Autor: Raimund Abraham
+
+Nivel de recomendacion: 160 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Fauvismo -> +50
+Pertany a un any de l'epoca preferida: 1970 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Vacation House, project, Aspen, Colorado, Fireplace
+  Anyo: 1978
+  Altura: 20.3 - Amplada: 20.3
+  Estil: Clasicismo
+  Sala: Sala_8
+  Autor: Michael Graves
+
+Nivel de recomendacion: 100 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Clasicismo -> +50
+Pertany a un any de l'epoca preferida: 1978 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 4: The Block,
+  Anyo: 1980
+  Altura: 48.3 - Amplada: 78.7
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 100 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York , Episode 1: The Park
+  Anyo: 1976
+  Altura: 35.6 - Amplada: 45.7
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 100 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1976 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)
+  Anyo: 1980
+  Altura: 121.9 - Amplada: 61.0
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 130 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)
+  Anyo: 1979
+  Altura: 121.9 - Amplada: 61.0
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 130 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1979 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)
+  Anyo: 1979
+  Altura: 121.9202 - Amplada: 60.9601
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 130 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1979 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Parc de la Villette, Le Case Vide, Paris, France (Axonometric of folly)
+  Anyo: 1984
+  Altura: 94.4564 - Amplada: 94.7739
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 160 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1984 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Pedestrian City project, Hypostyle Courtyard (Perspective)
+  Anyo: 1979
+  Altura: 112.7127 - Amplada: 113.3477
+  Estil: Fauvismo
+  Sala: Sala_9
+  Autor: Roger C. Ferri
+
+Nivel de recomendacion: 160 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Fauvismo -> +50
+Pertany a un any de l'epoca preferida: 1979 -> +50
+
+-----------------------------------
+============================================
+Dia 2
+============================================
+-----------------------------------
+  Titulo: Woodland Crematorium, Stockholm, Sweden, Second version: exterior elevation and section
+  Anyo: 1935
+  Altura: 30.8 - Amplada: 83.8
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 80 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Public Library, Stockholm, Sweden, Elevation of west facade
+  Anyo: 1927
+  Altura: 90.8 - Amplada: 93.0
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 110 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier
+  Anyo: 1968
+  Altura: 113.0 - Amplada: 167.6
+  Estil: Romanticismo
+  Sala: Sala_5
+  Autor: Louis I. Kahn
+
+Nivel de recomendacion: 60 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Autonomous Artisans' House, project, New York (Staten Island), New York, Perspective
+  Anyo: 1984
+  Altura: 52.1 - Amplada: 103.5
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 80 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a un any de l'epoca preferida: 1984 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: French & Company, project, New York (Manhattan), New York, Facade study
+  Anyo: 1978
+  Altura: 27.6 - Amplada: 27.3
+  Estil: Clasicismo
+  Sala: Sala_8
+  Autor: Michael Graves
+
+Nivel de recomendacion: 100 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Clasicismo -> +50
+Pertany a un any de l'epoca preferida: 1978 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 4: The Block
+  Anyo: 1980
+  Altura: 48.3 - Amplada: 78.7
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 100 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 2: The Street (Border Crossing)
+  Anyo: 1978
+  Altura: 60.9601 - Amplada: 817.8816
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 130 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1978 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall),
+  Anyo: 1979
+  Altura: 121.9 - Amplada: 61.0
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 130 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1979 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Pedestrian City project, Hypostyle Courtyard (Structural details)
+  Anyo: 1979
+  Altura: 141.6 - Amplada: 110.8
+  Estil: Fauvismo
+  Sala: Sala_9
+  Autor: Roger C. Ferri
+
+Nivel de recomendacion: 160 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Fauvismo -> +50
+Pertany a un any de l'epoca preferida: 1979 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Ferdinandsbrucke Project, Vienna, Austria (Elevation, preliminary version)
+  Anyo: 1896
+  Altura: 48.6 - Amplada: 168.9
+  Estil: Clasicismo
+  Sala: Sala_10
+  Autor: Otto Wagner
+
+Nivel de recomendacion: 80 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Clasicismo -> +50
+
+-----------------------------------
+============================================
+Dia 3
+============================================
+-----------------------------------
+  Titulo: Villa Snellman, Djursholm, Sweden, Exterior elevation
+  Anyo: 1917
+  Altura: 31.8 - Amplada: 61.6
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Stockholm, Sweden, First version: ground floor plan
+  Anyo: 1935
+  Altura: 41.9 - Amplada: 41.9
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Stockholm, Sweden, Exterior-perspective study
+  Anyo: 1930
+  Altura: 65.4 - Amplada: 101.6
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 80 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Public Library, Stockholm, Sweden, Plan of first and second galleries
+  Anyo: 1915
+  Altura: 90.8 - Amplada: 90.8
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 110 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Porta Vittoria, project, Milan, Italy, Subway station and shops, ticket-taker tower, perspective and plan
+  Anyo: 1986
+  Altura: 75.6 - Amplada: 56.5
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Gymnasium Bridge, project, New York City, New York, Plan, site plan, and exterior perspective
+  Anyo: 1977
+  Altura: 55.9 - Amplada: 75.6
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1977 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Gymnasium-Bridge Project, New York, New York, Perspective
+  Anyo: 1977
+  Altura: 34.3 - Amplada: 55.9
+  Estil: Expresionismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1977 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Berkowitz House, Martha's Vineyard, Massachusetts, Exterior perspective
+  Anyo: 1985
+  Altura: 52.0701 - Amplada: 107.9502
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 80 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a un any de l'epoca preferida: 1985 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 4: The Block
+  Anyo: 1980
+  Altura: 48.2 - Amplada: 78.7
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 100 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Pedestrian City project, Hypostyle Courtyard (Developed plan and section elevations)
+  Anyo: 1979
+  Altura: 141.6053 - Amplada: 110.8077
+  Estil: Fauvismo
+  Sala: Sala_9
+  Autor: Roger C. Ferri
+
+Nivel de recomendacion: 160 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+Pertany a l'estil preferit: Fauvismo -> +50
+Pertany a un any de l'epoca preferida: 1979 -> +50
+
+-----------------------------------
+============================================
+Dia 4
+============================================
+-----------------------------------
+  Titulo: Skandia Cinema, Stockholm, Sweden, Plan of ground floor
+  Anyo: 1923
+  Altura: 47.9 - Amplada: 55.2
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Skandia Cinema, Stockholm, Sweden, Perspective of staircase
+  Anyo: 1931
+  Altura: 33.0 - Amplada: 29.8
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Skandia Cinema, Stockholm, Sweden, Perspective of promenade
+  Anyo: 1936
+  Altura: 21.0 - Amplada: 26.7
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Stockholm Exhibition, Stockholm, Sweden (Elevation of advertising tower)
+  Anyo: 1930
+  Altura: 52.7 - Amplada: 33.0
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Public Library, Stockholm, Sweden, Elevation of front facade
+  Anyo: 1910
+  Altura: 91.4 - Amplada: 93.3
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 60 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspective
+  Anyo: 1936
+  Altura: 27.3051 - Amplada: 35.8776
+  Estil: Arte Naif
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Porta Vittoria, project, Milan, Italy, Garden of Sounds, perspective and plan
+  Anyo: 1986
+  Altura: 75.6 - Amplada: 56.8
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Vacation House Project, Aspen, Colorado, Elevations, interior and exterior perspectives and plan
+  Anyo: 1978
+  Altura: 59.7 - Amplada: 60.0
+  Estil: Surrealismo
+  Sala: Sala_8
+  Autor: Michael Graves
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1978 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 1: The Park
+  Anyo: 1976
+  Altura: 35.6 - Amplada: 45.7
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1976 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Parc de la Villette, Paris, France, Aerial perspective of follies
+  Anyo: 1986
+  Altura: 69.2151 - Amplada: 99.6952
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 80 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)
+  Anyo: 1979
+  Altura: 121.9 - Amplada: 61.0
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 130 
+Justificacion de la eleccion: 
+Te una altura suficient per un grup gran -> +30
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1979 -> +50
+
+-----------------------------------
+============================================
+Dia 5
+============================================
+-----------------------------------
+  Titulo: Law Courts Annex, Gothenburg, Sweden, Exterior elevation
+  Anyo: 1936
+  Altura: 30.5 - Amplada: 70.5
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Law Courts Annex, Gothenburg, Sweden, Plan of courtroom and section of desk
+  Anyo: 1935
+  Altura: 39.4 - Amplada: 51.1
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Villa Snellman, Djursholm, Sweden, Ground-floor plan
+  Anyo: 1917
+  Altura: 57.2 - Amplada: 62.5
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard
+  Anyo: 1987
+  Altura: 40.6401 - Amplada: 29.8451
+  Estil: Abstractismo
+  Sala: Sala_3
+  Autor: Christian de Portzamparc
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1987 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspective
+  Anyo: 1936
+  Altura: 21.9075 - Amplada: 40.6401
+  Estil: Arte Naif
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspective and plan
+  Anyo: 1944
+  Altura: 21.6 - Amplada: 35.9
+  Estil: Arte Naif
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Gymnasium-Bridge, project, New York City, New York, Perspective
+  Anyo: 1977
+  Altura: 33.3 - Amplada: 30.2
+  Estil: Expresionismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1977 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Porta Vittoria, project, Milan, Italy, View from court of four-sided pentagon, perspective, site plan
+  Anyo: 1986
+  Altura: 75.6 - Amplada: 56.5
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 2: The Street (Border Crossing)
+  Anyo: 1980
+  Altura: 50.8 - Amplada: 50.8
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 1: The Park
+  Anyo: 1976
+  Altura: 35.6 - Amplada: 45.7
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1976 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 4: The Block
+  Anyo: 1980
+  Altura: 50.8 - Amplada: 50.8
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Episode 4: The Block
+  Anyo: 1980
+  Altura: 48.3 - Amplada: 78.7
+  Estil: Arte Naif
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 100 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+============================================
+Dia 6
+============================================
+-----------------------------------
+  Titulo: Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior elevation
+  Anyo: 1935
+  Altura: 30.8 - Amplada: 83.3
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Stockholm, Sweden, Second version: section and two exterior elevations
+  Anyo: 1935
+  Altura: 30.5 - Amplada: 83.5
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Exterior elevation, final version
+  Anyo: 1937
+  Altura: 49.2 - Amplada: 158.8
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Skandia Cinema, Stockholm, Sweden, Floor plan of mezzanine
+  Anyo: 1923
+  Altura: 47.9 - Amplada: 55.5
+  Estil: Arte Naif
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Concert Hall Project, Dresden, Germany (Interior perspective of preliminary scheme)
+  Anyo: 1918
+  Altura: 37.1 - Amplada: 41.0
+  Estil: Clasicismo
+  Sala: Sala_6
+  Autor: Hans Poelzig
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Clasicismo -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Porta Vittoria, project, Milan, Italy, Water basin, amphitheater, and jack-up rig, perspective and plan
+  Anyo: 1986
+  Altura: 75.6 - Amplada: 56.5
+  Estil: Expresionismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Porta Vittoria, project, Milan, Italy, View at elliptical passage, perspective and plan
+  Anyo: 1986
+  Altura: 76.2 - Amplada: 56.5
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Residence for Herbert Green, Studies for an Unfolded Modular House, Cherry Hill, Pennsylvania, Perspective
+  Anyo: 1989
+  Altura: 37.1 - Amplada: 164.5
+  Estil: Arte Pop
+  Sala: Sala_6
+  Autor: Paul Rudolph
+
+Nivel de recomendacion: 80 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+Pertany a un any de l'epoca preferida: 1989 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Fargo-Moorhead Cultural Center Bridge, project, Fargo, North Dakota and Moorhead, Minnesota, South elevation
+  Anyo: 1978
+  Altura: 30.2 - Amplada: 30.2
+  Estil: Surrealismo
+  Sala: Sala_8
+  Autor: Michael Graves
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1978 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 3: The Tower (The Fall)
+  Anyo: 1980
+  Altura: 50.8 - Amplada: 50.8
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York , Episode 4: The Block
+  Anyo: 1980
+  Altura: 48.3 - Amplada: 78.7
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+============================================
+Dia 7
+============================================
+-----------------------------------
+  Titulo: Villa Snellman, Djursholm, Sweden, Site plan
+  Anyo: 1917
+  Altura: 39.4 - Amplada: 34.0
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Skandia Cinema, Stockholm, Sweden, Elevation of front of auditorium
+  Anyo: 1923
+  Altura: 56.8 - Amplada: 79.4
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Stockholm, Sweden, Second version: exterior elevation
+  Anyo: 1935
+  Altura: 30.8 - Amplada: 83.5
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Stockholm, Sweden, Exterior elevation of loggia
+  Anyo: 1937
+  Altura: 29.5 - Amplada: 83.8
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspectives and elevation
+  Anyo: 1933
+  Altura: 30.2 - Amplada: 36.8
+  Estil: Arte Naif
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspectives of the medical school and auditorium
+  Anyo: 1936
+  Altura: 36.8301 - Amplada: 29.2101
+  Estil: Arte Naif
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Finney Guest House Project, Siesta Key, Florida, Aerial perspective
+  Anyo: 1949
+  Altura: 64.8 - Amplada: 47.9
+  Estil: Arte Pop
+  Sala: Sala_6
+  Autor: Paul Rudolph
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Villa, project, outside Vienna, Austria, Exterior perspective
+  Anyo: 1903
+  Altura: 38.4 - Amplada: 19.1
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Emil Hoppe
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Yale University, Art and Architecture Building, New Haven, Connecticut, Elevation
+  Anyo: 1958
+  Altura: 69.2 - Amplada: 87.0
+  Estil: Arte Pop
+  Sala: Sala_6
+  Autor: Paul Rudolph
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Porta Vittoria, project, Milan, Italy, Passage below water basin, perspective and plan
+  Anyo: 1986
+  Altura: 75.6 - Amplada: 56.5
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Porta Vittoria, project, Milan, Italy, New subway station opening onto elongated gap, perspective and plan
+  Anyo: 1986
+  Altura: 75.6 - Amplada: 56.5
+  Estil: Cubismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1986 -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Imperial Post Office, Teschen, Austria (Elevation)
+  Anyo: 1906
+  Altura: 29.6 - Amplada: 35.8
+  Estil: Surrealismo
+  Sala: Sala_9
+  Autor: Otto Schonthal
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+============================================
+Dia 8
+============================================
+-----------------------------------
+  Titulo: Villa Snellman, Djursholm, Sweden, Exterior elevation
+  Anyo: 1917
+  Altura: 31.1 - Amplada: 61.9
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Stockholm, Sweden, Second version: Two sections
+  Anyo: 1935
+  Altura: 30.5 - Amplada: 83.5
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspectives and elevation
+  Anyo: 1914
+  Altura: 34.9 - Amplada: 17.8
+  Estil: Expresionismo
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Library and Office Building of Salman Schocken, Jerusalem, Israel, Elevations
+  Anyo: 1910
+  Altura: 20.3 - Amplada: 35.9
+  Estil: Expresionismo
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Gated Wall, Perspective and elevation
+  Anyo: 1938
+  Altura: 29.8 - Amplada: 37.5
+  Estil: Expresionismo
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Gated Wall, Perspective and elevation
+  Anyo: 1923
+  Altura: 41.9 - Amplada: 29.2
+  Estil: Expresionismo
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Library and Office Building of Salman Schocken, Jerusalem, Israel, Interior perspectives
+  Anyo: 1935
+  Altura: 35.6 - Amplada: 29.2
+  Estil: Expresionismo
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspectives
+  Anyo: 1936
+  Altura: 21.59 - Amplada: 13.6525
+  Estil: Arte Naif
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+-----------------------------------
+  Titulo: Villa near Vienna Project, Outside Vienna, Austria, Elevation
+  Anyo: 1903
+  Altura: 34.3 - Amplada: 31.8
+  Estil: Expresionismo
+  Sala: Sala_6
+  Autor: Emil Hoppe
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Helium Bridge Project
+  Anyo: 1958
+  Altura: 55.2 - Amplada: 150.2
+  Estil: Expresionismo
+  Sala: Sala_6
+  Autor: Paolo Soleri
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: House in Krems, project, Krems, Austria, Elevation
+  Anyo: 1905
+  Altura: 30.5 - Amplada: 21.6
+  Estil: Arte Pop
+  Sala: Sala_9
+  Autor: Otto Schonthal
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park
+  Anyo: 1980
+  Altura: 50.8 - Amplada: 50.8
+  Estil: Expresionismo
+  Sala: Sala_9
+  Autor: Bernard Tschumi
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+============================================
+Dia 9
+============================================
+-----------------------------------
+  Titulo: Villa Snellman, Djursholm, Sweden, Elevation of garden facade, sketch
+  Anyo: 1917
+  Altura: 23.2 - Amplada: 34.9
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Villa Snellman, Djursholm, Sweden, Second-floor plan
+  Anyo: 1917
+  Altura: 56.5 - Amplada: 62.2
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior elevation
+  Anyo: 1935
+  Altura: 30.8 - Amplada: 83.8
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 30 
+Justificacion de la eleccion: 
+Te una amplada suficient per un grup gran -> +30
+
+-----------------------------------
+-----------------------------------
+  Titulo: Residence of Salman Schocken, Jerusalem, Israel, Perspective and elevation
+  Anyo: 1924
+  Altura: 34.2901 - Amplada: 28.7338
+  Estil: Expresionismo
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Hadassah University Medical Center, Mount Scopus, Jerusalem, Israel, Perspectives and elevation
+  Anyo: 1936
+  Altura: 35.2 - Amplada: 24.1
+  Estil: Expresionismo
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Autonomous Artisans' House, project, Staten Island, New York, Perspective
+  Anyo: 1980
+  Altura: 8.3 - Amplada: 33.0
+  Estil: Expresionismo
+  Sala: Sala_6
+  Autor: Steven Holl
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a un any de l'epoca preferida: 1980 -> +50
+
+-----------------------------------
+============================================
+Dia 10
+============================================
+-----------------------------------
+  Titulo: Skandia Cinema, Stockholm, Sweden, Elevation of rear of auditorium
+  Anyo: 1923
+  Altura: 57.2 - Amplada: 79.1
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior perspective
+  Anyo: 1891
+  Altura: 26.0 - Amplada: 62.9
+  Estil: Surrealismo
+  Sala: Sala_2
+  Autor: Erik Gunnar Asplund
+
+Nivel de recomendacion: 0 
+Justificacion de la eleccion: 
+
+-----------------------------------
+-----------------------------------
+  Titulo: Hadassah University Medical Center, Mount Scopus, Jerusalem, Interior perspective and details of furniture
+  Anyo: 1936
+  Altura: 36.2 - Amplada: 29.2
+  Estil: Arte Naif
+  Sala: Sala_3
+  Autor: Erich Mendelsohn
+
+Nivel de recomendacion: 50 
+Justificacion de la eleccion: 
+Pertany a l'estil preferit: Arte Naif -> +50
+
+-----------------------------------
+============================================
+CLIPS> (dribble-off)
