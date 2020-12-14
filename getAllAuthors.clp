@@ -1869,12 +1869,12 @@
 	(printout t crlf)
 	(format t "  Anyo: %d" ?self:Data)
 	(printout t crlf)
-    (format t "  Altura: %s" ?self:Altura)
+    (format t "  Altura: %s - Amplada: %s" ?self:Altura ?self:Amplada)
 	(printout t crlf)
-    (format t "  Amplada: %s" ?self:Amplada)
-	(printout t crlf)
-    (format t "  Medi: %s" ?self:Medi)
-	(printout t crlf)
+    ; (format t "  Amplada: %s" ?self:Amplada)
+	; (printout t crlf)
+    ; (format t "  Medi: %s" ?self:Medi)
+	; (printout t crlf)
     (format t "  Estil: %s" (send ?self:Estil_Quadre get-Nom))
 	(printout t crlf)
     (format t "  Sala: %s" (send ?self:Esta_En get-Nom))
@@ -2217,13 +2217,13 @@
 
 (defrule dades-visita::passar-a-preferencies "Passem al modul de recopilacio de preferencies"
     (declare (salience 10))
- 			?g <- (Visita (tipus ~"indefinit")(edat ?edat) (dies ?dies) (hores ?hores) (coneixement ?coneixement) (nacionalitat ~"indefinit"))
+ 	?g <- (Visita (tipus ~"indefinit")(edat ?edat) (dies ?dies) (hores ?hores) (coneixement ?coneixement))
      (test (> ?edat -1))
      (test (> ?dies -1))
      (test (> ?hores -1))
      (test (> ?coneixement -1))
-		=>
-		(focus dades-preferencies)
+    =>
+    (focus dades-preferencies)
 )
 
 
