@@ -2,7 +2,7 @@
 
 [![HitCount](http://hits.dwyl.io/danaecanillas/IA-SBC.svg)](http://hits.dwyl.io/danaecanillas/IA-SBC)  [![GitHub stars](https://img.shields.io/github/stars/danaecanillas/IA-SBC.svg)](https://GitHub.com/danaecanillas/IA-SBC/stargazers/)  [![GitHub forks](https://img.shields.io/github/forks/danaecanillas/IA-SBC.svg)](https://GitHub.com/ArnauSoler/IA/network/)  [![GitHub repo size in bytes](https://img.shields.io/github/repo-size/danaecanillas/IA-SBC.svg)](https://github.com/danaecanillas/IA-SBC)  [![GitHub contributors](https://img.shields.io/github/contributors/danaecanillas/IA-SBC.svg)](https://GitHub.com/danaecanillas/IA-SBC/graphs/contributors/)  
 
-## Package distribution optimization using local search algorithms
+## Art museum visiting tours customization using knowledge-based systems.
 
 **Authors**: Dànae Canillas, Miquel Escobar, Arnau Soler
 
