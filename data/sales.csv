@@ -1,0 +1,13 @@
+ID,Name,ConnectWith
+0,"Entrada","1"
+1,"Sala_1","0 2"
+2,"Sala_2","1 3"
+3,"Sala_3","2 4"
+4,"Sala_4","3 5"
+5,"Sala_5","4 6"
+6,"Sala_6","5 7"
+7,"Sala_7","6 8"
+8,"Sala_8","7 9"
+9,"Sala_9","8 10"
+10,"Sala_10","9 11"
+11,"Sortida","10"
