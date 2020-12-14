@@ -23,11 +23,19 @@ In this project, we are asked to implement a recommendation system for the visit
 
 ### Project files
 ```
+├─ experiments
+│  ├─ Experiment_1.txt
+│  ├─ Experiment_2.txt
+│  ├─ Experiment_3.txt
+│  ├─ Experiment_4.txt
+│  ├─ Experiment_5.txt
+│  ├─ Experiment_6.txt
+│  └─ Experiment_6_Extra.txt
+├─ python
+|  └─ csv2owl.py
 ├─ ontology
 │  ├─ ontology.clp
 │  └─ ontology.owl
-├─ python
-|  └─ csv2owl.py
 ├─ SBC-20211q.pdf
 ├─ Report.pdf
 ├─ museum.clp
