@@ -2104,7 +2104,7 @@
         (if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "Una placa de toros" "Un bombardeig"))
-    (bind ?resposta (pregunta-index "¿Qué representa el quadre de Guernica de Pablo Picasso?" ?var))
+    (bind ?resposta (pregunta-index "Que representa el quadre de Guernica de Pablo Picasso?" ?var))
         (if (= ?resposta 2) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "Impressionisme" "Surrealisme" "Dadaisme" "K-Pop"))
@@ -2124,7 +2124,7 @@
         (if (= ?resposta 3) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "El Moulin de la Galette" "Razzmatazz" "El Parc de la Ciutadella"))
-    (bind ?resposta (pregunta-index "Quin era l'espai d'esbarjo que acostumaven a frequentar  els artistes bohemis l'any 1900?" ?var))
+    (bind ?resposta (pregunta-index "Quin era l'espai d'esbarjo que acostumaven a frequentar els artistes bohemis l'any 1900?" ?var))
         (if (= ?resposta 1) then (bind ?score (+ 1 ?score)))
 
     (bind ?var (create$ "Ratafia" "Absenta" "Carajillo" "Vodka Naranja"))
