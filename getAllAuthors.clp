@@ -2337,9 +2337,9 @@
 	(test (eq (instance-name ?cont) (instance-name ?conta)))
 	(not (valoracio ?cont ?coneixement))
 	=>
-    (if (> ?relevancia 3) then
+    (if (< ?relevancia 4) then
         (bind ?p (+ ?p 70))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una rellevancia alta acord al coneixement del visitant -> +70"))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una rellevancia mitjana/baixa acord al coneixement del visitant -> +70"))
 	)
 	(send ?rec put-puntuacio ?p)
     (send ?rec put-justificacions $?just)
@@ -2355,9 +2355,9 @@
 	(test (eq (instance-name ?cont) (instance-name ?conta)))
 	(not (valoracio ?cont ?coneixement))
 	=>
-    (if (< ?relevancia 4) then
-        (bind ?p (+ ?p 40))
-		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una rellevancia mitjana/baixa acord al coneixement del visitant -> +40"))
+    (if (> ?relevancia 5) then
+        (bind ?p (+ ?p 100))
+		(bind $?just (insert$ $?just (+ (length$ $?just) 1) "Te una rellevancia alta acord al coneixement del visitant -> +100"))
 	)
 	(send ?rec put-puntuacio ?p)
     (send ?rec put-justificacions $?just)
