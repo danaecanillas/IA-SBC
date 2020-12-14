@@ -213,6 +213,14 @@
      rdfs:range xsd:string .
 
 
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Numero_Sala
+:Numero_Sala rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdf:type owl:FunctionalProperty ;
+             rdfs:domain :Sala ;
+             rdfs:range xsd:integer .
+
+
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Rellevancia
 :Rellevancia rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf owl:topDataProperty ;
@@ -270,1968 +278,1948 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor6210
-:Autor6210 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art1;
-	:ArtistID 6210 ;
-	:Nom "Otto Wagner" ;
-	:Nacionalitat "Austrian" ;
-	:AnyNeixement 1841 ;
-	:AnyMort 1918 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7470
-:Autor7470 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art2;
-	:ArtistID 7470 ;
-	:Nom "Christian de Portzamparc" ;
-	:Nacionalitat "French" ;
-	:AnyNeixement 1944 ;
-	:AnyMort 1976 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7605
-:Autor7605 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art3,
-		:Art5;
-	:ArtistID 7605 ;
-	:Nom "Emil Hoppe" ;
-	:Nacionalitat "Austrian" ;
-	:AnyNeixement 1876 ;
-	:AnyMort 1957 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7056
-:Autor7056 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art4,
-		:Art6,
-		:Art7,
-		:Art8,
-		:Art10,
-		:Art12,
-		:Art14,
-		:Art16,
-		:Art17,
-		:Art18,
-		:Art19,
-		:Art20,
-		:Art21,
-		:Art22,
-		:Art23,
-		:Art24,
-		:Art25,
-		:Art26,
-		:Art30,
-		:Art32;
-	:ArtistID 7056 ;
-	:Nom "Bernard Tschumi" ;
-	:Nacionalitat "Georgian" ;
-	:AnyNeixement 1944 ;
-	:AnyMort 1992 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor2964
-:Autor2964 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art9;
-	:ArtistID 2964 ;
-	:Nom "Louis I. Kahn" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1901 ;
-	:AnyMort 1974 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7607
-:Autor7607 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art11;
-	:ArtistID 7607 ;
-	:Nom "Marcel Kammerer" ;
-	:Nacionalitat "Austrian" ;
-	:AnyNeixement 1878 ;
-	:AnyMort 1969 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor7608
-:Autor7608 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art13,
-		:Art15;
-	:ArtistID 7608 ;
-	:Nom "Otto Schönthal" ;
-	:Nacionalitat "Austrian" ;
-	:AnyNeixement 1878 ;
-	:AnyMort 1961 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor8100
-:Autor8100 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art27;
-	:ArtistID 8100 ;
-	:Nom "Hans Poelzig" ;
-	:Nacionalitat "German" ;
-	:AnyNeixement 1869 ;
-	:AnyMort 1936 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor47
-:Autor47 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art28;
-	:ArtistID 47 ;
-	:Nom "Raimund Abraham" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1933 ;
-	:AnyMort 2010 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor1863
-:Autor1863 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art29,
-		:Art31,
-		:Art33;
-	:ArtistID 1863 ;
-	:Nom "Roger C. Ferri" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1949 ;
-	:AnyMort 1991 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor2308
-:Autor2308 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art34,
-		:Art35,
-		:Art36,
-		:Art37;
-	:ArtistID 2308 ;
-	:Nom "Michael Graves" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1934 ;
-	:AnyMort 2015 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor27
-:Autor27 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art38,
-		:Art39,
-		:Art40,
-		:Art41,
-		:Art42,
-		:Art43,
-		:Art44,
-		:Art45,
-		:Art46,
-		:Art47,
-		:Art48,
-		:Art49,
-		:Art50,
-		:Art51,
-		:Art52,
-		:Art53,
-		:Art54,
-		:Art55,
-		:Art56,
-		:Art57,
-		:Art58,
-		:Art59,
-		:Art60,
-		:Art61,
-		:Art62,
-		:Art63,
-		:Art64,
-		:Art65,
-		:Art66,
-		:Art67,
-		:Art68;
-	:ArtistID 27 ;
-	:Nom "Erik Gunnar Asplund" ;
-	:Nacionalitat "Swedish" ;
-	:AnyNeixement 1885 ;
-	:AnyMort 1940 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor2702
-:Autor2702 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art69,
-		:Art70,
-		:Art72,
-		:Art75,
-		:Art77,
-		:Art79,
-		:Art81,
-		:Art83,
-		:Art85,
-		:Art87,
-		:Art89,
-		:Art91,
-		:Art93;
-	:ArtistID 2702 ;
-	:Nom "Steven Holl" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1947 ;
-	:AnyMort 1984 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor8219
-:Autor8219 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art71,
-		:Art73,
-		:Art76,
-		:Art78,
-		:Art80,
-		:Art82,
-		:Art84,
-		:Art86,
-		:Art88,
-		:Art90,
-		:Art92,
-		:Art94,
-		:Art96,
-		:Art98;
-	:ArtistID 8219 ;
-	:Nom "Erich Mendelsohn" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1887 ;
-	:AnyMort 1953 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor8101
-:Autor8101 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art74;
-	:ArtistID 8101 ;
-	:Nom "Paolo Soleri" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1919 ;
-	:AnyMort 2013 ;
-	:Genere "male" .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Autor5076
-:Autor5076 rdf:type owl:NamedIndividual ,
-		:Author ;
-	:Pinta
-		:Art95,
-		:Art97,
-		:Art99;
-	:ArtistID 5076 ;
-	:Nom "Paul Rudolph" ;
-	:Nacionalitat "American" ;
-	:AnyNeixement 1918 ;
-	:AnyMort 1997 ;
-	:Genere "male" .
-
-
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art1
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art1
 :Art1 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 6210 ;
-	:Nom "Ferdinandsbrücke Project, Vienna, Austria (Elevation, preliminary version)" ;
-	:Data 1896 ;
-	:Medi "Ink and cut-and-pasted painted pages on paper" ;
-	:Amplada 168.9 ;
-	:Altura 48.6 ;
-	:Estil "Clasicismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil1 ;
-	:Esta_En :Sala_10 ;
-	:Es_De :Autor6210 .
+               :Quadre ;
+      :Es_De :Autor6210 ;
+      :Esta_En :Sala_10 ;
+      :Estil_Quadre :Estil1 ;
+      :Altura 48.6 ;
+      :Amplada 168.9 ;
+      :ArtistID 6210 ;
+      :Data 1896 ;
+      :Estil "Clasicismo" ;
+      :Nom "Ferdinandsbrucke Project, Vienna, Austria (Elevation, preliminary version)" ;
+      :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art2
-:Art2 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7470 ;
-	:Nom "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard" ;
-	:Data 1987 ;
-	:Medi "Paint and colored pencil on print" ;
-	:Amplada 29.8451 ;
-	:Altura 40.6401 ;
-	:Estil "Abstractismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil2 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor7470 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art3
-:Art3 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7605 ;
-	:Nom "Villa near Vienna Project, Outside Vienna, Austria, Elevation" ;
-	:Data 1903 ;
-	:Medi "Graphite, pen, color pencil, ink, and gouache on tracing paper" ;
-	:Amplada 31.8 ;
-	:Altura 34.3 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor7605 .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art4
-:Art4 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park" ;
-	:Data 1980 ;
-	:Medi "Photographic reproduction with colored synthetic laminate" ;
-	:Amplada 50.8 ;
-	:Altura 50.8 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art5
-:Art5 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7605 ;
-	:Nom "Villa, project, outside Vienna, Austria, Exterior perspective" ;
-	:Data 1903 ;
-	:Medi "Graphite, color pencil, ink, and gouache on tracing paper" ;
-	:Amplada 19.1 ;
-	:Altura 38.4 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor7605 .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art6
-:Art6 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
-	:Data 1976 ;
-	:Medi "Gelatin silver photograph" ;
-	:Amplada 45.7 ;
-	:Altura 35.6 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art7
-:Art7 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
-	:Data 1976 ;
-	:Medi "Gelatin silver photographs" ;
-	:Amplada 45.7 ;
-	:Altura 35.6 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art8
-:Art8 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park" ;
-	:Data 1976 ;
-	:Medi "Gelatin silver photograph" ;
-	:Amplada 45.7 ;
-	:Altura 35.6 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art9
-:Art9 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2964 ;
-	:Nom "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier" ;
-	:Data 1968 ;
-	:Medi "Charcoal and graphite on tracing paper" ;
-	:Amplada 167.6 ;
-	:Altura 113.0 ;
-	:Estil "Romanticismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil6 ;
-	:Esta_En :Sala_5 ;
-	:Es_De :Autor2964 .
-
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art10
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art10
 :Art10 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 2: The Street (Border Crossing)" ;
-	:Data 1980 ;
-	:Medi "Photographic reproduction with colored synthetic laminate" ;
-	:Amplada 50.8 ;
-	:Altura 50.8 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 5 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 50.8 ;
+       :Amplada 50.8 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Expresionismo" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 2: The Street (Border Crossing)" ;
+       :Rellevancia 5 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art11
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art11
 :Art11 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7607 ;
-	:Nom "Royal Hunting Tent, project, Exterior perspective" ;
-	:Data 1900 ;
-	:Medi "Ink, graphite, watercolor, gouache, and airbrush on paper" ;
-	:Amplada 31.4 ;
-	:Altura 47.9 ;
-	:Estil "Arte Pop" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil7 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor7607 .
+                :Quadre ;
+       :Es_De :Autor7607 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil7 ;
+       :Altura 47.9 ;
+       :Amplada 31.4 ;
+       :ArtistID 7607 ;
+       :Data 1900 ;
+       :Estil "Arte Pop" ;
+       :Nom "Royal Hunting Tent, project, Exterior perspective" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art12
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art12
 :Art12 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 2: The Street (Border Crossing)" ;
-	:Data 1978 ;
-	:Medi "Ink, charcoal, graphite, cut-and-pasted photographic reproductions, Letraset type, and color pencil on tracing paper" ;
-	:Amplada 817.8816 ;
-	:Altura 60.9601 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 60.9601 ;
+       :Amplada 817.8816 ;
+       :ArtistID 7056 ;
+       :Data 1978 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 2: The Street (Border Crossing)" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art13
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art13
 :Art13 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7608 ;
-	:Nom "House in Krems, project, Krems, Austria, Elevation" ;
-	:Data 1905 ;
-	:Medi "Graphite, ink, watercolor, and metallic paint on paper" ;
-	:Amplada 21.6 ;
-	:Altura 30.5 ;
-	:Estil "Arte Pop" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil7 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7608 .
+                :Quadre ;
+       :Es_De :Autor7608 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil7 ;
+       :Altura 30.5 ;
+       :Amplada 21.6 ;
+       :ArtistID 7608 ;
+       :Data 1905 ;
+       :Estil "Arte Pop" ;
+       :Nom "House in Krems, project, Krems, Austria, Elevation" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art14
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art14
 :Art14 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 3: The Tower (The Fall)" ;
-	:Data 1980 ;
-	:Medi "Photographic reproduction with colored synthetic laminate" ;
-	:Amplada 50.8 ;
-	:Altura 50.8 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 50.8 ;
+       :Amplada 50.8 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Expresionismo" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 3: The Tower (The Fall)" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art15
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art15
 :Art15 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7608 ;
-	:Nom "Imperial Post Office, Teschen, Austria (Elevation)" ;
-	:Data 1906 ;
-	:Medi "Pencil, ink, colored pencil, and gouache on paper" ;
-	:Amplada 35.8 ;
-	:Altura 29.6 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7608 .
+                :Quadre ;
+       :Es_De :Autor7608 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 29.6 ;
+       :Amplada 35.8 ;
+       :ArtistID 7608 ;
+       :Data 1906 ;
+       :Estil "Surrealismo" ;
+       :Nom "Imperial Post Office, Teschen, Austria (Elevation)" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art16
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art16
 :Art16 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
-	:Data 1979 ;
-	:Medi "Ink on tracing paper" ;
-	:Amplada 61.0 ;
-	:Altura 121.9 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 121.9 ;
+       :Amplada 61.0 ;
+       :ArtistID 7056 ;
+       :Data 1979 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art17
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art17
 :Art17 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
-	:Data 1979 ;
-	:Medi "Ink and transfer on tracing paper" ;
-	:Amplada 60.9601 ;
-	:Altura 121.9202 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 121.9202 ;
+       :Amplada 60.9601 ;
+       :ArtistID 7056 ;
+       :Data 1979 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art18
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art18
 :Art18 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
-	:Data 1980 ;
-	:Medi "Ink on tracing paper" ;
-	:Amplada 61.0 ;
-	:Altura 121.9 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 121.9 ;
+       :Amplada 61.0 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art19
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art19
 :Art19 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)," ;
-	:Data 1979 ;
-	:Medi "Ink on tracing paper" ;
-	:Amplada 61.0 ;
-	:Altura 121.9 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 121.9 ;
+       :Amplada 61.0 ;
+       :ArtistID 7056 ;
+       :Data 1979 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)," ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art20
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art2
+:Art2 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor7470 ;
+      :Esta_En :Sala_3 ;
+      :Estil_Quadre :Estil2 ;
+      :Altura 40.6401 ;
+      :Amplada 29.8451 ;
+      :ArtistID 7470 ;
+      :Data 1987 ;
+      :Estil "Abstractismo" ;
+      :Nom "City of Music, National Superior Conservatory of Music and Dance, Paris, France, View from interior courtyard" ;
+      :Rellevancia 2 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art20
 :Art20 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
-	:Data 1979 ;
-	:Medi "Ink and photographic reproductions on tracing paper" ;
-	:Amplada 61.0 ;
-	:Altura 121.9 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 121.9 ;
+       :Amplada 61.0 ;
+       :ArtistID 7056 ;
+       :Data 1979 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 3: The Tower (The Fall)" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art21
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art21
 :Art21 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 4: The Block" ;
-	:Data 1980 ;
-	:Medi "Photographic reproduction with colored synthetic laminate" ;
-	:Amplada 50.8 ;
-	:Altura 50.8 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 50.8 ;
+       :Amplada 50.8 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Expresionismo" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 4: The Block" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art22
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art22
 :Art22 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block" ;
-	:Data 1980 ;
-	:Medi "Ink and cut-and-pasted gelatin silver photographs on tracing paper" ;
-	:Amplada 78.7 ;
-	:Altura 48.3 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 48.3 ;
+       :Amplada 78.7 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art23
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art23
 :Art23 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block" ;
-	:Data 1980 ;
-	:Medi "Ink and photographs on tracing paper" ;
-	:Amplada 78.7 ;
-	:Altura 48.2 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 48.2 ;
+       :Amplada 78.7 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art24
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art24
 :Art24 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block" ;
-	:Data 1980 ;
-	:Medi "Ink on tracing paper" ;
-	:Amplada 78.7 ;
-	:Altura 48.3 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 48.3 ;
+       :Amplada 78.7 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art25
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art25
 :Art25 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block," ;
-	:Data 1980 ;
-	:Medi "Ink and cut-and-pasted gelatin silver photographs on tracing paper" ;
-	:Amplada 78.7 ;
-	:Altura 48.3 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 48.3 ;
+       :Amplada 78.7 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Arte Naif" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York, Episode 4: The Block," ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art26
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art26
 :Art26 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "The Manhattan Transcripts Project, New York, New York , Episode 4: The Block" ;
-	:Data 1980 ;
-	:Medi "Ink and cut-and-pasted gelatin silver photographs on tracing paper" ;
-	:Amplada 78.7 ;
-	:Altura 48.3 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 48.3 ;
+       :Amplada 78.7 ;
+       :ArtistID 7056 ;
+       :Data 1980 ;
+       :Estil "Expresionismo" ;
+       :Nom "The Manhattan Transcripts Project, New York, New York , Episode 4: The Block" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art27
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art27
 :Art27 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8100 ;
-	:Nom "Concert Hall Project, Dresden, Germany (Interior perspective of preliminary scheme)" ;
-	:Data 1918 ;
-	:Medi "Colored pencil and graphite on tracing paper" ;
-	:Amplada 41.0 ;
-	:Altura 37.1 ;
-	:Estil "Clasicismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil1 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor8100 .
+                :Quadre ;
+       :Es_De :Autor8100 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil1 ;
+       :Altura 37.1 ;
+       :Amplada 41.0 ;
+       :ArtistID 8100 ;
+       :Data 1918 ;
+       :Estil "Clasicismo" ;
+       :Nom "Concert Hall Project, Dresden, Germany (Interior perspective of preliminary scheme)" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art28
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art28
 :Art28 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 47 ;
-	:Nom "Earth-Cloud House, project" ;
-	:Data 1970 ;
-	:Medi "Graphite" ;
-	:Amplada 135.8903 ;
-	:Altura 87.3127 ;
-	:Estil "Fauvismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil9 ;
-	:Esta_En :Sala_4 ;
-	:Es_De :Autor47 .
+                :Quadre ;
+       :Es_De :Autor47 ;
+       :Esta_En :Sala_4 ;
+       :Estil_Quadre :Estil9 ;
+       :Altura 87.3127 ;
+       :Amplada 135.8903 ;
+       :ArtistID 47 ;
+       :Data 1970 ;
+       :Estil "Fauvismo" ;
+       :Nom "Earth-Cloud House, project" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art29
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art29
 :Art29 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 1863 ;
-	:Nom "Pedestrian City project, Hypostyle Courtyard (Structural details)" ;
-	:Data 1979 ;
-	:Medi "Ink and pastel on paper" ;
-	:Amplada 110.8 ;
-	:Altura 141.6 ;
-	:Estil "Fauvismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil9 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor1863 .
+                :Quadre ;
+       :Es_De :Autor1863 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil9 ;
+       :Altura 141.6 ;
+       :Amplada 110.8 ;
+       :ArtistID 1863 ;
+       :Data 1979 ;
+       :Estil "Fauvismo" ;
+       :Nom "Pedestrian City project, Hypostyle Courtyard (Structural details)" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art30
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art3
+:Art3 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor7605 ;
+      :Esta_En :Sala_6 ;
+      :Estil_Quadre :Estil3 ;
+      :Altura 34.3 ;
+      :Amplada 31.8 ;
+      :ArtistID 7605 ;
+      :Data 1903 ;
+      :Estil "Expresionismo" ;
+      :Nom "Villa near Vienna Project, Outside Vienna, Austria, Elevation" ;
+      :Rellevancia 2 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art30
 :Art30 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "Parc de la Villette, Le Case Vide, Paris, France (Axonometric of folly)" ;
-	:Data 1984 ;
-	:Medi "Pen, ink, gouache, and airbrush on paper" ;
-	:Amplada 94.7739 ;
-	:Altura 94.4564 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 94.4564 ;
+       :Amplada 94.7739 ;
+       :ArtistID 7056 ;
+       :Data 1984 ;
+       :Estil "Arte Naif" ;
+       :Nom "Parc de la Villette, Le Case Vide, Paris, France (Axonometric of folly)" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art31
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art31
 :Art31 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 1863 ;
-	:Nom "Pedestrian City project, Hypostyle Courtyard (Developed plan and section elevations)" ;
-	:Data 1979 ;
-	:Medi "Ink and pastel on paper" ;
-	:Amplada 110.8077 ;
-	:Altura 141.6053 ;
-	:Estil "Fauvismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil9 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor1863 .
+                :Quadre ;
+       :Es_De :Autor1863 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil9 ;
+       :Altura 141.6053 ;
+       :Amplada 110.8077 ;
+       :ArtistID 1863 ;
+       :Data 1979 ;
+       :Estil "Fauvismo" ;
+       :Nom "Pedestrian City project, Hypostyle Courtyard (Developed plan and section elevations)" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art32
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art32
 :Art32 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 7056 ;
-	:Nom "Parc de la Villette, Paris, France, Aerial perspective of follies" ;
-	:Data 1986 ;
-	:Medi "Pen, ink, and gouache on paper" ;
-	:Amplada 99.6952 ;
-	:Altura 69.2151 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor7056 .
+                :Quadre ;
+       :Es_De :Autor7056 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 69.2151 ;
+       :Amplada 99.6952 ;
+       :ArtistID 7056 ;
+       :Data 1986 ;
+       :Estil "Expresionismo" ;
+       :Nom "Parc de la Villette, Paris, France, Aerial perspective of follies" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art33
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art33
 :Art33 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 1863 ;
-	:Nom "Pedestrian City project, Hypostyle Courtyard (Perspective)" ;
-	:Data 1979 ;
-	:Medi "Pastel on paper" ;
-	:Amplada 113.3477 ;
-	:Altura 112.7127 ;
-	:Estil "Fauvismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil9 ;
-	:Esta_En :Sala_9 ;
-	:Es_De :Autor1863 .
+                :Quadre ;
+       :Es_De :Autor1863 ;
+       :Esta_En :Sala_9 ;
+       :Estil_Quadre :Estil9 ;
+       :Altura 112.7127 ;
+       :Amplada 113.3477 ;
+       :ArtistID 1863 ;
+       :Data 1979 ;
+       :Estil "Fauvismo" ;
+       :Nom "Pedestrian City project, Hypostyle Courtyard (Perspective)" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art34
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art34
 :Art34 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2308 ;
-	:Nom "Fargo-Moorhead Cultural Center Bridge, project, Fargo, North Dakota and Moorhead, Minnesota, South elevation" ;
-	:Data 1978 ;
-	:Medi "Graphite and crayon on yellow tracing paper" ;
-	:Amplada 30.2 ;
-	:Altura 30.2 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_8 ;
-	:Es_De :Autor2308 .
+                :Quadre ;
+       :Es_De :Autor2308 ;
+       :Esta_En :Sala_8 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 30.2 ;
+       :Amplada 30.2 ;
+       :ArtistID 2308 ;
+       :Data 1978 ;
+       :Estil "Surrealismo" ;
+       :Nom "Fargo-Moorhead Cultural Center Bridge, project, Fargo, North Dakota and Moorhead, Minnesota, South elevation" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art35
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art35
 :Art35 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2308 ;
-	:Nom "Vacation House Project, Aspen, Colorado, Elevations, interior and exterior perspectives and plan" ;
-	:Data 1978 ;
-	:Medi "Ink and graphite on paper" ;
-	:Amplada 60.0 ;
-	:Altura 59.7 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_8 ;
-	:Es_De :Autor2308 .
+                :Quadre ;
+       :Es_De :Autor2308 ;
+       :Esta_En :Sala_8 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 59.7 ;
+       :Amplada 60.0 ;
+       :ArtistID 2308 ;
+       :Data 1978 ;
+       :Estil "Surrealismo" ;
+       :Nom "Vacation House Project, Aspen, Colorado, Elevations, interior and exterior perspectives and plan" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art36
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art36
 :Art36 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2308 ;
-	:Nom "French & Company, project, New York (Manhattan), New York, Facade study" ;
-	:Data 1978 ;
-	:Medi "Graphite, ink and crayon on paper" ;
-	:Amplada 27.3 ;
-	:Altura 27.6 ;
-	:Estil "Clasicismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil1 ;
-	:Esta_En :Sala_8 ;
-	:Es_De :Autor2308 .
+                :Quadre ;
+       :Es_De :Autor2308 ;
+       :Esta_En :Sala_8 ;
+       :Estil_Quadre :Estil1 ;
+       :Altura 27.6 ;
+       :Amplada 27.3 ;
+       :ArtistID 2308 ;
+       :Data 1978 ;
+       :Estil "Clasicismo" ;
+       :Nom "French & Company, project, New York (Manhattan), New York, Facade study" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art37
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art37
 :Art37 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2308 ;
-	:Nom "Vacation House, project, Aspen, Colorado, Fireplace" ;
-	:Data 1978 ;
-	:Medi "Graphite and Prismacolor crayon on tracing paper" ;
-	:Amplada 20.3 ;
-	:Altura 20.3 ;
-	:Estil "Clasicismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil1 ;
-	:Esta_En :Sala_8 ;
-	:Es_De :Autor2308 .
+                :Quadre ;
+       :Es_De :Autor2308 ;
+       :Esta_En :Sala_8 ;
+       :Estil_Quadre :Estil1 ;
+       :Altura 20.3 ;
+       :Amplada 20.3 ;
+       :ArtistID 2308 ;
+       :Data 1978 ;
+       :Estil "Clasicismo" ;
+       :Nom "Vacation House, project, Aspen, Colorado, Fireplace" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art38
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art38
 :Art38 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Villa Snellman, Djursholm, Sweden, Elevation of garden facade, sketch" ;
-	:Data 1917 ;
-	:Medi "Graphite and crayon on tracing paper mounted on board" ;
-	:Amplada 34.9 ;
-	:Altura 23.2 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 23.2 ;
+       :Amplada 34.9 ;
+       :ArtistID 27 ;
+       :Data 1917 ;
+       :Estil "Surrealismo" ;
+       :Nom "Villa Snellman, Djursholm, Sweden, Elevation of garden facade, sketch" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art39
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art39
 :Art39 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Villa Snellman, Djursholm, Sweden, Exterior elevation" ;
-	:Data 1917 ;
-	:Medi "Ink on ozalid" ;
-	:Amplada 61.9 ;
-	:Altura 31.1 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 31.1 ;
+       :Amplada 61.9 ;
+       :ArtistID 27 ;
+       :Data 1917 ;
+       :Estil "Surrealismo" ;
+       :Nom "Villa Snellman, Djursholm, Sweden, Exterior elevation" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art40
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art4
+:Art4 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor7056 ;
+      :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil3 ;
+      :Altura 50.8 ;
+      :Amplada 50.8 ;
+      :ArtistID 7056 ;
+      :Data 1980 ;
+      :Estil "Expresionismo" ;
+      :Nom "The Manhattan Transcripts Project, New York, New York, Introductory panel to Episode 1: The Park" ;
+      :Rellevancia 2 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art40
 :Art40 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Villa Snellman, Djursholm, Sweden, Exterior elevation" ;
-	:Data 1917 ;
-	:Medi "Ink on ozalid" ;
-	:Amplada 61.6 ;
-	:Altura 31.8 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 31.8 ;
+       :Amplada 61.6 ;
+       :ArtistID 27 ;
+       :Data 1917 ;
+       :Estil "Arte Naif" ;
+       :Nom "Villa Snellman, Djursholm, Sweden, Exterior elevation" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art41
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art41
 :Art41 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Villa Snellman, Djursholm, Sweden, Site plan" ;
-	:Data 1917 ;
-	:Medi "Graphite and crayon on tracing paper mounted on board" ;
-	:Amplada 34.0 ;
-	:Altura 39.4 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 5 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 39.4 ;
+       :Amplada 34.0 ;
+       :ArtistID 27 ;
+       :Data 1917 ;
+       :Estil "Surrealismo" ;
+       :Nom "Villa Snellman, Djursholm, Sweden, Site plan" ;
+       :Rellevancia 5 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art42
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art42
 :Art42 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Villa Snellman, Djursholm, Sweden, Ground-floor plan" ;
-	:Data 1917 ;
-	:Medi "Ink on ozalid" ;
-	:Amplada 62.5 ;
-	:Altura 57.2 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 57.2 ;
+       :Amplada 62.5 ;
+       :ArtistID 27 ;
+       :Data 1917 ;
+       :Estil "Arte Naif" ;
+       :Nom "Villa Snellman, Djursholm, Sweden, Ground-floor plan" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art43
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art43
 :Art43 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Villa Snellman, Djursholm, Sweden, Second-floor plan" ;
-	:Data 1917 ;
-	:Medi "Ink on ozalid" ;
-	:Amplada 62.2 ;
-	:Altura 56.5 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 56.5 ;
+       :Amplada 62.2 ;
+       :ArtistID 27 ;
+       :Data 1917 ;
+       :Estil "Surrealismo" ;
+       :Nom "Villa Snellman, Djursholm, Sweden, Second-floor plan" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art44
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art44
 :Art44 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Skandia Cinema, Stockholm, Sweden, Elevation of front of auditorium" ;
-	:Data 1923 ;
-	:Medi "Ink on paper mounted on board" ;
-	:Amplada 79.4 ;
-	:Altura 56.8 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 56.8 ;
+       :Amplada 79.4 ;
+       :ArtistID 27 ;
+       :Data 1923 ;
+       :Estil "Surrealismo" ;
+       :Nom "Skandia Cinema, Stockholm, Sweden, Elevation of front of auditorium" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art45
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art45
 :Art45 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Skandia Cinema, Stockholm, Sweden, Elevation of rear of auditorium" ;
-	:Data 1923 ;
-	:Medi "Ink on paper mounted on board" ;
-	:Amplada 79.1 ;
-	:Altura 57.2 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 5 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 57.2 ;
+       :Amplada 79.1 ;
+       :ArtistID 27 ;
+       :Data 1923 ;
+       :Estil "Surrealismo" ;
+       :Nom "Skandia Cinema, Stockholm, Sweden, Elevation of rear of auditorium" ;
+       :Rellevancia 5 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art46
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art46
 :Art46 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Skandia Cinema, Stockholm, Sweden, Plan of ground floor" ;
-	:Data 1923 ;
-	:Medi "Ink on paper mounted on board" ;
-	:Amplada 55.2 ;
-	:Altura 47.9 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 47.9 ;
+       :Amplada 55.2 ;
+       :ArtistID 27 ;
+       :Data 1923 ;
+       :Estil "Arte Naif" ;
+       :Nom "Skandia Cinema, Stockholm, Sweden, Plan of ground floor" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art47
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art47
 :Art47 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Skandia Cinema, Stockholm, Sweden, Floor plan of mezzanine" ;
-	:Data 1923 ;
-	:Medi "Ink on paper mounted on board" ;
-	:Amplada 55.5 ;
-	:Altura 47.9 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 47.9 ;
+       :Amplada 55.5 ;
+       :ArtistID 27 ;
+       :Data 1923 ;
+       :Estil "Arte Naif" ;
+       :Nom "Skandia Cinema, Stockholm, Sweden, Floor plan of mezzanine" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art48
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art48
 :Art48 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Skandia Cinema, Stockholm, Sweden, Perspective of staircase" ;
-	:Data 1931 ;
-	:Medi "Ink and graphite on tracing paper mounted on board" ;
-	:Amplada 29.8 ;
-	:Altura 33.0 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 33.0 ;
+       :Amplada 29.8 ;
+       :ArtistID 27 ;
+       :Data 1931 ;
+       :Estil "Arte Naif" ;
+       :Nom "Skandia Cinema, Stockholm, Sweden, Perspective of staircase" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art49
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art49
 :Art49 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Skandia Cinema, Stockholm, Sweden, Perspective of promenade" ;
-	:Data 1936 ;
-	:Medi "Graphite on tracing paper mounted on board" ;
-	:Amplada 26.7 ;
-	:Altura 21.0 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 21.0 ;
+       :Amplada 26.7 ;
+       :ArtistID 27 ;
+       :Data 1936 ;
+       :Estil "Arte Naif" ;
+       :Nom "Skandia Cinema, Stockholm, Sweden, Perspective of promenade" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art50
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art5
+:Art5 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor7605 ;
+      :Esta_En :Sala_6 ;
+      :Estil_Quadre :Estil4 ;
+      :Altura 38.4 ;
+      :Amplada 19.1 ;
+      :ArtistID 7605 ;
+      :Data 1903 ;
+      :Estil "Cubismo" ;
+      :Nom "Villa, project, outside Vienna, Austria, Exterior perspective" ;
+      :Rellevancia 3 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art50
 :Art50 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Public Library, Stockholm, Sweden, Elevation of front facade" ;
-	:Data 1910 ;
-	:Medi "Ink on paper" ;
-	:Amplada 93.3 ;
-	:Altura 91.4 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 91.4 ;
+       :Amplada 93.3 ;
+       :ArtistID 27 ;
+       :Data 1910 ;
+       :Estil "Surrealismo" ;
+       :Nom "Public Library, Stockholm, Sweden, Elevation of front facade" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art51
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art51
 :Art51 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Public Library, Stockholm, Sweden, Elevation of west facade" ;
-	:Data 1927 ;
-	:Medi "Ink on paper with paper backing" ;
-	:Amplada 93.0 ;
-	:Altura 90.8 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 90.8 ;
+       :Amplada 93.0 ;
+       :ArtistID 27 ;
+       :Data 1927 ;
+       :Estil "Arte Naif" ;
+       :Nom "Public Library, Stockholm, Sweden, Elevation of west facade" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art52
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art52
 :Art52 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Public Library, Stockholm, Sweden, Section" ;
-	:Data 1933 ;
-	:Medi "Ink on paper with paper backing" ;
-	:Amplada 93.7 ;
-	:Altura 90.2 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 90.2 ;
+       :Amplada 93.7 ;
+       :ArtistID 27 ;
+       :Data 1933 ;
+       :Estil "Arte Naif" ;
+       :Nom "Public Library, Stockholm, Sweden, Section" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art53
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art53
 :Art53 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Public Library, Stockholm, Sweden, Plan of first and second galleries" ;
-	:Data 1915 ;
-	:Medi "Ink on paper" ;
-	:Amplada 90.8 ;
-	:Altura 90.8 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 90.8 ;
+       :Amplada 90.8 ;
+       :ArtistID 27 ;
+       :Data 1915 ;
+       :Estil "Arte Naif" ;
+       :Nom "Public Library, Stockholm, Sweden, Plan of first and second galleries" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art54
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art54
 :Art54 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Stockholm Exhibition, Stockholm, Sweden (Elevation of advertising tower)" ;
-	:Data 1930 ;
-	:Medi "Gouache on board" ;
-	:Amplada 33.0 ;
-	:Altura 52.7 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 52.7 ;
+       :Amplada 33.0 ;
+       :ArtistID 27 ;
+       :Data 1930 ;
+       :Estil "Arte Naif" ;
+       :Nom "Stockholm Exhibition, Stockholm, Sweden (Elevation of advertising tower)" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art55
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art55
 :Art55 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Law Courts Annex, Gothenburg, Sweden, Exterior elevation" ;
-	:Data 1936 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 70.5 ;
-	:Altura 30.5 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 30.5 ;
+       :Amplada 70.5 ;
+       :ArtistID 27 ;
+       :Data 1936 ;
+       :Estil "Arte Naif" ;
+       :Nom "Law Courts Annex, Gothenburg, Sweden, Exterior elevation" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art56
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art56
 :Art56 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Law Courts Annex, Gothenburg, Sweden, Plan of courtroom and section of desk" ;
-	:Data 1935 ;
-	:Medi "Ink on paper" ;
-	:Amplada 51.1 ;
-	:Altura 39.4 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 39.4 ;
+       :Amplada 51.1 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Arte Naif" ;
+       :Nom "Law Courts Annex, Gothenburg, Sweden, Plan of courtroom and section of desk" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art57
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art57
 :Art57 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Stockholm, Sweden, Second version: section and two exterior elevations" ;
-	:Data 1935 ;
-	:Medi "Graphite on tracing paper mounted on board" ;
-	:Amplada 83.5 ;
-	:Altura 30.5 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 30.5 ;
+       :Amplada 83.5 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Stockholm, Sweden, Second version: section and two exterior elevations" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art58
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art58
 :Art58 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior elevation" ;
-	:Data 1935 ;
-	:Medi "Graphite on tracing paper mounted on board" ;
-	:Amplada 83.8 ;
-	:Altura 30.8 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 30.8 ;
+       :Amplada 83.8 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior elevation" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art59
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art59
 :Art59 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Stockholm, Sweden, Second version: exterior elevation" ;
-	:Data 1935 ;
-	:Medi "Graphite on tracing paper mounted on board" ;
-	:Amplada 83.5 ;
-	:Altura 30.8 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 5 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 30.8 ;
+       :Amplada 83.5 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Stockholm, Sweden, Second version: exterior elevation" ;
+       :Rellevancia 5 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art60
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art6
+:Art6 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor7056 ;
+      :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil3 ;
+      :Altura 35.6 ;
+      :Amplada 45.7 ;
+      :ArtistID 7056 ;
+      :Data 1976 ;
+      :Estil "Expresionismo" ;
+      :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
+      :Rellevancia 4 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art60
 :Art60 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior elevation" ;
-	:Data 1935 ;
-	:Medi "Graphite on tracing paper on board" ;
-	:Amplada 83.3 ;
-	:Altura 30.8 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 30.8 ;
+       :Amplada 83.3 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior elevation" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art61
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art61
 :Art61 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Stockholm, Sweden, Second version: exterior elevation and section" ;
-	:Data 1935 ;
-	:Medi "Graphite on tracing paper mounted on board" ;
-	:Amplada 83.8 ;
-	:Altura 30.8 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 5 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 30.8 ;
+       :Amplada 83.8 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Arte Naif" ;
+       :Nom "Woodland Crematorium, Stockholm, Sweden, Second version: exterior elevation and section" ;
+       :Rellevancia 5 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art62
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art62
 :Art62 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Stockholm, Sweden, Second version: Two sections" ;
-	:Data 1935 ;
-	:Medi "Graphite on tracing paper mounted on board" ;
-	:Amplada 83.5 ;
-	:Altura 30.5 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 30.5 ;
+       :Amplada 83.5 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Stockholm, Sweden, Second version: Two sections" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art63
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art63
 :Art63 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior perspective" ;
-	:Data 1891 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 62.9 ;
-	:Altura 26.0 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 26.0 ;
+       :Amplada 62.9 ;
+       :ArtistID 27 ;
+       :Data 1891 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Second version: exterior perspective" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art64
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art64
 :Art64 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, First version: exterior perspective" ;
-	:Data 1921 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 46.7 ;
-	:Altura 19.7 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 19.7 ;
+       :Amplada 46.7 ;
+       :ArtistID 27 ;
+       :Data 1921 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, First version: exterior perspective" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art65
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art65
 :Art65 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Stockholm, Sweden, First version: ground floor plan" ;
-	:Data 1935 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 41.9 ;
-	:Altura 41.9 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 41.9 ;
+       :Amplada 41.9 ;
+       :ArtistID 27 ;
+       :Data 1935 ;
+       :Estil "Arte Naif" ;
+       :Nom "Woodland Crematorium, Stockholm, Sweden, First version: ground floor plan" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art66
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art66
 :Art66 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Stockholm, Sweden, Exterior-perspective study" ;
-	:Data 1930 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 101.6 ;
-	:Altura 65.4 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 65.4 ;
+       :Amplada 101.6 ;
+       :ArtistID 27 ;
+       :Data 1930 ;
+       :Estil "Arte Naif" ;
+       :Nom "Woodland Crematorium, Stockholm, Sweden, Exterior-perspective study" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art67
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art67
 :Art67 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Stockholm, Sweden, Exterior elevation of loggia" ;
-	:Data 1937 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 83.8 ;
-	:Altura 29.5 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 29.5 ;
+       :Amplada 83.8 ;
+       :ArtistID 27 ;
+       :Data 1937 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Stockholm, Sweden, Exterior elevation of loggia" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art68
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art68
 :Art68 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 27 ;
-	:Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Exterior elevation, final version" ;
-	:Data 1937 ;
-	:Medi "Ink and graphite on drafting cloth" ;
-	:Amplada 158.8 ;
-	:Altura 49.2 ;
-	:Estil "Surrealismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil8 ;
-	:Esta_En :Sala_2 ;
-	:Es_De :Autor27 .
+                :Quadre ;
+       :Es_De :Autor27 ;
+       :Esta_En :Sala_2 ;
+       :Estil_Quadre :Estil8 ;
+       :Altura 49.2 ;
+       :Amplada 158.8 ;
+       :ArtistID 27 ;
+       :Data 1937 ;
+       :Estil "Surrealismo" ;
+       :Nom "Woodland Crematorium, Woodland Cemetery, Stockholm, Sweden, Exterior elevation, final version" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art69
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art69
 :Art69 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Gymnasium-Bridge, project, New York City, New York, Perspective" ;
-	:Data 1977 ;
-	:Medi "Graphite on paper" ;
-	:Amplada 30.2 ;
-	:Altura 33.3 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 33.3 ;
+       :Amplada 30.2 ;
+       :ArtistID 2702 ;
+       :Data 1977 ;
+       :Estil "Expresionismo" ;
+       :Nom "Gymnasium-Bridge, project, New York City, New York, Perspective" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art70
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art7
+:Art7 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor7056 ;
+      :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil3 ;
+      :Altura 35.6 ;
+      :Amplada 45.7 ;
+      :ArtistID 7056 ;
+      :Data 1976 ;
+      :Estil "Expresionismo" ;
+      :Nom "The Manhattan Transcripts Project, New York, New York, Episode 1: The Park" ;
+      :Rellevancia 2 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art70
 :Art70 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Gymnasium-Bridge Project, New York, New York, Perspective" ;
-	:Data 1977 ;
-	:Medi "Ink and graphite on paper" ;
-	:Amplada 55.9 ;
-	:Altura 34.3 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 34.3 ;
+       :Amplada 55.9 ;
+       :ArtistID 2702 ;
+       :Data 1977 ;
+       :Estil "Expresionismo" ;
+       :Nom "Gymnasium-Bridge Project, New York, New York, Perspective" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art71
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art71
 :Art71 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Interior perspectives" ;
-	:Data 1935 ;
-	:Medi "Graphite and color pencil on tracing paper" ;
-	:Amplada 29.2 ;
-	:Altura 35.6 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 35.6 ;
+       :Amplada 29.2 ;
+       :ArtistID 8219 ;
+       :Data 1935 ;
+       :Estil "Expresionismo" ;
+       :Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Interior perspectives" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art72
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art72
 :Art72 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Gymnasium Bridge, project, New York City, New York, Plan, site plan, and exterior perspective" ;
-	:Data 1977 ;
-	:Medi "Graphite on paper" ;
-	:Amplada 75.6 ;
-	:Altura 55.9 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 55.9 ;
+       :Amplada 75.6 ;
+       :ArtistID 2702 ;
+       :Data 1977 ;
+       :Estil "Cubismo" ;
+       :Nom "Gymnasium Bridge, project, New York City, New York, Plan, site plan, and exterior perspective" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art73
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art73
 :Art73 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspective and plan" ;
-	:Data 1944 ;
-	:Medi "Graphite and color pencil on tracing paper" ;
-	:Amplada 35.9 ;
-	:Altura 21.6 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 5 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 21.6 ;
+       :Amplada 35.9 ;
+       :ArtistID 8219 ;
+       :Data 1944 ;
+       :Estil "Arte Naif" ;
+       :Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspective and plan" ;
+       :Rellevancia 5 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art74
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art74
 :Art74 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8101 ;
-	:Nom "Helium Bridge Project" ;
-	:Data 1958 ;
-	:Medi "Silkscreen" ;
-	:Amplada 150.2 ;
-	:Altura 55.2 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor8101 .
+                :Quadre ;
+       :Es_De :Autor8101 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 55.2 ;
+       :Amplada 150.2 ;
+       :ArtistID 8101 ;
+       :Data 1958 ;
+       :Estil "Expresionismo" ;
+       :Nom "Helium Bridge Project" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art75
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art75
 :Art75 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Autonomous Artisans' House, project, Staten Island, New York, Perspective" ;
-	:Data 1980 ;
-	:Medi "Graphite and watercolor on paper" ;
-	:Amplada 33.0 ;
-	:Altura 8.3 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 8.3 ;
+       :Amplada 33.0 ;
+       :ArtistID 2702 ;
+       :Data 1980 ;
+       :Estil "Expresionismo" ;
+       :Nom "Autonomous Artisans' House, project, Staten Island, New York, Perspective" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art76
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art76
 :Art76 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Elevations" ;
-	:Data 1910 ;
-	:Medi "Graphite and color pencil on tracing paper" ;
-	:Amplada 35.9 ;
-	:Altura 20.3 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 20.3 ;
+       :Amplada 35.9 ;
+       :ArtistID 8219 ;
+       :Data 1910 ;
+       :Estil "Expresionismo" ;
+       :Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Elevations" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art77
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art77
 :Art77 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Autonomous Artisans' House, project, New York (Staten Island), New York, Perspective" ;
-	:Data 1984 ;
-	:Medi "Graphite on vellum" ;
-	:Amplada 103.5 ;
-	:Altura 52.1 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 52.1 ;
+       :Amplada 103.5 ;
+       :ArtistID 2702 ;
+       :Data 1984 ;
+       :Estil "Cubismo" ;
+       :Nom "Autonomous Artisans' House, project, New York (Staten Island), New York, Perspective" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art78
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art78
 :Art78 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspectives and elevation" ;
-	:Data 1914 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 17.8 ;
-	:Altura 34.9 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 3 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 34.9 ;
+       :Amplada 17.8 ;
+       :ArtistID 8219 ;
+       :Data 1914 ;
+       :Estil "Expresionismo" ;
+       :Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspectives and elevation" ;
+       :Rellevancia 3 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art79
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art79
 :Art79 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Berkowitz House, Martha's Vineyard, Massachusetts, Exterior perspective" ;
-	:Data 1985 ;
-	:Medi "Graphite and watercolor on paper" ;
-	:Amplada 107.9502 ;
-	:Altura 52.0701 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 52.0701 ;
+       :Amplada 107.9502 ;
+       :ArtistID 2702 ;
+       :Data 1985 ;
+       :Estil "Cubismo" ;
+       :Nom "Berkowitz House, Martha's Vineyard, Massachusetts, Exterior perspective" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art80
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art8
+:Art8 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor7056 ;
+      :Esta_En :Sala_9 ;
+      :Estil_Quadre :Estil5 ;
+      :Altura 35.6 ;
+      :Amplada 45.7 ;
+      :ArtistID 7056 ;
+      :Data 1976 ;
+      :Estil "Arte Naif" ;
+      :Nom "The Manhattan Transcripts Project, New York, New York , Episode 1: The Park" ;
+      :Rellevancia 2 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art80
 :Art80 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspectives" ;
-	:Data 1936 ;
-	:Medi "Graphite on copy paper" ;
-	:Amplada 13.6525 ;
-	:Altura 21.59 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 21.59 ;
+       :Amplada 13.6525 ;
+       :ArtistID 8219 ;
+       :Data 1936 ;
+       :Estil "Arte Naif" ;
+       :Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspectives" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art81
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art81
 :Art81 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Porta Vittoria, project, Milan, Italy, View from court of four-sided pentagon, perspective, site plan" ;
-	:Data 1986 ;
-	:Medi "Graphite, ink and ink wash on paper" ;
-	:Amplada 56.5 ;
-	:Altura 75.6 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 75.6 ;
+       :Amplada 56.5 ;
+       :ArtistID 2702 ;
+       :Data 1986 ;
+       :Estil "Cubismo" ;
+       :Nom "Porta Vittoria, project, Milan, Italy, View from court of four-sided pentagon, perspective, site plan" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art82
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art82
 :Art82 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspective" ;
-	:Data 1936 ;
-	:Medi "Colored pencil on tracing paper" ;
-	:Amplada 35.8776 ;
-	:Altura 27.3051 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 27.3051 ;
+       :Amplada 35.8776 ;
+       :ArtistID 8219 ;
+       :Data 1936 ;
+       :Estil "Arte Naif" ;
+       :Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspective" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art83
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art83
 :Art83 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Porta Vittoria, project, Milan, Italy, Garden of Sounds, perspective and plan" ;
-	:Data 1986 ;
-	:Medi "Graphite, ink and ink wash on paper" ;
-	:Amplada 56.8 ;
-	:Altura 75.6 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 75.6 ;
+       :Amplada 56.8 ;
+       :ArtistID 2702 ;
+       :Data 1986 ;
+       :Estil "Cubismo" ;
+       :Nom "Porta Vittoria, project, Milan, Italy, Garden of Sounds, perspective and plan" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art84
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art84
 :Art84 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Interior perspective and details of furniture" ;
-	:Data 1936 ;
-	:Medi "Graphite and color pencil on tracing paper" ;
-	:Amplada 29.2 ;
-	:Altura 36.2 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 36.2 ;
+       :Amplada 29.2 ;
+       :ArtistID 8219 ;
+       :Data 1936 ;
+       :Estil "Arte Naif" ;
+       :Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Interior perspective and details of furniture" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art85
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art85
 :Art85 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Porta Vittoria, project, Milan, Italy, New subway station opening onto elongated gap, perspective and plan" ;
-	:Data 1986 ;
-	:Medi "Graphite, ink and ink wash on paper" ;
-	:Amplada 56.5 ;
-	:Altura 75.6 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 75.6 ;
+       :Amplada 56.5 ;
+       :ArtistID 2702 ;
+       :Data 1986 ;
+       :Estil "Cubismo" ;
+       :Nom "Porta Vittoria, project, Milan, Italy, New subway station opening onto elongated gap, perspective and plan" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art86
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art86
 :Art86 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspectives of the medical school and auditorium" ;
-	:Data 1936 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 29.2101 ;
-	:Altura 36.8301 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 36.8301 ;
+       :Amplada 29.2101 ;
+       :ArtistID 8219 ;
+       :Data 1936 ;
+       :Estil "Arte Naif" ;
+       :Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspectives of the medical school and auditorium" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art87
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art87
 :Art87 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Porta Vittoria, project, Milan, Italy, View at elliptical passage, perspective and plan" ;
-	:Data 1986 ;
-	:Medi "Graphite, ink and ink wash on paper" ;
-	:Amplada 56.5 ;
-	:Altura 76.2 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 76.2 ;
+       :Amplada 56.5 ;
+       :ArtistID 2702 ;
+       :Data 1986 ;
+       :Estil "Cubismo" ;
+       :Nom "Porta Vittoria, project, Milan, Italy, View at elliptical passage, perspective and plan" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art88
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art88
 :Art88 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspective" ;
-	:Data 1936 ;
-	:Medi "Colored pencil on tracing paper" ;
-	:Amplada 40.6401 ;
-	:Altura 21.9075 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 21.9075 ;
+       :Amplada 40.6401 ;
+       :ArtistID 8219 ;
+       :Data 1936 ;
+       :Estil "Arte Naif" ;
+       :Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Perspective" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art89
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art89
 :Art89 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Porta Vittoria, project, Milan, Italy, Subway station and shops, ticket-taker tower, perspective and plan" ;
-	:Data 1986 ;
-	:Medi "Graphite, ink and ink wash on paper" ;
-	:Amplada 56.5 ;
-	:Altura 75.6 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 75.6 ;
+       :Amplada 56.5 ;
+       :ArtistID 2702 ;
+       :Data 1986 ;
+       :Estil "Cubismo" ;
+       :Nom "Porta Vittoria, project, Milan, Italy, Subway station and shops, ticket-taker tower, perspective and plan" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art90
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art9
+:Art9 rdf:type owl:NamedIndividual ,
+               :Quadre ;
+      :Es_De :Autor2964 ;
+      :Esta_En :Sala_5 ;
+      :Estil_Quadre :Estil6 ;
+      :Altura 113.0 ;
+      :Amplada 167.6 ;
+      :ArtistID 2964 ;
+      :Data 1968 ;
+      :Estil "Romanticismo" ;
+      :Nom "Memorial to the Six Million Jewish Martyrs, project, New York City, New York, Perspective of central pier" ;
+      :Rellevancia 4 .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art90
 :Art90 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Residence of Salman Schocken, Jerusalem, Israel, Perspective and elevation" ;
-	:Data 1924 ;
-	:Medi "Graphite and color pencil on tracing paper" ;
-	:Amplada 28.7338 ;
-	:Altura 34.2901 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 34.2901 ;
+       :Amplada 28.7338 ;
+       :ArtistID 8219 ;
+       :Data 1924 ;
+       :Estil "Expresionismo" ;
+       :Nom "Residence of Salman Schocken, Jerusalem, Israel, Perspective and elevation" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art91
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art91
 :Art91 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Porta Vittoria, project, Milan, Italy, Water basin, amphitheater, and jack-up rig, perspective and plan" ;
-	:Data 1986 ;
-	:Medi "Graphite, ink and ink wash on paper" ;
-	:Amplada 56.5 ;
-	:Altura 75.6 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 75.6 ;
+       :Amplada 56.5 ;
+       :ArtistID 2702 ;
+       :Data 1986 ;
+       :Estil "Expresionismo" ;
+       :Nom "Porta Vittoria, project, Milan, Italy, Water basin, amphitheater, and jack-up rig, perspective and plan" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art92
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art92
 :Art92 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Israel, Perspectives and elevation" ;
-	:Data 1936 ;
-	:Medi "Graphite and color pencil on tracing paper" ;
-	:Amplada 24.1 ;
-	:Altura 35.2 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 1 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 35.2 ;
+       :Amplada 24.1 ;
+       :ArtistID 8219 ;
+       :Data 1936 ;
+       :Estil "Expresionismo" ;
+       :Nom "Hadassah University Medical Center, Mount Scopus, Jerusalem, Israel, Perspectives and elevation" ;
+       :Rellevancia 1 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art93
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art93
 :Art93 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 2702 ;
-	:Nom "Porta Vittoria, project, Milan, Italy, Passage below water basin, perspective and plan" ;
-	:Data 1986 ;
-	:Medi "Graphite, ink and ink wash on paper" ;
-	:Amplada 56.5 ;
-	:Altura 75.6 ;
-	:Estil "Cubismo" ;
-	:Rellevancia 5 ;
-	:Estil_Quadre :Estil4 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor2702 .
+                :Quadre ;
+       :Es_De :Autor2702 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil4 ;
+       :Altura 75.6 ;
+       :Amplada 56.5 ;
+       :ArtistID 2702 ;
+       :Data 1986 ;
+       :Estil "Cubismo" ;
+       :Nom "Porta Vittoria, project, Milan, Italy, Passage below water basin, perspective and plan" ;
+       :Rellevancia 5 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art94
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art94
 :Art94 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspectives and elevation" ;
-	:Data 1933 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 36.8 ;
-	:Altura 30.2 ;
-	:Estil "Arte Naif" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil5 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil5 ;
+       :Altura 30.2 ;
+       :Amplada 36.8 ;
+       :ArtistID 8219 ;
+       :Data 1933 ;
+       :Estil "Arte Naif" ;
+       :Nom "Library and Office Building of Salman Schocken, Jerusalem, Israel, Perspectives and elevation" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art95
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art95
 :Art95 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 5076 ;
-	:Nom "Residence for Herbert Green, Studies for an Unfolded Modular House, Cherry Hill, Pennsylvania, Perspective" ;
-	:Data 1989 ;
-	:Medi "Ink on tracing paper" ;
-	:Amplada 164.5 ;
-	:Altura 37.1 ;
-	:Estil "Arte Pop" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil7 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor5076 .
+                :Quadre ;
+       :Es_De :Autor5076 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil7 ;
+       :Altura 37.1 ;
+       :Amplada 164.5 ;
+       :ArtistID 5076 ;
+       :Data 1989 ;
+       :Estil "Arte Pop" ;
+       :Nom "Residence for Herbert Green, Studies for an Unfolded Modular House, Cherry Hill, Pennsylvania, Perspective" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art96
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art96
 :Art96 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Gated Wall, Perspective and elevation" ;
-	:Data 1938 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 37.5 ;
-	:Altura 29.8 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 29.8 ;
+       :Amplada 37.5 ;
+       :ArtistID 8219 ;
+       :Data 1938 ;
+       :Estil "Expresionismo" ;
+       :Nom "Gated Wall, Perspective and elevation" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art97
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art97
 :Art97 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 5076 ;
-	:Nom "Finney Guest House Project, Siesta Key, Florida, Aerial perspective" ;
-	:Data 1949 ;
-	:Medi "Ink and printed polymer sheet on paper" ;
-	:Amplada 47.9 ;
-	:Altura 64.8 ;
-	:Estil "Arte Pop" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil7 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor5076 .
+                :Quadre ;
+       :Es_De :Autor5076 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil7 ;
+       :Altura 64.8 ;
+       :Amplada 47.9 ;
+       :ArtistID 5076 ;
+       :Data 1949 ;
+       :Estil "Arte Pop" ;
+       :Nom "Finney Guest House Project, Siesta Key, Florida, Aerial perspective" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art98
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art98
 :Art98 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 8219 ;
-	:Nom "Gated Wall, Perspective and elevation" ;
-	:Data 1923 ;
-	:Medi "Graphite on tracing paper" ;
-	:Amplada 29.2 ;
-	:Altura 41.9 ;
-	:Estil "Expresionismo" ;
-	:Rellevancia 2 ;
-	:Estil_Quadre :Estil3 ;
-	:Esta_En :Sala_3 ;
-	:Es_De :Autor8219 .
+                :Quadre ;
+       :Es_De :Autor8219 ;
+       :Esta_En :Sala_3 ;
+       :Estil_Quadre :Estil3 ;
+       :Altura 41.9 ;
+       :Amplada 29.2 ;
+       :ArtistID 8219 ;
+       :Data 1923 ;
+       :Estil "Expresionismo" ;
+       :Nom "Gated Wall, Perspective and elevation" ;
+       :Rellevancia 2 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Art99
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Art99
 :Art99 rdf:type owl:NamedIndividual ,
-		:Quadre ;
-	:ArtistID 5076 ;
-	:Nom "Yale University, Art and Architecture Building, New Haven, Connecticut, Elevation" ;
-	:Data 1958 ;
-	:Medi "Graphite and colored pencil on paper" ;
-	:Amplada 87.0 ;
-	:Altura 69.2 ;
-	:Estil "Arte Pop" ;
-	:Rellevancia 4 ;
-	:Estil_Quadre :Estil7 ;
-	:Esta_En :Sala_6 ;
-	:Es_De :Autor5076 .
+                :Quadre ;
+       :Es_De :Autor5076 ;
+       :Esta_En :Sala_6 ;
+       :Estil_Quadre :Estil7 ;
+       :Altura 69.2 ;
+       :Amplada 87.0 ;
+       :ArtistID 5076 ;
+       :Data 1958 ;
+       :Estil "Arte Pop" ;
+       :Nom "Yale University, Art and Architecture Building, New Haven, Connecticut, Elevation" ;
+       :Rellevancia 4 .
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil1
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor1863
+:Autor1863 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art29 ,
+                  :Art31 ,
+                  :Art33 ;
+           :AnyMort 1991 ;
+           :AnyNeixement 1949 ;
+           :ArtistID 1863 ;
+           :Genere "male" ;
+           :Nacionalitat "American" ;
+           :Nom "Roger C. Ferri" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor2308
+:Autor2308 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art34 ,
+                  :Art35 ,
+                  :Art36 ,
+                  :Art37 ;
+           :AnyMort 2015 ;
+           :AnyNeixement 1934 ;
+           :ArtistID 2308 ;
+           :Genere "male" ;
+           :Nacionalitat "American" ;
+           :Nom "Michael Graves" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor27
+:Autor27 rdf:type owl:NamedIndividual ,
+                  :Author ;
+         :Pinta :Art38 ,
+                :Art39 ,
+                :Art40 ,
+                :Art41 ,
+                :Art42 ,
+                :Art43 ,
+                :Art44 ,
+                :Art45 ,
+                :Art46 ,
+                :Art47 ,
+                :Art48 ,
+                :Art49 ,
+                :Art50 ,
+                :Art51 ,
+                :Art52 ,
+                :Art53 ,
+                :Art54 ,
+                :Art55 ,
+                :Art56 ,
+                :Art57 ,
+                :Art58 ,
+                :Art59 ,
+                :Art60 ,
+                :Art61 ,
+                :Art62 ,
+                :Art63 ,
+                :Art64 ,
+                :Art65 ,
+                :Art66 ,
+                :Art67 ,
+                :Art68 ;
+         :AnyMort 1940 ;
+         :AnyNeixement 1885 ;
+         :ArtistID 27 ;
+         :Genere "male" ;
+         :Nacionalitat "Swedish" ;
+         :Nom "Erik Gunnar Asplund" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor2702
+:Autor2702 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art69 ,
+                  :Art70 ,
+                  :Art72 ,
+                  :Art75 ,
+                  :Art77 ,
+                  :Art79 ,
+                  :Art81 ,
+                  :Art83 ,
+                  :Art85 ,
+                  :Art87 ,
+                  :Art89 ,
+                  :Art91 ,
+                  :Art93 ;
+           :AnyMort 1984 ;
+           :AnyNeixement 1947 ;
+           :ArtistID 2702 ;
+           :Genere "male" ;
+           :Nacionalitat "American" ;
+           :Nom "Steven Holl" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor2964
+:Autor2964 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art9 ;
+           :AnyMort 1974 ;
+           :AnyNeixement 1901 ;
+           :ArtistID 2964 ;
+           :Genere "male" ;
+           :Nacionalitat "American" ;
+           :Nom "Louis I. Kahn" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor47
+:Autor47 rdf:type owl:NamedIndividual ,
+                  :Author ;
+         :Pinta :Art28 ;
+         :AnyMort 2010 ;
+         :AnyNeixement 1933 ;
+         :ArtistID 47 ;
+         :Genere "male" ;
+         :Nacionalitat "American" ;
+         :Nom "Raimund Abraham" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor5076
+:Autor5076 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art95 ,
+                  :Art97 ,
+                  :Art99 ;
+           :AnyMort 1997 ;
+           :AnyNeixement 1918 ;
+           :ArtistID 5076 ;
+           :Genere "male" ;
+           :Nacionalitat "American" ;
+           :Nom "Paul Rudolph" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor6210
+:Autor6210 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art1 ;
+           :AnyMort 1918 ;
+           :AnyNeixement 1841 ;
+           :ArtistID 6210 ;
+           :Genere "male" ;
+           :Nacionalitat "Austrian" ;
+           :Nom "Otto Wagner" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor7056
+:Autor7056 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art10 ,
+                  :Art12 ,
+                  :Art14 ,
+                  :Art16 ,
+                  :Art17 ,
+                  :Art18 ,
+                  :Art19 ,
+                  :Art20 ,
+                  :Art21 ,
+                  :Art22 ,
+                  :Art23 ,
+                  :Art24 ,
+                  :Art25 ,
+                  :Art26 ,
+                  :Art30 ,
+                  :Art32 ,
+                  :Art4 ,
+                  :Art6 ,
+                  :Art7 ,
+                  :Art8 ;
+           :AnyMort 1992 ;
+           :AnyNeixement 1944 ;
+           :ArtistID 7056 ;
+           :Genere "male" ;
+           :Nacionalitat "Georgian" ;
+           :Nom "Bernard Tschumi" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor7470
+:Autor7470 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art2 ;
+           :AnyMort 1976 ;
+           :AnyNeixement 1944 ;
+           :ArtistID 7470 ;
+           :Genere "male" ;
+           :Nacionalitat "French" ;
+           :Nom "Christian de Portzamparc" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor7605
+:Autor7605 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art3 ,
+                  :Art5 ;
+           :AnyMort 1957 ;
+           :AnyNeixement 1876 ;
+           :ArtistID 7605 ;
+           :Genere "male" ;
+           :Nacionalitat "Austrian" ;
+           :Nom "Emil Hoppe" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor7607
+:Autor7607 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art11 ;
+           :AnyMort 1969 ;
+           :AnyNeixement 1878 ;
+           :ArtistID 7607 ;
+           :Genere "male" ;
+           :Nacionalitat "Austrian" ;
+           :Nom "Marcel Kammerer" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor7608
+:Autor7608 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art13 ,
+                  :Art15 ;
+           :AnyMort 1961 ;
+           :AnyNeixement 1878 ;
+           :ArtistID 7608 ;
+           :Genere "male" ;
+           :Nacionalitat "Austrian" ;
+           :Nom "Otto Schonthal" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor8100
+:Autor8100 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art27 ;
+           :AnyMort 1936 ;
+           :AnyNeixement 1869 ;
+           :ArtistID 8100 ;
+           :Genere "male" ;
+           :Nacionalitat "German" ;
+           :Nom "Hans Poelzig" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor8101
+:Autor8101 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art74 ;
+           :AnyMort 2013 ;
+           :AnyNeixement 1919 ;
+           :ArtistID 8101 ;
+           :Genere "male" ;
+           :Nacionalitat "American" ;
+           :Nom "Paolo Soleri" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Autor8219
+:Autor8219 rdf:type owl:NamedIndividual ,
+                    :Author ;
+           :Pinta :Art71 ,
+                  :Art73 ,
+                  :Art76 ,
+                  :Art78 ,
+                  :Art80 ,
+                  :Art82 ,
+                  :Art84 ,
+                  :Art86 ,
+                  :Art88 ,
+                  :Art90 ,
+                  :Art92 ,
+                  :Art94 ,
+                  :Art96 ,
+                  :Art98 ;
+           :AnyMort 1953 ;
+           :AnyNeixement 1887 ;
+           :ArtistID 8219 ;
+           :Genere "male" ;
+           :Nacionalitat "American" ;
+           :Nom "Erich Mendelsohn" .
+
+
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil1
 :Estil1 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art1,
-		:Art27,
-		:Art36,
-		:Art37;
-	:Pintors_Estil
-		:Autor6210,
-		:Autor8100,
-		:Autor2308;
-	:Nom "Clasicismo" .
+                 :Estil ;
+        :Pintors_Estil :Autor2308 ,
+                       :Autor6210 ,
+                       :Autor8100 ;
+        :Quadres_Estil :Art1 ,
+                       :Art27 ,
+                       :Art36 ,
+                       :Art37 ;
+        :Nom "Clasicismo" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil2
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil2
 :Estil2 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art2;
-	:Pintors_Estil
-		:Autor7470;
-	:Nom "Abstractismo" .
+                 :Estil ;
+        :Pintors_Estil :Autor7470 ;
+        :Quadres_Estil :Art2 ;
+        :Nom "Abstractismo" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil3
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil3
 :Estil3 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art3,
-		:Art4,
-		:Art6,
-		:Art7,
-		:Art10,
-		:Art14,
-		:Art21,
-		:Art26,
-		:Art32,
-		:Art69,
-		:Art70,
-		:Art71,
-		:Art74,
-		:Art75,
-		:Art76,
-		:Art78,
-		:Art90,
-		:Art91,
-		:Art92,
-		:Art96,
-		:Art98;
-	:Pintors_Estil
-		:Autor7605,
-		:Autor7056,
-		:Autor2702,
-		:Autor8219,
-		:Autor8101;
-	:Nom "Expresionismo" .
+                 :Estil ;
+        :Pintors_Estil :Autor2702 ,
+                       :Autor7056 ,
+                       :Autor7605 ,
+                       :Autor8101 ,
+                       :Autor8219 ;
+        :Quadres_Estil :Art10 ,
+                       :Art14 ,
+                       :Art21 ,
+                       :Art26 ,
+                       :Art3 ,
+                       :Art32 ,
+                       :Art4 ,
+                       :Art6 ,
+                       :Art69 ,
+                       :Art7 ,
+                       :Art70 ,
+                       :Art71 ,
+                       :Art74 ,
+                       :Art75 ,
+                       :Art76 ,
+                       :Art78 ,
+                       :Art90 ,
+                       :Art91 ,
+                       :Art92 ,
+                       :Art96 ,
+                       :Art98 ;
+        :Nom "Expresionismo" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil4
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil4
 :Estil4 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art5,
-		:Art72,
-		:Art77,
-		:Art79,
-		:Art81,
-		:Art83,
-		:Art85,
-		:Art87,
-		:Art89,
-		:Art93;
-	:Pintors_Estil
-		:Autor7605,
-		:Autor2702;
-	:Nom "Cubismo" .
+                 :Estil ;
+        :Pintors_Estil :Autor2702 ,
+                       :Autor7605 ;
+        :Quadres_Estil :Art5 ,
+                       :Art72 ,
+                       :Art77 ,
+                       :Art79 ,
+                       :Art81 ,
+                       :Art83 ,
+                       :Art85 ,
+                       :Art87 ,
+                       :Art89 ,
+                       :Art93 ;
+        :Nom "Cubismo" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil5
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil5
 :Estil5 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art8,
-		:Art12,
-		:Art16,
-		:Art17,
-		:Art18,
-		:Art19,
-		:Art20,
-		:Art22,
-		:Art23,
-		:Art24,
-		:Art25,
-		:Art30,
-		:Art40,
-		:Art42,
-		:Art46,
-		:Art47,
-		:Art48,
-		:Art49,
-		:Art51,
-		:Art52,
-		:Art53,
-		:Art54,
-		:Art55,
-		:Art56,
-		:Art61,
-		:Art65,
-		:Art66,
-		:Art73,
-		:Art80,
-		:Art82,
-		:Art84,
-		:Art86,
-		:Art88,
-		:Art94;
-	:Pintors_Estil
-		:Autor7056,
-		:Autor27,
-		:Autor8219;
-	:Nom "Arte Naif" .
+                 :Estil ;
+        :Pintors_Estil :Autor27 ,
+                       :Autor7056 ,
+                       :Autor8219 ;
+        :Quadres_Estil :Art12 ,
+                       :Art16 ,
+                       :Art17 ,
+                       :Art18 ,
+                       :Art19 ,
+                       :Art20 ,
+                       :Art22 ,
+                       :Art23 ,
+                       :Art24 ,
+                       :Art25 ,
+                       :Art30 ,
+                       :Art40 ,
+                       :Art42 ,
+                       :Art46 ,
+                       :Art47 ,
+                       :Art48 ,
+                       :Art49 ,
+                       :Art51 ,
+                       :Art52 ,
+                       :Art53 ,
+                       :Art54 ,
+                       :Art55 ,
+                       :Art56 ,
+                       :Art61 ,
+                       :Art65 ,
+                       :Art66 ,
+                       :Art73 ,
+                       :Art8 ,
+                       :Art80 ,
+                       :Art82 ,
+                       :Art84 ,
+                       :Art86 ,
+                       :Art88 ,
+                       :Art94 ;
+        :Nom "Arte Naif" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil6
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil6
 :Estil6 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art9;
-	:Pintors_Estil
-		:Autor2964;
-	:Nom "Romanticismo" .
+                 :Estil ;
+        :Pintors_Estil :Autor2964 ;
+        :Quadres_Estil :Art9 ;
+        :Nom "Romanticismo" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil7
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil7
 :Estil7 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art11,
-		:Art13,
-		:Art95,
-		:Art97,
-		:Art99;
-	:Pintors_Estil
-		:Autor7607,
-		:Autor7608,
-		:Autor5076;
-	:Nom "Arte Pop" .
+                 :Estil ;
+        :Pintors_Estil :Autor5076 ,
+                       :Autor7607 ,
+                       :Autor7608 ;
+        :Quadres_Estil :Art11 ,
+                       :Art13 ,
+                       :Art95 ,
+                       :Art97 ,
+                       :Art99 ;
+        :Nom "Arte Pop" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil8
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil8
 :Estil8 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art15,
-		:Art34,
-		:Art35,
-		:Art38,
-		:Art39,
-		:Art41,
-		:Art43,
-		:Art44,
-		:Art45,
-		:Art50,
-		:Art57,
-		:Art58,
-		:Art59,
-		:Art60,
-		:Art62,
-		:Art63,
-		:Art64,
-		:Art67,
-		:Art68;
-	:Pintors_Estil
-		:Autor7608,
-		:Autor2308,
-		:Autor27;
-	:Nom "Surrealismo" .
+                 :Estil ;
+        :Pintors_Estil :Autor2308 ,
+                       :Autor27 ,
+                       :Autor7608 ;
+        :Quadres_Estil :Art15 ,
+                       :Art34 ,
+                       :Art35 ,
+                       :Art38 ,
+                       :Art39 ,
+                       :Art41 ,
+                       :Art43 ,
+                       :Art44 ,
+                       :Art45 ,
+                       :Art50 ,
+                       :Art57 ,
+                       :Art58 ,
+                       :Art59 ,
+                       :Art60 ,
+                       :Art62 ,
+                       :Art63 ,
+                       :Art64 ,
+                       :Art67 ,
+                       :Art68 ;
+        :Nom "Surrealismo" .
 
 
-###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Estil9
+###  http://www.semanticweb.org/05087/ontologies/2020/10/untitled-ontology-5#Estil9
 :Estil9 rdf:type owl:NamedIndividual ,
-		:Estil ;
-	:Quadres_Estil
-		:Art28,
-		:Art29,
-		:Art31,
-		:Art33;
-	:Pintors_Estil
-		:Autor47,
-		:Autor1863;
-	:Nom "Fauvismo" .
+                 :Estil ;
+        :Pintors_Estil :Autor1863 ,
+                       :Autor47 ;
+        :Quadres_Estil :Art28 ,
+                       :Art29 ,
+                       :Art31 ,
+                       :Art33 ;
+        :Nom "Fauvismo" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_0
 :Sala_0 rdf:type owl:NamedIndividual ,
 		:Sala ;
 	:Connecta_Amb
-		:Sala_1,
-		:Sala_2;
+		:Sala_1;
+	:Numero_Sala 0 ;
 	:Nom "Entrada" .
 
 
@@ -2240,7 +2228,8 @@
 		:Sala ;
 	:Connecta_Amb
 		:Sala_0,
-		:Sala_4;
+		:Sala_2;
+	:Numero_Sala 1 ;
 	:Nom "Sala_1" .
 
 
@@ -2248,9 +2237,9 @@
 :Sala_2 rdf:type owl:NamedIndividual ,
 		:Sala ;
 	:Connecta_Amb
-		:Sala_0,
-		:Sala_3,
-		:Sala_4;
+		:Sala_1,
+		:Sala_3;
+	:Numero_Sala 2 ;
 	:Nom "Sala_2" .
 
 
@@ -2258,7 +2247,9 @@
 :Sala_3 rdf:type owl:NamedIndividual ,
 		:Sala ;
 	:Connecta_Amb
-		:Sala_2;
+		:Sala_2,
+		:Sala_4;
+	:Numero_Sala 3 ;
 	:Nom "Sala_3" .
 
 
@@ -2266,47 +2257,79 @@
 :Sala_4 rdf:type owl:NamedIndividual ,
 		:Sala ;
 	:Connecta_Amb
-		:Sala_1,
-		:Sala_2;
-	:Nom "Sortida" .
+		:Sala_3,
+		:Sala_5;
+	:Numero_Sala 4 ;
+	:Nom "Sala_4" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_5
 :Sala_5 rdf:type owl:NamedIndividual ,
 		:Sala ;
-	:Nom "5" .
+	:Connecta_Amb
+		:Sala_4,
+		:Sala_6;
+	:Numero_Sala 5 ;
+	:Nom "Sala_5" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_6
 :Sala_6 rdf:type owl:NamedIndividual ,
 		:Sala ;
-	:Nom "6" .
+	:Connecta_Amb
+		:Sala_5,
+		:Sala_7;
+	:Numero_Sala 6 ;
+	:Nom "Sala_6" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_7
 :Sala_7 rdf:type owl:NamedIndividual ,
 		:Sala ;
-	:Nom "7" .
+	:Connecta_Amb
+		:Sala_6,
+		:Sala_8;
+	:Numero_Sala 7 ;
+	:Nom "Sala_7" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_8
 :Sala_8 rdf:type owl:NamedIndividual ,
 		:Sala ;
-	:Nom "8" .
+	:Connecta_Amb
+		:Sala_7,
+		:Sala_9;
+	:Numero_Sala 8 ;
+	:Nom "Sala_8" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_9
 :Sala_9 rdf:type owl:NamedIndividual ,
 		:Sala ;
-	:Nom "9" .
+	:Connecta_Amb
+		:Sala_8,
+		:Sala_10;
+	:Numero_Sala 9 ;
+	:Nom "Sala_9" .
 
 
 ###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_10
 :Sala_10 rdf:type owl:NamedIndividual ,
 		:Sala ;
-	:Nom "10" .
+	:Connecta_Amb
+		:Sala_9,
+		:Sala_11;
+	:Numero_Sala 10 ;
+	:Nom "Sala_10" .
 
 
+###  http://www.semanticweb.org/05087/ontologies/2020/10/ontologia_museu#Sala_11
+:Sala_11 rdf:type owl:NamedIndividual ,
+		:Sala ;
+	:Connecta_Amb
+		:Sala_10;
+	:Numero_Sala 11 ;
+	:Nom "Sortida" .
 
 
 #################################################################

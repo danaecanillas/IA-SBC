@@ -30,8 +30,7 @@ with open('artworks_2.csv', encoding='utf-8') as csv_file:
     for row in csv_reader:
         if line_count == 0:
             line_count += 1
-        elif line_count < 200 :
-            print(line_count)
+        elif line_count < 100 :
             nom = f'Art{line_count}'
             nomAutor = f'Autor{row[0]}'
             f.write(IRI+f'Art{line_count}')
@@ -84,7 +83,6 @@ with open('sales.csv') as csv_file:
         if line_count == 0:
             line_count += 1
         else:
-            print(line_count)
             f.write(IRI+"Sala_"+row[0])
             f.write(f'\n:Sala_{row[0]} '+tipusSala)
             if(len(row[2]) > 0):
@@ -93,6 +91,7 @@ with open('sales.csv') as csv_file:
                 for sala in row[2].split()[1:]:
                     f.write(f',\n\t\t:Sala_{sala}')
                 f.write(';\n')
+            f.write(f'\t:Numero_Sala {row[0]} ;\n')
             f.write(f'\t:Nom \"{row[1]}\" .\n')
             f.write('\n\n')
             line_count += 1
