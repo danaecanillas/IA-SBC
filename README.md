@@ -22,7 +22,18 @@ In this project, we are asked to implement a recommendation system for the visit
 ## Usage
 
 ### Project files
-
+```
+├─ ontology
+│  ├─ ontology.clp
+│  └─ ontology.owl
+├─ python
+|  └─ csv2owl.py
+├─ SBC-20211q.pdf
+├─ Report.pdf
+├─ museum.clp
+├─ LICENSE
+└─ README.md
+```
 ### Execution
 ```
 CLIPS> (load "museum.clp")
