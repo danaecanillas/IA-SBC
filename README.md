@@ -31,8 +31,13 @@ In this project, we are asked to implement a recommendation system for the visit
 │  ├─ Experiment_5.txt
 │  ├─ Experiment_6.txt
 │  └─ Experiment_6_Extra.txt
+├─ data
+│  ├─ artists.csv
+│  ├─ artworks.csv
+│  └─ sales.csv
 ├─ python
-|  └─ csv2owl.py
+│  ├─ csv2owl.py
+│  └─ generate-data.py
 ├─ ontology
 │  ├─ ontology.clp
 │  └─ ontology.owl
